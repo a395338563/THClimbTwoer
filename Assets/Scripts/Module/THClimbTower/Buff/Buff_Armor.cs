@@ -33,7 +33,7 @@ namespace THClimbTower
             }
             else if (eventType == EventType.PlayerTurnStart)
             {
-                Model.Log.Debug($"{(Parent as Charactor).Name} lose all armor at turn start");
+                Model.Log.Debug($"{(Parent as BattleCharactor).Name} lose all armor at turn start");
                 LastTime = 0;
                 return o;
             }

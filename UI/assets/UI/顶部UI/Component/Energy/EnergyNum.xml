@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="75,39" extention="Label">
+  <displayList>
+    <text id="n18_ocpo" name="title" xy="1,1" pivot="0.5,0.5" size="73,38" font="ui://p2tnfz1ul39c87e" fontSize="34" color="#990000" letterSpacing="-3" bold="true" text="3/3"/>
+    <text id="n22_l39c" name="value" xy="0,0" pivot="0.5,0.5" size="75,39" font="ui://p2tnfz1ul39c86s" fontSize="34" color="#ffffdb" letterSpacing="-3" text="3/3"/>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Scale" target="n22_l39c" tween="true" startValue="1,1" endValue="1.5,1.5" duration="3"/>
+    <item time="0" type="Scale" target="n18_ocpo" tween="true" startValue="1,1" endValue="1.5,1.5" duration="3"/>
+    <item time="3" type="Scale" target="n22_l39c" tween="true" startValue="1.5,1.5" endValue="1,1" duration="6"/>
+    <item time="3" type="Scale" target="n18_ocpo" tween="true" startValue="1.5,1.5" endValue="1,1" duration="6"/>
+  </transition>
+</component>

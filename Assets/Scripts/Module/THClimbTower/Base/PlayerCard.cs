@@ -26,7 +26,7 @@ namespace THClimbTower
         /// </summary>
         /// <param name="reciver">接受者可以为空</param>
         /// <returns></returns>
-        public abstract Task<bool> UseAble(Charactor reciver);
+        public abstract Task<bool> UseAble(BattleCharactor reciver);
 
         protected void ThrowToCemetery()
         {

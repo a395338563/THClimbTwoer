@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" extention="Label">
+  <displayList>
+    <graph id="n0_gmzy" name="n0" xy="-339,468" size="2556,128" type="rect" lineSize="0" fillColor="#99000000">
+      <relation target="" sidePair="width-width"/>
+    </graph>
+    <image id="n1_gmzy" name="n1" src="gmzy8d1" fileName="战斗UI/battleStartSword.png" xy="1060,360" rotation="50"/>
+    <image id="n2_gmzy" name="n2" src="gmzy8d1" fileName="战斗UI/battleStartSword.png" xy="781,428" rotation="-50"/>
+    <text id="n3_gmzy" name="title" xy="704,416" pivot="0.5,0.5" size="472,204" font="Source Han Serif SC Medium" fontSize="72" color="#cc9900" align="center" vAlign="middle" autoSize="none" bold="true" shadowColor="#000000" shadowOffset="-1,-1" text="战斗开始"/>
+  </displayList>
+  <transition name="t0">
+    <item time="0" type="Alpha" tween="true" startValue="0" endValue="1" duration="6"/>
+    <item time="18" type="XY" tween="true" startValue="0,0" endValue="-2224,0" duration="18"/>
+  </transition>
+</component>

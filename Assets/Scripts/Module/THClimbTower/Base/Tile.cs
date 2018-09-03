@@ -8,6 +8,7 @@ namespace THClimbTower
 {
     public class Tile : Model.Entity
     {
+        public int X, Y;
         public TileTypeEnum TileType;
         public int Level;
         public List<Tile> Next = new List<Tile>();

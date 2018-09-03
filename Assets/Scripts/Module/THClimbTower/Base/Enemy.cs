@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    public abstract class Enemy : Charactor
+    public abstract class Enemy : BattleCharactor
     {
         public int X, Y;
         public EnemyCard SelectedSkill;
@@ -23,6 +23,10 @@ namespace THClimbTower
             SelectedSkill = AIThink();
             Predict();            
         }
+        /// <summary>
+        /// 以玩家为目标使用预测的技能
+        /// </summary>
+        /// <returns></returns>
         public Task UseSkill()
         {
             return UseCard(SelectedSkill, Game.Instance.NowBattle.player);

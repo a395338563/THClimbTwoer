@@ -10,11 +10,11 @@ namespace THClimbTower
     {
         public int LastTime { get; set; }
 
-        public Charactor Owner
+        public BattleCharactor Owner
         {
             get
             {
-                return Parent as Charactor;
+                return Parent as BattleCharactor;
             }
         }
         public abstract Task<object> RunEvent(EventType eventType, object o, params object[] args);

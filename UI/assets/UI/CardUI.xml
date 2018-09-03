@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="294,416" pivot="0.5,0.5" anchor="true" bgColor="#000000">
+  <displayList>
+    <graph id="n16_g3bn" name="Trail" xy="151,194" pivot="0.5,0.5" anchor="true" size="100,100"/>
+    <image id="n15_l39c" name="Shadow" src="gt454v" fileName="CardUI/card_super_shadow.png" xy="-105,-42" pivot="0.5,0.5" scale="1.03,1.03" color="#66ccff"/>
+    <image id="n14_gt45" name="n0" src="gt454v" fileName="CardUI/card_super_shadow.png" xy="-105,-42" pivot="0.5,0.5" scale="1.03,1.03" alpha="0" color="#66ccff"/>
+    <loader id="n8_mcmm" name="Bg" xy="-110,-50" size="512,512" touchable="false" url="ui://p2tnfz1ugt4559"/>
+    <loader id="n9_ue77" name="CardImage" xy="22,43" size="248,186" touchable="false" url="ui://p2tnfz1upr125m" align="center" vAlign="middle" fill="scale" autoSize="true"/>
+    <loader id="n10_ue77" name="CardFrame" xy="-110,-50" size="512,512" touchable="false" url="ui://p2tnfz1ugt454x"/>
+    <loader id="n11_ue77" name="CardBanner" xy="-110,-50" size="512,512" touchable="false" url="ui://p2tnfz1ugt4556" fill="scale"/>
+    <text id="n3_mcmm" name="CardName" xy="78,-4" pivot="0.5,0.5" size="129,71" fontSize="25" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" shadowColor="#000000" shadowOffset="1,1" text="打击"/>
+    <text id="n5_mcmm" name="CardType" xy="130,217" size="35,22" fontSize="14" align="center" vAlign="middle" bold="true" text="技能"/>
+    <text id="n6_mcmm" name="CardDesc" xy="26,267" pivot="0.5,0.5" size="240,99" fontSize="18" color="#ffffff" align="center" vAlign="middle" autoSize="height" bold="true" text="造成 6 点伤害111111111111111111111111111111111111111111111111111111111111111111111111111111"/>
+    <loader id="n12_ue77" name="CardOrb" xy="-110,-50" size="512,512" group="n13_gt45" touchable="false" url="ui://p2tnfz1ugt455h" fill="scale"/>
+    <text id="n7_mcmm" name="CardCost" xy="1,-11" size="23,54" group="n13_gt45" font="Noto Sans Mono CJK SC Regular" fontSize="34" color="#ffffff" align="center" vAlign="middle" bold="true" strokeColor="#000000" strokeSize="2" text="1"/>
+    <group id="n13_gt45" name="n13" xy="-110,-50" size="512,512"/>
+  </displayList>
+  <transition name="CanUse">
+    <item time="0" type="Alpha" target="n14_gt45" tween="true" startValue="1" endValue="0" duration="6"/>
+    <item time="0" type="Scale" target="n14_gt45" tween="true" startValue="1.03,1.03" endValue="1.5,1.5" duration="6"/>
+  </transition>
+</component>

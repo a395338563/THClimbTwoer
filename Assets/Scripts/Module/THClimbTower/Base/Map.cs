@@ -8,9 +8,9 @@ namespace THClimbTower
 {
     public class Map : Model.Entity
     {
-        public List<Tile> tiles;
+        public int LevelNum, StartLevel, MinLine, MaxLine, MaxHeight, MaxWidth;
 
-        int MaxWidth;
+        public List<Tile> tiles;
 
         Tile NowTile;
 

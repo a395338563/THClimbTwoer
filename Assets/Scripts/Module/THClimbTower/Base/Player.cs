@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    public class Player : Charactor
+    /// <summary>
+    /// 进入战斗大地图后的玩家信息
+    /// </summary>
+    public class Player : BattleCharactor
     {
         public CharactorTypeEnum MainCharactorType, HelpCharactorType;
         public int Gold;
         public int Power;
         public int MaxPower;
-        public List<PlayerCard> PlayerCards = new List<PlayerCard>();
+        public List<PlayerCard> Deck = new List<PlayerCard>();
         public List<Relic> Relics = new List<Relic>();
         public List<Potion> potions = new List<Potion>();
 
@@ -37,8 +40,10 @@ namespace THClimbTower
                     BaseDesc = "造成$Damage$点伤害",
                     BaseDamage = 6,
                 };
-                PlayerCards.Add(t);
+                Deck.Add(t);
             }
+            potions.Add(new TestPotion());
+            AddRelics(new TestRelic());
         }
         /// <summary>
         /// 获得遗物

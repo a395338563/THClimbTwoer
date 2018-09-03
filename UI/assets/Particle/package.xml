@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="ybob7dil" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="l5sr0" name="p1.png" path="/" exported="true"/>
+    <image id="l5sr1" name="p2.png" path="/" exported="true"/>
+    <image id="l5sr2" name="p3.png" path="/" exported="true"/>
+    <image id="l5sr3" name="p4.png" path="/" exported="true"/>
+    <image id="l5sr4" name="p5.png" path="/" exported="true"/>
+    <image id="l5sr5" name="p6.png" path="/" exported="true"/>
+  </resources>
+  <publish name="Particle" path="E:\Project\StsForMobile\Main\Assets\Resources\AssetBundle\UI"/>
+</packageDescription>

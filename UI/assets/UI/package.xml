@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="p2tnfz1u" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="i6400" name="QQ截图20180706111534.png" path="/"/>
+    <component id="dass1" name="Component1.xml" path="/"/>
+    <image id="dass3" name="Title.png" path="/"/>
+    <image id="mcmm4" name="SlashLight.png" path="/特效/Battle/" exported="true"/>
+    <component id="mcmm5" name="SlashLine.xml" path="/" exported="true"/>
+    <image id="mcmm6" name="SlashHeavy.png" path="/特效/Battle/" exported="true"/>
+    <component id="mcmmm" name="CardUI.xml" path="/" exported="true"/>
+    <image id="mcmmp" name="elite.png" path="/大地图UI/"/>
+    <image id="mcmmq" name="eliteOutline.png" path="/大地图UI/"/>
+    <image id="mcmmr" name="event.png" path="/大地图UI/"/>
+    <image id="mcmms" name="eventOutline.png" path="/大地图UI/"/>
+    <image id="mcmmt" name="legend2.png" path="/大地图UI/"/>
+    <image id="mcmmu" name="mapBlend.png" path="/大地图UI/"/>
+    <image id="mcmmv" name="mapBlend2.png" path="/大地图UI/"/>
+    <image id="mcmmw" name="mapBot.png" path="/大地图UI/"/>
+    <image id="mcmmx" name="mapCompleteIcon.png" path="/大地图UI/"/>
+    <image id="mcmmy" name="mapMid.png" path="/大地图UI/" scale="" scale9grid="480,270,960,540" gridTile="16" qualityOption="source" duplicatePadding="true"/>
+    <image id="mcmmz" name="mapMid2.png" path="/大地图UI/"/>
+    <image id="mcmm10" name="mapShrineIcon.png" path="/大地图UI/"/>
+    <image id="mcmm11" name="mapTop.png" path="/大地图UI/"/>
+    <image id="mcmm12" name="monster.png" path="/大地图UI/"/>
+    <image id="mcmm13" name="monsterOutline.png" path="/大地图UI/"/>
+    <image id="mcmm14" name="purgeWellIcon.png" path="/大地图UI/"/>
+    <image id="mcmm15" name="rest.png" path="/大地图UI/"/>
+    <image id="mcmm16" name="restOutline.png" path="/大地图UI/"/>
+    <image id="mcmm17" name="selectBox.png" path="/大地图UI/"/>
+    <image id="mcmm18" name="shop.png" path="/大地图UI/"/>
+    <image id="mcmm19" name="shopOutline.png" path="/大地图UI/"/>
+    <image id="mcmm1a" name="chest.png" path="/大地图UI/"/>
+    <image id="mcmm1b" name="chestOutline.png" path="/大地图UI/"/>
+    <image id="mcmm1c" name="circle1.png" path="/大地图UI/"/>
+    <image id="mcmm1d" name="circle2.png" path="/大地图UI/"/>
+    <image id="mcmm1e" name="circle3.png" path="/大地图UI/"/>
+    <image id="mcmm1f" name="circle4.png" path="/大地图UI/"/>
+    <image id="mcmm1g" name="circle5.png" path="/大地图UI/"/>
+    <image id="mcmm1h" name="dot1.png" path="/大地图UI/" exported="true"/>
+    <image id="mcmm1i" name="automaton.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1j" name="awakened.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1k" name="champ.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1l" name="collector.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1m" name="donu.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1n" name="guardian.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1o" name="hexaghost.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1p" name="slime.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1q" name="timeeater.png" path="/大地图UI/boss/"/>
+    <image id="mcmm1r" name="automaton.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1s" name="awakened.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1t" name="champ.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1u" name="collector.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1v" name="donu.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1w" name="guardian.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1x" name="hexaghost.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1y" name="slime.png" path="/大地图UI/bossOutline/"/>
+    <image id="mcmm1z" name="timeeater.png" path="/大地图UI/bossOutline/"/>
+    <component id="mcmm20" name="MapBackground.xml" path="/"/>
+    <component id="mcmm21" name="Map.xml" path="/" exported="true"/>
+    <component id="mcmm23" name="BossButton.xml" path="/大地图UI/boss/"/>
+    <component id="mcmm24" name="RoomButton.xml" path="/大地图UI/" exported="true"/>
+    <movieclip id="mcmm25" name="SelectRoom.jta" path="/大地图UI/"/>
+    <image id="mbp826" name="attackBuff.png" path="/图标集合/意图图标/"/>
+    <image id="mbp827" name="attackDebuff.png" path="/图标集合/意图图标/"/>
+    <image id="mbp828" name="attackDefend.png" path="/图标集合/意图图标/"/>
+    <image id="mbp829" name="buff1.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82a" name="debuff1.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82b" name="debuff2.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82c" name="debuffVFX1.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82d" name="defend.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82e" name="defendBuff.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82f" name="escape.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82g" name="magic.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82h" name="sleep.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82i" name="special.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82j" name="stun.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82k" name="unknown.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82l" name="attack6.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82m" name="attack7.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82n" name="attack1.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82o" name="attack2.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82p" name="attack3.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82q" name="attack4.png" path="/图标集合/意图图标/"/>
+    <image id="mbp82r" name="attack5.png" path="/图标集合/意图图标/"/>
+    <component id="mbp82s" name="Intent.xml" path="/图标集合/意图图标/" exported="true"/>
+    <image id="k8zt2t" name="endTurnButton.png" path="/战斗UI/"/>
+    <image id="k8zt2u" name="endTurnButtonGlow.png" path="/战斗UI/"/>
+    <image id="k8zt2w" name="bar.png" path="/战斗UI/"/>
+    <image id="k8zt2x" name="deck.png" path="/战斗UI/"/>
+    <component id="k8zt2y" name="BattleUI.xml" path="/" exported="true"/>
+    <image id="k8zt34" name="scene_scene_4.png" path="/场景图片/"/>
+    <image id="k8zt35" name="scene_scene_5.png" path="/场景图片/"/>
+    <image id="k8zt36" name="scene2_scene2_0.png" path="/场景图片/"/>
+    <image id="k8zt37" name="scene2_scene2_1.png" path="/场景图片/"/>
+    <image id="k8zt38" name="scene2_scene2_2.png" path="/场景图片/"/>
+    <image id="k8zt39" name="scene2_scene2_3.png" path="/场景图片/"/>
+    <image id="k8zt3a" name="scene2_scene2_4.png" path="/场景图片/"/>
+    <image id="k8zt3b" name="scene2_scene2_5.png" path="/场景图片/"/>
+    <image id="k8zt3c" name="scene2_scene2_6.png" path="/场景图片/"/>
+    <image id="k8zt3d" name="scene2_scene2_7.png" path="/场景图片/"/>
+    <image id="k8zt3e" name="scene2_scene2_8.png" path="/场景图片/"/>
+    <image id="k8zt3f" name="scene2_scene2_9.png" path="/场景图片/"/>
+    <image id="k8zt3g" name="scene2_scene2_10.png" path="/场景图片/"/>
+    <image id="k8zt3h" name="scene2_scene2_11.png" path="/场景图片/"/>
+    <image id="k8zt3i" name="scene_scene_0.png" path="/场景图片/"/>
+    <image id="k8zt3l" name="scene_scene_3.png" path="/场景图片/"/>
+    <image id="k8zt3m" name="scene2.jpg" path="/场景图片/"/>
+    <image id="k8zt3n" name="scene3.jpg" path="/场景图片/"/>
+    <image id="k8zt3o" name="scene.jpg" path="/场景图片/"/>
+    <image id="k8zt3p" name="QQ截图20180710152612.png" path="/"/>
+    <image id="i0hd3q" name="scrollBarTrackMid.png" path="/通用UI/" scale="9grid" scale9grid="0,24,49,52"/>
+    <image id="i0hd3r" name="scrollBarTrain.png" path="/通用UI/"/>
+    <image id="odg13z" name="scrollBarTrackMid2.png" path="/通用UI/" scale="9grid" scale9grid="25,13,50,26"/>
+    <component id="odg144" name="ScrollBarV_grip.xml" path="/通用UI/"/>
+    <component id="odg145" name="ScrollBarV.xml" path="/通用UI/" exported="true"/>
+    <component id="odg146" name="ScrollBar.xml" path="/通用UI/" exported="true"/>
+    <image id="l5sr47" name="shadow.png" path="/战斗UI/"/>
+    <image id="l5sr48" name="DiscardButton.png" path="/战斗UI/"/>
+    <component id="l5sr49" name="EndTurnComponent.xml" path="/战斗UI/"/>
+    <image id="l5sr4a" name="DeckButton.png" path="/战斗UI/"/>
+    <component id="l5sr4b" name="DeckComponent.xml" path="/战斗UI/"/>
+    <component id="l5sr4c" name="DiscardComponent.xml" path="/战斗UI/"/>
+    <component id="k3vi4d" name="HandPileArea.xml" path="/" exported="true"/>
+    <image id="k3vi4e" name="orb3.png" path="/卡牌UI/" exported="true"/>
+    <image id="k3vi4f" name="orb1.png" path="/卡牌UI/" exported="true"/>
+    <image id="k3vi4g" name="orb2.png" path="/卡牌UI/" exported="true"/>
+    <image id="gt454h" name="panelGoldBag.png" path="/战斗UI/"/>
+    <image id="gt454i" name="panelHeart.png" path="/战斗UI/"/>
+    <image id="gt454j" name="map.png" path="/战斗UI/"/>
+    <image id="gt454k" name="settings.png" path="/战斗UI/"/>
+    <image id="gt454l" name="potion_placeholder.png" path="/战斗UI/"/>
+    <component id="gt454m" name="OpenDeck.xml" path="/战斗UI/"/>
+    <component id="gt454n" name="SettingButton.xml" path="/战斗UI/"/>
+    <component id="gt454o" name="MapButton.xml" path="/战斗UI/"/>
+    <image id="gt454q" name="bg_skill_blue.png" path="/卡牌UI/"/>
+    <image id="gt454r" name="bg_skill_gray.png" path="/卡牌UI/"/>
+    <image id="gt454s" name="bg_skill_green.png" path="/卡牌UI/"/>
+    <image id="gt454t" name="bg_skill_red.png" path="/卡牌UI/"/>
+    <image id="gt454u" name="card_shadow.png" path="/卡牌UI/"/>
+    <image id="gt454v" name="card_super_shadow.png" path="/卡牌UI/"/>
+    <image id="gt454w" name="frame_attack_common.png" path="/卡牌UI/"/>
+    <image id="gt454x" name="frame_attack_rare.png" path="/卡牌UI/"/>
+    <image id="gt454y" name="frame_attack_uncommon.png" path="/卡牌UI/"/>
+    <image id="gt454z" name="frame_power_common.png" path="/卡牌UI/"/>
+    <image id="gt4550" name="frame_power_rare.png" path="/卡牌UI/"/>
+    <image id="gt4551" name="frame_power_uncommon.png" path="/卡牌UI/"/>
+    <image id="gt4552" name="frame_skill_common.png" path="/卡牌UI/"/>
+    <image id="gt4553" name="frame_skill_rare.png" path="/卡牌UI/"/>
+    <image id="gt4554" name="frame_skill_uncommon.png" path="/卡牌UI/"/>
+    <image id="gt4555" name="banner_common.png" path="/卡牌UI/"/>
+    <image id="gt4556" name="banner_rare.png" path="/卡牌UI/"/>
+    <image id="gt4557" name="banner_uncommon.png" path="/卡牌UI/"/>
+    <image id="gt4558" name="bg_attack_blue.png" path="/卡牌UI/"/>
+    <image id="gt4559" name="bg_attack_gray.png" path="/卡牌UI/"/>
+    <image id="gt455a" name="bg_attack_green.png" path="/卡牌UI/"/>
+    <image id="gt455b" name="bg_attack_red.png" path="/卡牌UI/"/>
+    <image id="gt455c" name="bg_power_blue.png" path="/卡牌UI/"/>
+    <image id="gt455d" name="bg_power_gray.png" path="/卡牌UI/"/>
+    <image id="gt455e" name="bg_power_green.png" path="/卡牌UI/"/>
+    <image id="gt455f" name="bg_power_red.png" path="/卡牌UI/"/>
+    <image id="gt455g" name="locked_attack.png" path="/卡牌UI/"/>
+    <image id="gt455h" name="card_colorless_orb.png" path="/卡牌UI/"/>
+    <image id="gt455i" name="card_green_orb.png" path="/卡牌UI/"/>
+    <image id="gt455j" name="card_red_orb.png" path="/卡牌UI/"/>
+    <image id="gt455k" name="card_blue_orb.png" path="/卡牌UI/"/>
+    <component id="zetr5l" name="DeckComponent(1).xml" path="/战斗UI/"/>
+    <image id="pr125m" name="anger.png" path="/卡牌UI/"/>
+    <image id="pr125n" name="barricade.png" path="/卡牌UI/"/>
+    <image id="pr125o" name="armaments.png" path="/卡牌UI/"/>
+    <component id="10e885p" name="Scene1.xml" path="/" exported="true"/>
+    <image id="jw0q85r" name="layer1.png" path="/顶部UI/red/"/>
+    <image id="jw0q85s" name="layer1d.png" path="/顶部UI/red/"/>
+    <image id="jw0q85t" name="layer2.png" path="/顶部UI/red/"/>
+    <image id="jw0q85u" name="layer2d.png" path="/顶部UI/red/"/>
+    <image id="jw0q85v" name="layer3.png" path="/顶部UI/red/"/>
+    <image id="jw0q85w" name="layer3d.png" path="/顶部UI/red/"/>
+    <image id="jw0q85x" name="layer4.png" path="/顶部UI/red/"/>
+    <image id="jw0q85y" name="layer4d.png" path="/顶部UI/red/"/>
+    <image id="jw0q85z" name="layer5.png" path="/顶部UI/red/"/>
+    <image id="jw0q860" name="layer5d.png" path="/顶部UI/red/"/>
+    <image id="jw0q861" name="layer6.png" path="/顶部UI/red/"/>
+    <image id="jw0q862" name="1.png" path="/顶部UI/blue/"/>
+    <image id="jw0q863" name="1d.png" path="/顶部UI/blue/"/>
+    <image id="jw0q864" name="2.png" path="/顶部UI/blue/"/>
+    <image id="jw0q865" name="2d.png" path="/顶部UI/blue/"/>
+    <image id="jw0q866" name="3.png" path="/顶部UI/blue/"/>
+    <image id="jw0q867" name="3d.png" path="/顶部UI/blue/"/>
+    <image id="jw0q868" name="4.png" path="/顶部UI/blue/"/>
+    <image id="jw0q869" name="4d.png" path="/顶部UI/blue/"/>
+    <image id="jw0q86a" name="5.png" path="/顶部UI/blue/"/>
+    <image id="jw0q86b" name="5d.png" path="/顶部UI/blue/"/>
+    <image id="jw0q86c" name="border.png" path="/顶部UI/blue/"/>
+    <image id="jw0q86d" name="layer1.png" path="/顶部UI/green/"/>
+    <image id="jw0q86e" name="layer1d.png" path="/顶部UI/green/"/>
+    <image id="jw0q86f" name="layer2.png" path="/顶部UI/green/"/>
+    <image id="jw0q86g" name="layer2d.png" path="/顶部UI/green/"/>
+    <image id="jw0q86h" name="layer3.png" path="/顶部UI/green/"/>
+    <image id="jw0q86i" name="layer3d.png" path="/顶部UI/green/"/>
+    <image id="jw0q86j" name="layer4.png" path="/顶部UI/green/"/>
+    <image id="jw0q86k" name="layer4d.png" path="/顶部UI/green/"/>
+    <image id="jw0q86l" name="layer5.png" path="/顶部UI/green/"/>
+    <image id="jw0q86m" name="layer5d.png" path="/顶部UI/green/"/>
+    <image id="jw0q86n" name="layer6.png" path="/顶部UI/green/"/>
+    <image id="jw0q86o" name="whiteRing.png" path="/顶部UI/"/>
+    <image id="jw0q86p" name="energyGreenVFX.png" path="/顶部UI/"/>
+    <image id="jw0q86q" name="energyRedVFX.png" path="/顶部UI/"/>
+    <image id="jw0q86r" name="energyBlueVFX.png" path="/顶部UI/"/>
+    <font id="l39c86s" name="EnergyNumber.fnt" path="/字体文件/Number/" exported="true"/>
+    <image id="l39c86u" name="1-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c86v" name="1.png" path="/字体文件/Number/"/>
+    <image id="l39c86w" name="2-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c86x" name="2.png" path="/字体文件/Number/"/>
+    <image id="l39c86y" name="3-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c86z" name="3.png" path="/字体文件/Number/"/>
+    <image id="l39c870" name="4-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c871" name="4.png" path="/字体文件/Number/"/>
+    <image id="l39c872" name="0-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c873" name="0.png" path="/字体文件/Number/"/>
+    <image id="l39c874" name="5-OutLine.png" path="/字体文件/Number/"/>
+    <image id="l39c875" name="5.png" path="/字体文件/Number/"/>
+    <image id="l39c876" name="6-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c877" name="6.png" path="/字体文件/Number/"/>
+    <image id="l39c878" name="7-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c879" name="7.png" path="/字体文件/Number/"/>
+    <image id="l39c87a" name="8-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c87b" name="8.png" path="/字体文件/Number/"/>
+    <image id="l39c87c" name="9-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c87d" name="9.png" path="/字体文件/Number/"/>
+    <font id="l39c87e" name="EnergyNumberOutline.fnt" path="/字体文件/Number/" exported="true"/>
+    <image id="l39c87f" name="slash-Outline.png" path="/字体文件/Number/"/>
+    <image id="l39c87g" name="slash.png" path="/字体文件/Number/"/>
+    <component id="l39c87i" name="RedEnergy.xml" path="/顶部UI/Component/Energy/" exported="true"/>
+    <component id="l39c87j" name="GreenEnergy.xml" path="/顶部UI/Component/Energy/" exported="true"/>
+    <component id="l39c87l" name="EnergyNum.xml" path="/顶部UI/Component/Energy/"/>
+    <image id="l39c87v" name="HpBar.png" path="/战斗UI/" scale="9grid" scale9grid="3,3,15,4"/>
+    <image id="l39c87w" name="HpBody.png" path="/战斗UI/" scale="9grid" scale9grid="6,9,19,2"/>
+    <component id="l39c87x" name="HpBar.xml" path="/战斗UI/" exported="true"/>
+    <image id="gmzy87y" name="biteTop.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy87z" name="biteBot.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy880" name="shield.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy881" name="slash_horizontal.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy882" name="slash_vertical.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy883" name="slash1.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy884" name="slash2.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy885" name="blunt_heavy.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy886" name="blunt_light.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy887" name="fire.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy888" name="poison.png" path="/特效/Battle/" exported="true"/>
+    <image id="gmzy8aj" name="block.png" path="/战斗UI/"/>
+    <image id="gmzy8ak" name="blockL.png" path="/战斗UI/"/>
+    <image id="gmzy8al" name="blockR.png" path="/战斗UI/"/>
+    <image id="gmzy8am" name="accuracy.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8an" name="afterImage.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ao" name="ai.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ap" name="anger.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8aq" name="armor.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ar" name="artifact.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8as" name="attackBurn.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8at" name="barricade.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8au" name="bias.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8av" name="blur.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8aw" name="buffer.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ax" name="cache.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ay" name="carddraw.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8az" name="cExplosion.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b0" name="channel.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b1" name="choke.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b2" name="combust.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b3" name="confusion.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b4" name="conserve.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b5" name="constricted.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b6" name="corruption.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b7" name="curiosity.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b8" name="darkembrace.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8b9" name="defenseNext.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ba" name="demonForm.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bb" name="dexterity.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bc" name="draw.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bd" name="draw2.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8be" name="drawDown.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bf" name="echo.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bg" name="energized_blue.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bh" name="energized_green.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bi" name="entangle.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bj" name="evolve.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bk" name="explosive.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bl" name="fading.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bm" name="firebreathing.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bn" name="flameBarrier.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bo" name="flex.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bp" name="flight.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bq" name="focus.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8br" name="forcefield.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bs" name="frail.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bt" name="heatsink.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bu" name="hello.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bv" name="hex.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bw" name="infinitegreen.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bx" name="int.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8by" name="lessdraw.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8bz" name="lockon.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c0" name="loop.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c1" name="mastery.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c2" name="mayhem.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c3" name="minion.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c4" name="modeShift.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c5" name="noattack.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c6" name="noDraw.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c7" name="painfulStabs.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c8" name="platedarmor.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8c9" name="poison.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ca" name="prime.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cb" name="primitive.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cc" name="rebound.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cd" name="regen.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ce" name="regrow.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cf" name="repair.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cg" name="retain.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ch" name="ritual.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ci" name="shackle.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cj" name="sharpHide.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ck" name="skillBurn.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cl" name="split.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cm" name="sporeCloud.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cn" name="stasis.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8co" name="static_discharge.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cp" name="storm.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cq" name="strength.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cr" name="thievery.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cs" name="thorns.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8ct" name="time.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cu" name="unawakened.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cv" name="vulnerable.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cw" name="weak.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cx" name="winter.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8cy" name="wraithForm.png" path="/图标集合/Buff图标/"/>
+    <component id="gmzy8cz" name="BuffIcon.xml" path="/战斗UI/"/>
+    <component id="gmzy8d0" name="BattleStart.xml" path="/战斗UI/" exported="true"/>
+    <image id="gmzy8d1" name="battleStartSword.png" path="/战斗UI/"/>
+    <component id="d54z8d2" name="Component2.xml" path="/"/>
+    <component id="j2gj8d3" name="Potion.xml" path="/"/>
+  </resources>
+  <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI" genCode="true"/>
+</packageDescription>

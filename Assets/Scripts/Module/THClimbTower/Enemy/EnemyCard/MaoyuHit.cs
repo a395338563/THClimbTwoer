@@ -14,9 +14,10 @@ namespace THClimbTower
             return basePredict;
         }
 
-        public override async Task Use(Charactor user, Charactor reciver)
+        public override async Task Use(BattleCharactor user, BattleCharactor reciver)
         {
             Model.Log.Debug($"{user.Name} hit the {reciver.Name}");
+            //模拟等待技能动画
             await Task.Delay(1000);
             await reciver.ReciveDamage(new DamageInfo() { Damage = 15 });
         }

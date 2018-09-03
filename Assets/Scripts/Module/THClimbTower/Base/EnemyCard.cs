@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
+    /// <summary>
+    /// 怪物使用的技能，需要实现预测
+    /// </summary>
     public abstract class EnemyCard : Card
     {
         public abstract Task<EnemyPredict> GetPredict();

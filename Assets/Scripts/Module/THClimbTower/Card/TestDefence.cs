@@ -8,7 +8,7 @@ namespace THClimbTower
 {
     public class TestDefence : PlayerCard
     {
-        public override Task Use(Charactor user, Charactor reciver)
+        public override Task Use(BattleCharactor user, BattleCharactor reciver)
         {
             Buff_Armor armor = user.GetBuff<Buff_Armor>();
             armor.LastTime += 5;
@@ -17,7 +17,7 @@ namespace THClimbTower
             return Task.CompletedTask;
         }
 
-        public override async Task<bool> UseAble(Charactor reciver)
+        public override async Task<bool> UseAble(BattleCharactor reciver)
         {
             return true;
         }

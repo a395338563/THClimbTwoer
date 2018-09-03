@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="50,200" extention="ScrollBar">
+  <displayList>
+    <image id="n1" name="n1" src="i0hd3q" fileName="CommonUI/scrollBarTrackMid.png" xy="0,0" size="50,200">
+      <relation target="" sidePair="height-height"/>
+    </image>
+    <graph id="n2" name="bar" xy="0,8" size="50,253">
+      <relation target="" sidePair="height-height"/>
+    </graph>
+    <component id="n5" name="grip" src="odg144" fileName="CommonUI/ScrollBar1_grip.xml" xy="7,9"/>
+  </displayList>
+  <ScrollBar/>
+</component>

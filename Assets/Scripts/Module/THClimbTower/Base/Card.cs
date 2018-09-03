@@ -12,6 +12,6 @@ namespace THClimbTower
     public abstract class Card : EventInfo
     {
         public int BaseDamage, Damage, BaseArmor, Armor, BaseHits, Hits;
-        public abstract Task Use(Charactor user, Charactor reciver);
+        public abstract Task Use(BattleCharactor user, BattleCharactor reciver);
     }
 }

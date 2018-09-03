@@ -72,7 +72,7 @@ namespace THClimbTower
             List<SortWatcher> list;
             if (!dic.TryGetValue(eventType, out list))
             {
-                Log.Warning($"Cant find eventType:{eventType}");
+                Log.Warning($"There's no this type event watcher:{eventType}");
                 return o;
             }
             foreach (SortWatcher CardEventWatcher in list)

@@ -22,7 +22,7 @@ namespace THClimbTower
         /// </summary>
         /// <param name="Index"></param>
         /// <param name="reciver">目标，可为空</param>
-        public async void PlayerUseCard(int Index, Charactor reciver)
+        public async void PlayerUseCard(int Index, BattleCharactor reciver)
         {
             Card card = Hand[Index];
             await player.UseCard(card, reciver);
@@ -33,7 +33,7 @@ namespace THClimbTower
         /// <param name="enemyTeam"></param>
         /// <param name="enemies"></param>
         /// <returns></returns>
-        /*public async Task StartBattle(EnemyTeamConfig enemyTeam)
+        public async Task StartBattle(EnemyTeam enemyTeam)
         {
             Deck = new List<PlayerCard>();
             Hand = new List<PlayerCard>();
@@ -41,7 +41,7 @@ namespace THClimbTower
             Gap = new List<PlayerCard>();
             player = Game.Instance.player;
             Enemys = new List<Enemy>();
-            foreach (var a in enemyTeam.IDs)
+            foreach (var a in enemyTeam.Team)
             {
                 Enemy e = Game.Instance.GetComponent<EnemyFatory>().Get(a);
                 Enemys.Add(e);
@@ -49,13 +49,33 @@ namespace THClimbTower
             Turn = 0;
             GameEnd = false;
 
-            foreach (PlayerCard p in player.PlayerCards)
+            foreach (PlayerCard p in player.Deck)
             {
                 Deck.Add(p);
             }
             await Game.EventSystem.RunEvent<EventInfo>(EventType.BattleStart, null);
             GameCircle();
-        }*/
+        }
+
+        public async Task StartBattle(List<Enemy> enemies)
+        {
+            Deck = new List<PlayerCard>();
+            Hand = new List<PlayerCard>();
+            Cemetery = new List<PlayerCard>();
+            Gap = new List<PlayerCard>();
+            player = Game.Instance.player;
+            Enemys = new List<Enemy>(enemies);
+            Turn = 0;
+            GameEnd = false;
+
+            foreach (PlayerCard p in player.Deck)
+            {
+                Deck.Add(p);
+            }
+            await Game.EventSystem.RunEvent<EventInfo>(EventType.BattleStart, null);
+            GameCircle();
+        }
+
         /// <summary>
         /// 预测敌人行动
         /// </summary>

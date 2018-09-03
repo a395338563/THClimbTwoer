@@ -1,0 +1,15 @@
+{
+	"buttonClickSound":"",
+	"colorScheme":["自定义颜色 #FF0000"],
+	"font":"Kreon",
+	"fontScheme":["数字 Noto Sans Mono CJK SC Regular","思源宋体 Source Han Serif SC","思源宋体粗 Source Han Serif SC Medium","英文数字 Kreon"],
+	"fontSize":12,
+	"fontSizeScheme":[""],
+	"scrollBars":{
+		"defaultDisplay":"visible",
+		"horizontal":"ui://p2tnfz1uodg146",
+		"vertical":"ui://p2tnfz1uodg145"
+	},
+	"textColor":"#000000",
+	"tipsRes":""
+}

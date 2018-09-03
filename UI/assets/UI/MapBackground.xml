@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080" overflow="scroll" scrollBarFlags="640" bgColor="#000000" adaptationTest="FitSize">
+  <displayList>
+    <graph id="n12_mcmm" name="n12" xy="-64,-4" size="2032,3262" type="rect" fillColor="#ff000000">
+      <relation target="n7_mcmm" sidePair="bottomext-bottom"/>
+    </graph>
+    <image id="n9_mcmm" name="n9" src="mcmm11" fileName="大地图UI/mapTop.png" xy="959,1079" pivot="0.5,1" anchor="true" size="1920,1080"/>
+    <image id="n0_mcmm" name="n0" src="mcmmy" fileName="大地图UI/mapMid.png" xy="0,1080" size="1920,1080"/>
+    <image id="n10_mcmm" name="n10" src="mcmmu" fileName="大地图UI/mapBlend.png" xy="0,820" size="1920,512"/>
+    <image id="n7_mcmm" name="n7" src="mcmmw" fileName="大地图UI/mapBot.png" xy="0,2160" size="1920,1080"/>
+    <image id="n8_mcmm" name="n8" src="mcmmu" fileName="大地图UI/mapBlend.png" xy="-5,1907" size="1920,512"/>
+    <component id="n13_mcmm" name="n13" src="mcmm23" fileName="大地图UI/boss/BossButton.xml" xy="703,100" size="512,512"/>
+  </displayList>
+</component>
