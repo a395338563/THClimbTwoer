@@ -40,9 +40,7 @@ namespace THClimbTower
         public Battle NowBattle;
 
         public Map NowMap;
-
-        public Random RandomSeed;
-
+        
         public async void StartGame(CharactorTypeEnum mainCharactor, CharactorTypeEnum helpCharactor)
         {
             Instance.player = new Player()
@@ -52,7 +50,7 @@ namespace THClimbTower
             };
             player.Init();
 
-            RandomSeed = new Random(1);
+            RandomUtil.SetSeed(1);
 
             instance.NowMap = new Map();
             NowMap.Creat(5, 0);

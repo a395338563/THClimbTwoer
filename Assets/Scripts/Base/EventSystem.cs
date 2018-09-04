@@ -8,12 +8,6 @@ namespace Model
 {
     public class EventSystem : Component
     {
-        //UnOrderMultiMap<Type, IAwake> awakeSystems = new UnOrderMultiMap<Type, IAwake>();
-
-        //UnOrderMultiMap<Type, IUpdate> updateSystems = new UnOrderMultiMap<Type, IUpdate>();
-
-        //List<IUpdate> UpdateComponent = new List<IUpdate>();
-
         Dictionary<long, IUpdate> UpdateComponent = new Dictionary<long, IUpdate>();
 
         public void Add(Component component)
@@ -26,6 +20,14 @@ namespace Model
             {
                 //updateSystems.Add(component.GetType(), component as IUpdate);
                 UpdateComponent.Add(component.Id, component as IUpdate);
+            }
+        }
+
+        public void Remove(Component component)
+        {
+            if (component is IUpdate)
+            {
+                UpdateComponent.Remove(component.Id);
             }
         }
 

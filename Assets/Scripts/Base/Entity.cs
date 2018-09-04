@@ -42,6 +42,8 @@ namespace Model
             }
             componentDict.Remove(type);
 
+            Game.EventSystem.Remove(component);
+
             component.Dispose();
         }
         public T GetComponent<T>()where T : Component

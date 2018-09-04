@@ -12,6 +12,7 @@ namespace THClimbTower
         public string Desc;
         public string Pic;
         public int Cost;
+        public CardTypeEnum CardType;
 
         public string BaseDesc;
 
@@ -36,6 +37,12 @@ namespace THClimbTower
         public string GetFinalDesc()
         {
             return Desc;
+        }
+        public enum CardTypeEnum
+        {
+            Attack,
+            Skill,
+            Ablity,
         }
     }
 }

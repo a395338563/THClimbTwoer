@@ -9,8 +9,8 @@ namespace THClimbTower
 {
     public abstract class Relic : Entity
     {
-        public string Name;
-        public string Icon;
+        public virtual string Name { get; set; }
+        public virtual string Icon { get; set; }
         public abstract Task Use();
     }
 }

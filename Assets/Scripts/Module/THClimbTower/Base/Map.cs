@@ -59,7 +59,7 @@ namespace THClimbTower
                 last = now;
                 now = new List<Tile>();
                 //生成本层节点
-                int num = Game.Instance.RandomSeed.Next(MinLine, MaxLine + 1);
+                int num = RandomUtil.Next(MinLine, MaxLine + 1);
                 for (int j = 0; j < num; j++)
                 {
                     Tile t = TileFactory.CreatRandom();
@@ -80,7 +80,7 @@ namespace THClimbTower
                             ex[ex.Length - 1] = Count;
                             continue;
                         }
-                        int r = Game.Instance.RandomSeed.Next(0, Count);
+                        int r = RandomUtil.Next(0, Count);
                         Count -= r;
                         ex[j] = r;
                     }
@@ -105,7 +105,7 @@ namespace THClimbTower
                             ex[ex.Length - 1] = Count;
                             continue;
                         }
-                        int r = Game.Instance.RandomSeed.Next(0, Count);
+                        int r = RandomUtil.Next(0, Count);
                         Count -= r;
                         ex[j] = r;
                     }

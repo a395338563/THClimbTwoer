@@ -9,6 +9,9 @@ namespace THClimbTower
     [EventWatcher(new EventType[] { EventType.BattleStart})]
     public class TestRelic : Relic,iEventWatcher
     {
+        public override string Icon { get; set; } = "ui://UI/ai";
+        public override string Name { get; set; } = "测试遗物";
+
         public async Task<object> RunEvent(EventType eventType, object o, params object[] args)
         {
             Model.Log.Debug("这遗物没什么卵用，就是提醒你一下战斗开始了");

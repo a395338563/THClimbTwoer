@@ -249,96 +249,97 @@
     <image id="gmzy8aj" name="block.png" path="/战斗UI/"/>
     <image id="gmzy8ak" name="blockL.png" path="/战斗UI/"/>
     <image id="gmzy8al" name="blockR.png" path="/战斗UI/"/>
-    <image id="gmzy8am" name="accuracy.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8an" name="afterImage.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ao" name="ai.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ap" name="anger.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8aq" name="armor.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ar" name="artifact.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8as" name="attackBurn.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8at" name="barricade.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8au" name="bias.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8av" name="blur.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8aw" name="buffer.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ax" name="cache.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ay" name="carddraw.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8az" name="cExplosion.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b0" name="channel.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b1" name="choke.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b2" name="combust.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b3" name="confusion.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b4" name="conserve.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b5" name="constricted.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b6" name="corruption.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b7" name="curiosity.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b8" name="darkembrace.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8b9" name="defenseNext.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ba" name="demonForm.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bb" name="dexterity.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bc" name="draw.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bd" name="draw2.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8be" name="drawDown.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bf" name="echo.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bg" name="energized_blue.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bh" name="energized_green.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bi" name="entangle.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bj" name="evolve.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bk" name="explosive.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bl" name="fading.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bm" name="firebreathing.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bn" name="flameBarrier.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bo" name="flex.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bp" name="flight.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bq" name="focus.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8br" name="forcefield.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bs" name="frail.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bt" name="heatsink.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bu" name="hello.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bv" name="hex.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bw" name="infinitegreen.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bx" name="int.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8by" name="lessdraw.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8bz" name="lockon.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c0" name="loop.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c1" name="mastery.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c2" name="mayhem.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c3" name="minion.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c4" name="modeShift.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c5" name="noattack.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c6" name="noDraw.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c7" name="painfulStabs.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c8" name="platedarmor.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8c9" name="poison.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ca" name="prime.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cb" name="primitive.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cc" name="rebound.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cd" name="regen.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ce" name="regrow.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cf" name="repair.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cg" name="retain.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ch" name="ritual.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ci" name="shackle.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cj" name="sharpHide.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ck" name="skillBurn.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cl" name="split.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cm" name="sporeCloud.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cn" name="stasis.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8co" name="static_discharge.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cp" name="storm.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cq" name="strength.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cr" name="thievery.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cs" name="thorns.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8ct" name="time.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cu" name="unawakened.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cv" name="vulnerable.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cw" name="weak.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cx" name="winter.png" path="/图标集合/Buff图标/"/>
-    <image id="gmzy8cy" name="wraithForm.png" path="/图标集合/Buff图标/"/>
+    <image id="gmzy8am" name="accuracy.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8an" name="afterImage.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ao" name="ai.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ap" name="anger.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8aq" name="armor.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ar" name="artifact.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8as" name="attackBurn.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8at" name="barricade.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8au" name="bias.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8av" name="blur.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8aw" name="buffer.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ax" name="cache.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ay" name="carddraw.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8az" name="cExplosion.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b0" name="channel.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b1" name="choke.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b2" name="combust.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b3" name="confusion.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b4" name="conserve.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b5" name="constricted.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b6" name="corruption.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b7" name="curiosity.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b8" name="darkembrace.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8b9" name="defenseNext.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ba" name="demonForm.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bb" name="dexterity.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bc" name="draw.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bd" name="draw2.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8be" name="drawDown.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bf" name="echo.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bg" name="energized_blue.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bh" name="energized_green.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bi" name="entangle.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bj" name="evolve.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bk" name="explosive.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bl" name="fading.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bm" name="firebreathing.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bn" name="flameBarrier.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bo" name="flex.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bp" name="flight.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bq" name="focus.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8br" name="forcefield.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bs" name="frail.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bt" name="heatsink.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bu" name="hello.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bv" name="hex.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bw" name="infinitegreen.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bx" name="int.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8by" name="lessdraw.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8bz" name="lockon.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c0" name="loop.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c1" name="mastery.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c2" name="mayhem.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c3" name="minion.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c4" name="modeShift.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c5" name="noattack.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c6" name="noDraw.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c7" name="painfulStabs.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c8" name="platedarmor.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8c9" name="poison.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ca" name="prime.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cb" name="primitive.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cc" name="rebound.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cd" name="regen.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ce" name="regrow.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cf" name="repair.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cg" name="retain.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ch" name="ritual.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ci" name="shackle.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cj" name="sharpHide.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ck" name="skillBurn.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cl" name="split.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cm" name="sporeCloud.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cn" name="stasis.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8co" name="static_discharge.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cp" name="storm.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cq" name="strength.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cr" name="thievery.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cs" name="thorns.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8ct" name="time.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cu" name="unawakened.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cv" name="vulnerable.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cw" name="weak.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cx" name="winter.png" path="/图标集合/Buff图标/" exported="true"/>
+    <image id="gmzy8cy" name="wraithForm.png" path="/图标集合/Buff图标/" exported="true"/>
     <component id="gmzy8cz" name="BuffIcon.xml" path="/战斗UI/"/>
     <component id="gmzy8d0" name="BattleStart.xml" path="/战斗UI/" exported="true"/>
     <image id="gmzy8d1" name="battleStartSword.png" path="/战斗UI/"/>
     <component id="d54z8d2" name="Component2.xml" path="/"/>
     <component id="j2gj8d3" name="Potion.xml" path="/"/>
+    <component id="m11l8d4" name="Relic.xml" path="/"/>
   </resources>
-  <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI" genCode="true"/>
+  <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI"/>
 </packageDescription>
