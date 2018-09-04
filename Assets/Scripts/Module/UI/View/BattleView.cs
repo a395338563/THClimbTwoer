@@ -9,7 +9,7 @@ using THClimbTower;
 namespace Model
 {
     [GameUIView(UIViewType.Battle)]
-    public class BattleView : GameUIView
+    public class BattleView : GameUIView,IUpdate
     {
         public override string PackageName { get; set; } = "UI";
 
@@ -67,6 +67,11 @@ namespace Model
             MainView.GetChild("OpenDeck").asCom.GetChild("n6").text = battle.player.Deck.Count.ToString();
             MainView.GetChild("CardHint").text = battle.Deck.Count.ToString();
             MainView.GetChild("DiscardHint").text = battle.Cemetery.Count.ToString();
+
+            MainView.GetChild("Money").text = battle.player.Gold.ToString();
+            MainView.GetChild("WorkName").text = "????";
+            MainView.GetChild("PlayerName").text = "Tester";
+
         }
 
         void RelicListClick(EventContext context)
@@ -87,6 +92,11 @@ namespace Model
             THClimbTower.Potion potion = o as THClimbTower.Potion;
             if (potion == null) return;
             else potion.Use();
+        }
+
+        public void Update()
+        {
+            FreshPage();
         }
     }
 }

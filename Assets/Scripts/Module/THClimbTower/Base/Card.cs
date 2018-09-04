@@ -11,7 +11,18 @@ namespace THClimbTower
     /// </summary>
     public abstract class Card : EventInfo
     {
-        public int BaseDamage, Damage, BaseArmor, Armor, BaseHits, Hits;
+        public int BaseDamage { get; set; }
+        public int BaseArmor { get; set; }
+        public int BaseHits { get; set; }
+        public int Damage, Armor, Hits;
         public abstract Task Use(BattleCharactor user, BattleCharactor reciver);
+        /// <summary>
+        /// 在这里做初始化
+        /// </summary>
+        /// <returns></returns>
+        public virtual Card Init()
+        {
+            return this;
+        }
     }
 }

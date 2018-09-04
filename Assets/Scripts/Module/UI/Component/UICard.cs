@@ -22,6 +22,7 @@ namespace Model
             gCard.GetChild("CardDesc").text = playerCard.Desc;
             gCard.GetChild("CardName").text = playerCard.Title;
             gCard.GetChild("CardType").text = playerCard.CardType.ToString();
+            gCard.GetChild("CardImage").asLoader.url = $"Card/{playerCard.Pic}";
         }
     }
 }

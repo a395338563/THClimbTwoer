@@ -18,16 +18,18 @@ namespace THClimbTower
 
         /// <summary>
         /// 当此牌在手中时，能否被打出
+        /// 下一步是选择卡牌的使用目标
         /// 通常诅咒或状态牌返回false
         /// </summary>
         /// <returns></returns>
-        public abstract Task<bool> UseAbleInHand();
+        public abstract bool UseAbleInHand();
         /// <summary>
         /// 当此牌选择目标或不选择目标时，能否被打出
+        /// 下一步是执行卡牌的打出逻辑
         /// </summary>
         /// <param name="reciver">接受者可以为空</param>
         /// <returns></returns>
-        public abstract Task<bool> UseAble(BattleCharactor reciver);
+        public abstract bool UseAble(BattleCharactor reciver);
 
         protected void ThrowToCemetery()
         {

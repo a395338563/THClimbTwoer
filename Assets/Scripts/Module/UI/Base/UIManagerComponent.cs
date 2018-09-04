@@ -16,7 +16,7 @@ namespace Model
         }
     }*/
 
-    public class UIManagerComponent : Component,IAwake
+    public class UIManagerComponent : Component,IAwake,IUpdate
     {
         Dictionary<UIViewType, GameUIView> dic = new Dictionary<UIViewType, GameUIView>();
         /// <summary>
@@ -31,8 +31,8 @@ namespace Model
             //UIConfig.defaultFont = "SimHei";
             //FontManager.RegisterFont(FontManager.GetFont("font/jianshuhunti"), "迷你简书魂");//初始化字体
             AddSence();
-            LoadPackge("BlueSkin");//加载默认皮肤
-            LoadPackge("THCLimbTower");//加载资源
+            //LoadPackge("BlueSkin");//加载默认皮肤
+            //LoadPackge("THCLimbTower");//加载资源
             LoadPackge("UI");//从爬塔偷的资源包
             LoadSence(UIViewType.Battle);//初始化页面
             //Game.Scene.AddComponent<WindowComponent>();
@@ -84,6 +84,14 @@ namespace Model
                 }
             }
             //Log.Debug(dic.Count.ToString());
+        }
+
+        public void Update()
+        {
+            if (NowSence is IUpdate)
+            {
+                (NowSence as IUpdate).Update();
+            }
         }
     }
 }

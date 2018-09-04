@@ -43,6 +43,7 @@ namespace THClimbTower
         
         public async void StartGame(CharactorTypeEnum mainCharactor, CharactorTypeEnum helpCharactor)
         {
+            Model.Game.Scene.AddComponent<CardFactory>();
             Instance.player = new Player()
             {
                 MainCharactorType = mainCharactor,

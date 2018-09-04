@@ -33,14 +33,30 @@ namespace THClimbTower
         {
             MaxHp = 100;
             NowHp = 100;
+            Gold = 2333;
+            MainCharactorType = CharactorTypeEnum.Reimu;
             for (int i = 0; i < 5; i++)
             {
-                TestAttack t = new TestAttack()
+                Deck.Add(CardFactory.Instance.Get(0) as PlayerCard);
+                Deck.Add(CardFactory.Instance.Get(1) as PlayerCard);
+                /*TestAttack t = new TestAttack()
                 {
                     BaseDesc = "造成$Damage$点伤害",
                     BaseDamage = 6,
+                    Cost=1,
+                    Title="打击",
+                    Pic="anger",
                 };
                 Deck.Add(t);
+                TestDefence d = new TestDefence()
+                {
+                    BaseDesc = "获得$Armor$点护甲",
+                    BaseArmor=5,
+                    Cost=1,
+                    Title="防御",
+                    Pic="armaments",
+                };
+                Deck.Add(d);*/
             }
             potions.Add(new TestPotion());
             AddRelics(new TestRelic());
