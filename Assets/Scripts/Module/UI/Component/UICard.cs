@@ -11,10 +11,12 @@ namespace Model
     {
         THClimbTower.PlayerCard playerCard;
         GComponent gCard;
+
         public UICard(GComponent gCard, THClimbTower.PlayerCard card)
         {
             this.gCard = gCard;
             this.playerCard = card;
+            gCard.data = card;
         }
         public void Fresh()
         {

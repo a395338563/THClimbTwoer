@@ -19,6 +19,8 @@ namespace Model
 
         GList HandList, RelicList;
 
+        UICharactor player;
+
         public override void Creat()
         {
             HandList = MainView.GetChild("n52").asList;
@@ -42,6 +44,17 @@ namespace Model
 
             //右键点击主动使用遗物
             RelicList.onRightClickItem.Add(RelicListClick);
+
+            HandList.onClickItem.Add((x) =>
+            {
+                if (x.inputEvent.isDoubleClick)
+                {
+                    Card c = (x.data as GComponent).data as Card;
+                    player.UseCard(c, player);
+                }
+            });
+
+           this.player= new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
         }
 
         void FreshPage()
@@ -69,9 +82,10 @@ namespace Model
             MainView.GetChild("DiscardHint").text = battle.Cemetery.Count.ToString();
 
             MainView.GetChild("Money").text = battle.player.Gold.ToString();
-            MainView.GetChild("WorkName").text = "????";
+            MainView.GetChild("WorkName").text = battle.player.Name;
             MainView.GetChild("PlayerName").text = "Tester";
 
+            player.Fresh();
         }
 
         void RelicListClick(EventContext context)

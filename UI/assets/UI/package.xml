@@ -340,6 +340,421 @@
     <component id="d54z8d2" name="Component2.xml" path="/"/>
     <component id="j2gj8d3" name="Potion.xml" path="/"/>
     <component id="m11l8d4" name="Relic.xml" path="/"/>
+    <image id="nahy8d5" name="abacus.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8d6" name="anchor.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8d7" name="ancientUrn.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8d8" name="anvil.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8d9" name="artOfWar.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8da" name="ashes.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8db" name="astrolabe.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dc" name="bagOfPreparation.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dd" name="bank.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8de" name="battery.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8df" name="bell.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dg" name="bellows.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dh" name="bigSpoon.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8di" name="blackBlood.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dj" name="blackstar.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dk" name="bloodOfGifted.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dl" name="bloodVial.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dm" name="bloodyChalice.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dn" name="bloom.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8do" name="blueCandle.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dp" name="bluePill.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dq" name="boot.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dr" name="bottledFlame.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ds" name="bottledLightning.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dt" name="bottledTornado.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8du" name="bowlerHat.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dv" name="bronzeScales.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dw" name="burnHammer.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dx" name="burningBlood.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dy" name="cables.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8dz" name="cage.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e0" name="calendar.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e1" name="calipers.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e2" name="cantUseRelic.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e3" name="cauldron.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e4" name="centennialPuzzle.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e5" name="championBelt.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e6" name="chemicalX.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e7" name="circlet.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e8" name="clay.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8e9" name="clericFace.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ea" name="clockwork.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eb" name="codex.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ec" name="coffeeDripper.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ed" name="compass.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ee" name="courier.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ef" name="crackedOrb.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eg" name="crown.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eh" name="crownOfThorns.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ei" name="cultistMask.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ej" name="cursedBlood.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ek" name="cursedKey.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8el" name="darkstone.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8em" name="dataDisk.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8en" name="deadBranch.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eo" name="derpRock.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ep" name="dodecahedron.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eq" name="dodecahedron_s.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8er" name="dreamCatcher.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8es" name="drill.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8et" name="duvuDoll.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8eu" name="ectoplasm.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ev" name="egg1.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ew" name="egg2.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ex" name="egg3.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ey" name="emerald.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ez" name="emotionChip.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f0" name="enchiridion.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f1" name="equilibrium.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f2" name="eternalFeather.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f3" name="frozenEgg.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f4" name="frozenEye.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f5" name="frozenOrb.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f6" name="funnel.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f7" name="gamblingChip.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f8" name="ggg.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8f9" name="ginger.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fa" name="goldenIdolRelic.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fb" name="goldTooth.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fc" name="gremlinHorn.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fd" name="gremlinMask.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fe" name="gyoza.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ff" name="headband.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fg" name="hotPotato.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fh" name="hourglass.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fi" name="iceCream.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fj" name="incenseBurner.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fk" name="inserter.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fl" name="juzuBracelet.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fm" name="kettlebell.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fn" name="keyRing.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fo" name="kindling.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fp" name="kite.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fq" name="kunai.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fr" name="lament.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fs" name="lamentUsed.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ft" name="lantern.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fu" name="letterOpener.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fv" name="lives.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fw" name="livingBlood.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fx" name="lizardTail.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fy" name="lock.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8fz" name="magicFlower.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g0" name="mango.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g1" name="marbles.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g2" name="markOfPain.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g3" name="matryoshka.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g4" name="mealTicket.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g5" name="meat.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g6" name="medicalKit.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g7" name="membershipCard.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g8" name="merchantMask.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8g9" name="mirror.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ga" name="monocle.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gb" name="mummifiedHand.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gc" name="mushroom.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gd" name="mutagen.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ge" name="necronomicon.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gf" name="ninjaScroll.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gg" name="nloth.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gh" name="nlothsGift.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gi" name="nlothUsed.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gj" name="nullStone.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gk" name="nullStoneUsed.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gl" name="nunchaku.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gm" name="octohedron.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gn" name="oldCoin.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8go" name="omamori.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gp" name="orichalcum.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gq" name="ornamentalFan.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gr" name="ornithopter.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gs" name="orrery.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gt" name="owlDoll.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gu" name="pandorasBox.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gv" name="pantograph.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gw" name="paperCrane.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gx" name="paperFrog.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gy" name="peacePipe.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8gz" name="pear.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h0" name="pellets.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h1" name="penNib.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h2" name="philosopherStone.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h3" name="pillow.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h4" name="potion_belt.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h5" name="practiceLock.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h6" name="prayerWheel.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h7" name="questionCard.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h8" name="redChoker.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8h9" name="redCirclet.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ha" name="redMask.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hb" name="redPill.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hc" name="redSkull.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hd" name="runicCapacitor.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8he" name="runicCube.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hf" name="runicDome.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hg" name="runicPyramid.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hh" name="runicSphere.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hi" name="rupee.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hj" name="serpentHead.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hk" name="serpentRing.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hl" name="shovel.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hm" name="shuriken.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hn" name="singingBowl.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ho" name="sling.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hp" name="smoothStone.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hq" name="snakeRing.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hr" name="snakeSkull.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hs" name="sneckoEye.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ht" name="sozu.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hu" name="spearHead.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hv" name="specimen.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hw" name="spiritPoop.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hx" name="stoneEgg.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hy" name="strawberry.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8hz" name="sundial.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i0" name="sunflower.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i1" name="teaSet.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i2" name="test1.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i3" name="test2.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i4" name="test3.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i5" name="test4.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i6" name="test5.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i7" name="test6.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i8" name="test7.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8i9" name="test8.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ia" name="threadAndNeedle.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ib" name="tingsha.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ic" name="tinyChest.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8id" name="tinyHouse.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ie" name="toolbox.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8if" name="top.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ig" name="torii.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ih" name="toughBandages.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ii" name="toxicEgg.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ij" name="turnip.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ik" name="usedBank.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8il" name="usedLizardTail.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8im" name="usedMatryoshka.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8in" name="usedOmamori.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8io" name="vajra.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ip" name="vCore.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8iq" name="virus.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8ir" name="waffle.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8is" name="warPaint.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8it" name="wBlade.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8iu" name="whetstone.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8iv" name="whiteBeast.png" path="/图标集合/遗物图标/" exported="true"/>
+    <image id="nahy8iw" name="abacus.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ix" name="anchor.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8iy" name="ancientUrn.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8iz" name="anvil.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j0" name="artOfWar.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j1" name="ashes.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j2" name="astrolabe.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j3" name="bagOfPreparation.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j4" name="bank.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j5" name="battery.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j6" name="bell.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j7" name="bellows.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j8" name="bigSpoon.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8j9" name="blackBlood.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ja" name="blackstar.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jb" name="bloodOfGifted.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jc" name="bloodVial.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jd" name="bloodyChalice.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8je" name="bloom.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jf" name="blueCandle.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jg" name="bluePill.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jh" name="boot.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ji" name="bottledFlame.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jj" name="bottledLightning.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jk" name="bottledTornado.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jl" name="bowlerHat.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jm" name="bronzeScales.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jn" name="burnHammer.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jo" name="burningBlood.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jp" name="cables.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jq" name="cage.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jr" name="calendar.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8js" name="calipers.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jt" name="cantUseRelic.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ju" name="cauldron.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jv" name="centennialPuzzle.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jw" name="championBelt.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jx" name="chemicalX.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jy" name="circlet.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8jz" name="clay.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k0" name="clericFace.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k1" name="clockwork.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k2" name="codex.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k3" name="coffeeDripper.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k4" name="compass.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k5" name="courier.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k6" name="crackedOrb.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k7" name="crown.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k8" name="crownOfThorns.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8k9" name="cultistMask.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ka" name="cursedBlood.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kb" name="cursedKey.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kc" name="darkstone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kd" name="dataDisk.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ke" name="deadBranch.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kf" name="derpRock.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kg" name="dodecahedron.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kh" name="dodecahedron_s.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ki" name="dreamCatcher.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kj" name="drill.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kk" name="duvuDoll.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kl" name="ectoplasm.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8km" name="egg1.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kn" name="egg2.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ko" name="egg3.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kp" name="emerald.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kq" name="emotionChip.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kr" name="enchiridion.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ks" name="equilibrium.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kt" name="eternalFeather.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ku" name="frozenEgg.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kv" name="frozenEye.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kw" name="frozenOrb.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kx" name="funnel.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ky" name="gamblingChip.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8kz" name="ggg.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l0" name="ginger.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l1" name="goldenIdolRelic.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l2" name="goldTooth.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l3" name="gremlinHorn.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l4" name="gremlinMask.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l5" name="gyoza.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l6" name="headband.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l7" name="hotPotato.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l8" name="hourglass.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8l9" name="iceCream.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8la" name="incenseBurner.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lb" name="inserter.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lc" name="juzuBracelet.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ld" name="kettlebell.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8le" name="keyRing.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lf" name="kindling.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lg" name="kite.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lh" name="kunai.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8li" name="lament.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lj" name="lantern.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lk" name="letterOpener.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ll" name="lives.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lm" name="livingBlood.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ln" name="lizardTail.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lo" name="lock.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lp" name="magicFlower.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lq" name="mango.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lr" name="marbles.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ls" name="markOfPain.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lt" name="matryoshka.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lu" name="mealTicket.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lv" name="meat.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lw" name="medicalKit.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lx" name="membershipCard.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ly" name="merchantMask.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8lz" name="mirror.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m0" name="monocle.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m1" name="mummifiedHand.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m2" name="mushroom.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m3" name="mutagen.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m4" name="necronomicon.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m5" name="ninjaScroll.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m6" name="nloth.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m7" name="nlothsGift.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m8" name="nullStone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8m9" name="nullstoneUsed.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ma" name="nunchaku.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mb" name="octohedron.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mc" name="oldCoin.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8md" name="omamori.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8me" name="orichalcum.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mf" name="ornamentalFan.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mg" name="ornithopter.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mh" name="orrery.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mi" name="owlDoll.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mj" name="pandorasBox.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mk" name="pantograph.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ml" name="paperCrane.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mm" name="paperFrog.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mn" name="peacePipe.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mo" name="pear.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mp" name="pellets.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mq" name="penNib.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mr" name="philosopherStone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ms" name="pillow.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mt" name="plateArmor.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mu" name="potion_belt.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mv" name="powerStone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mw" name="practiceLock.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mx" name="prayerWheel.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8my" name="questionCard.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8mz" name="redChoker.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n0" name="redCirclet.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n1" name="redMask.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n2" name="redPill.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n3" name="redSkull.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n4" name="runicCapacitor.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n5" name="runicCube.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n6" name="runicDome.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n7" name="runicPyramid.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n8" name="runicSphere.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8n9" name="rupee.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8na" name="serpentHead.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nb" name="serpentRing.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nc" name="shovel.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nd" name="shuriken.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ne" name="singingBowl.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nf" name="sling.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ng" name="smoothStone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nh" name="snakeRing.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ni" name="snakeSkull.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nj" name="sneckoEye.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nk" name="sozu.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nl" name="spearHead.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nm" name="specimen.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nn" name="spiritPoop.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8no" name="stoneEgg.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8np" name="strawberry.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nq" name="sundial.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nr" name="sunflower.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ns" name="teaSet.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nt" name="test1.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nu" name="test2.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nv" name="test3.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nw" name="test4.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nx" name="test5.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ny" name="test6.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8nz" name="test7.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o0" name="test8.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o1" name="threadAndNeedle.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o2" name="tingsha.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o3" name="tinyChest.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o4" name="tinyHouse.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o5" name="toolbox.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o6" name="top.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o7" name="torii.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o8" name="toughBandages.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8o9" name="toxicEgg.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oa" name="turnip.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8ob" name="vajra.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oc" name="vCore.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8od" name="virus.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oe" name="waffle.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8of" name="warPaint.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8og" name="wBlade.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oh" name="whetstone.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oi" name="whiteBeast.png" path="/图标集合/遗物图标/outline/"/>
+    <image id="nahy8oj" name="whiteElephant.png" path="/图标集合/遗物图标/outline/"/>
+    <component id="nahy8ok" name="RelicIcon.xml" path="/图标集合/"/>
+    <component id="nahy8ol" name="Charactor.xml" path="/" exported="true"/>
+    <image id="nahy8oo" name="战士图.png" path="/"/>
+    <image id="nahy8op" name="测试怪.png" path="/"/>
   </resources>
   <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI"/>
 </packageDescription>

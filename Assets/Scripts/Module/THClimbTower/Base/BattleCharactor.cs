@@ -15,6 +15,21 @@ namespace THClimbTower
 
         public int NowHp;
         public int MaxHp;
+        public int Armor
+        {
+            get
+            {
+                if (GetBuff<Buff_Armor>() == null)
+                    return 0;
+                return GetBuff<Buff_Armor>().LastTime;
+            }
+            set
+            {
+                if (GetBuff<Buff_Armor>() == null)
+                    AddComponent<Buff_Armor>();
+                GetBuff<Buff_Armor>().LastTime = value;
+            }
+        }
 
         public async Task UseCard(Card card,BattleCharactor reciver)
         {
@@ -36,6 +51,27 @@ namespace THClimbTower
                 NowHp = 0;
                 await Game.EventSystem.RunEvent<EventInfo>(EventType.Die);
             }
+        }
+
+        public List<Buff> GetBuffs()
+        {
+            List<Buff> output = new List<Buff>();
+            foreach (var buff in GetComponents())
+            {
+                if (buff is Buff)
+                {
+                    //护甲不计入buff列表
+                    if (buff is Buff_Armor)
+                        break;
+                    output.Add(buff as Buff);
+                }
+            }
+            return output;
+        }
+
+        public T AddBuff<T>()where T : Buff, new()
+        {
+            return GetBuff<T>();
         }
 
         public T GetBuff<T>() where T : Buff, new()

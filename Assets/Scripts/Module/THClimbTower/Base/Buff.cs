@@ -10,6 +10,8 @@ namespace THClimbTower
     {
         public int LastTime { get; set; }
 
+        public string Icon { get; set; }
+
         public BattleCharactor Owner
         {
             get
