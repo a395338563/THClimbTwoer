@@ -16,7 +16,12 @@ namespace THClimbTower
         {
             Instance = this;
             CardDic = new Dictionary<int, Type>();
-            Type[] types = Assembly.GetExecutingAssembly().GetTypes();
+            AddCard(Assembly.GetExecutingAssembly());
+        }
+
+        public void AddCard(Assembly assembly)
+        {
+            Type[] types = assembly.GetTypes();
             foreach (Type type in types)
             {
                 object[] attrs = type.GetCustomAttributes(typeof(CardAttribute), false);
@@ -34,6 +39,7 @@ namespace THClimbTower
                 }
             }
         }
+
         public Card Get(int Id)
         {
             return (Activator.CreateInstance(CardDic[Id]) as Card).Init();
