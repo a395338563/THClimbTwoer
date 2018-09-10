@@ -54,7 +54,7 @@ namespace THClimbTower
             RandomUtil.SetSeed(1);
 
             instance.NowMap = new Map();
-            NowMap.Creat(5, 0);
+            //NowMap.Creat(5, 0);
             NowBattle = new Battle();
             await NowBattle.StartBattle(new List<Enemy>() { new Maoyu() });
             Log.Debug("战斗结束！");

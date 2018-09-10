@@ -755,6 +755,7 @@
     <component id="nahy8ol" name="Charactor.xml" path="/" exported="true"/>
     <image id="nahy8oo" name="战士图.png" path="/"/>
     <image id="nahy8op" name="测试怪.png" path="/"/>
+    <component id="wkqj8oq" name="Component3.xml" path="/"/>
   </resources>
   <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI"/>
 </packageDescription>

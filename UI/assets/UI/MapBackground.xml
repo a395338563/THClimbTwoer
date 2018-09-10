@@ -10,5 +10,8 @@
     <image id="n7_mcmm" name="n7" src="mcmmw" fileName="大地图UI/mapBot.png" xy="0,2160" size="1920,1080"/>
     <image id="n8_mcmm" name="n8" src="mcmmu" fileName="大地图UI/mapBlend.png" xy="-5,1907" size="1920,512"/>
     <component id="n13_mcmm" name="n13" src="mcmm23" fileName="大地图UI/boss/BossButton.xml" xy="703,100" size="512,512"/>
+    <component id="n14_wkqj" name="Node" src="wkqj8oq" fileName="Component3.xml" xy="0,0" size="1920,1080" touchable="false">
+      <relation target="" sidePair="width-width,height-height"/>
+    </component>
   </displayList>
 </component>

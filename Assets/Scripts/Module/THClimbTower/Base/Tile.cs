@@ -12,6 +12,40 @@ namespace THClimbTower
         public TileTypeEnum TileType;
         public int Level;
         public List<Tile> Next = new List<Tile>();
+        public List<Tile> Parent = new List<Tile>();
+
+        public string GetInfo()
+        {
+            string s = "";
+            foreach (var t in Next)
+            {
+                s += $"@{t.X},{t.Y}";
+            }
+            return s;
+        }
+
+        public int GetMaxXChild()
+        {
+            int output = -1;
+            foreach (var t in Next)
+            {               
+                if (t.X > output)
+                    output = t.X;
+            }
+            return output;
+        }
+
+        public int GetMinXChild()
+        {
+            int output = 999999;
+            foreach (var t in Next)
+            {
+                if (t.X < output)
+                    output = t.X;
+            }
+            return output;
+        }
+
         public virtual void OnClick()
         {
             Model.Log.Debug("you click a default tile");

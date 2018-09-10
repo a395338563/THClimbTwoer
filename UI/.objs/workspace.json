@@ -1,8 +1,5 @@
 {
-	"hidden_packages": [],
 	"docs": [
-		"p2tnfz1u",
-		"mcmm20",
 		"p2tnfz1u",
 		"k8zt2y",
 		"p2tnfz1u",
@@ -10,7 +7,7 @@
 		"p2tnfz1u",
 		"nahy8ol",
 		"p2tnfz1u",
-		"l39c87x"
+		"mcmm21"
 	],
 	"expanded_nodes": [
 		"p2tnfz1u",
@@ -18,6 +15,7 @@
 	],
 	"active_doc": [
 		"p2tnfz1u",
-		"l39c87x"
-	]
+		"mcmm21"
+	],
+	"hidden_packages": []
 }

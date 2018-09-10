@@ -8,7 +8,7 @@ namespace THClimbTower
 {
     public class RandomUtil
     {
-        static Random random = new Random();
+        static Random random = new Random(0);
         public static int Next(int Start,int End)
         {
             return random.Next(Start, End);
