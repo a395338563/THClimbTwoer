@@ -51,23 +51,51 @@ namespace Model
                 {
                     Card c = (x.data as GComponent).data as Card;
                     player.UseCard(c, player);
+                    FreshHand();
                 }
-            });
+            });           
 
            this.player= new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
+
+            FreshHand();
+        }
+
+        GComponent selectCard;
+
+        void FreshHand()
+        {
+            //刷新手牌
+            HandList.RemoveChildrenToPool();
+            HandList.columnGap = -100;
+            for (int i = 0; i < battle.Hand.Count; i++)// card in battle.Hand)
+            {
+                PlayerCard card = battle.Hand[i];
+                GComponent com = HandList.AddItemFromPool().asCom;
+                com.onRollOver.Add(async() => { if (selectCard==com) return; selectCard = com;await Task.Delay(100); FreshHand(); });
+                com.onRollOut.Add(async () => { selectCard = null; await Task.Delay(100); FreshHand(); });
+                if (selectCard!=null&& com == selectCard)
+                {
+                    com.TweenRotate(0, 0f);
+                    com.TweenMoveY(-100, 0);
+                    com.scale = new UnityEngine.Vector2(1, 1);
+                }
+                else
+                {
+                    float r = (i - battle.Hand.Count / 2) * 5;
+                    com.TweenRotate(r, 1f);
+                    com.TweenMoveY(Math.Abs(300 * (float)(Math.Tan((double)(r / 180 * Math.PI)))), 1f);
+                    com.scale = new UnityEngine.Vector2(0.75f, 0.75f);
+                }
+                //com.y = Math.Abs(300*(float)(Math.Tan((double)(com.rotation/180*Math.PI))));
+                //Log.Debug($"{com.rotation},{com.y}");
+                //UICard uICard = new UICard(com, card);
+                //uICard.Fresh();
+            }
         }
 
         void FreshPage()
         {
-            //刷新手牌
-            HandList.RemoveChildrenToPool();
-            foreach (var card in battle.Hand)
-            {
-                GComponent com = HandList.AddItemFromPool().asCom;
-                UICard uICard = new UICard(com, card);
-                uICard.Fresh();
-            }
-
+            //FreshHand();
             //刷新遗物
             RelicList.RemoveChildrenToPool();
             foreach (var relic in battle.player.Relics)

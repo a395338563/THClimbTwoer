@@ -93,16 +93,16 @@ namespace THClimbTower
             }
         }
 
-
-        public void Creat(int StartLevel,int height,int width,int Density)
+        public void Creat(int StartLevel, int height, int width, int Density)
         {
-            //int yadd = -1;
-            Tile last = null;
+            Tile Root = Creat(width / 2, StartLevel - 1);
+            AddTile(Root);
+            NowTile = Root;
+            Tile last = Root;
             for (int i = 0; i < Density; i++)
             {
                 for (int j = 0; j < height; j++)
                 {
-                    //yadd++;
                     int y = StartLevel + j;
                     //第一层单独
                     if (j == 0)
@@ -111,6 +111,10 @@ namespace THClimbTower
                         Tile tile = Creat(x, y);
                         last = tile;
                         AddTile(tile);
+                        if (!Root.Next.Contains(tile))
+                            Root.Next.Add(tile);
+                        if (!tile.Parent.Contains(tile))
+                            tile.Parent.Add(Root);
                         //Log.Debug($"Add Base Tile:{tile.X,tile.Y}");
                     }
                     else
@@ -124,16 +128,22 @@ namespace THClimbTower
                             maxX++;
                         }
                         int x = RandomUtil.Next(minX, maxX + 1);
-                        //Log.Debug(x.ToString());
-                        Tile lf = GetLeftTile(last);
-                        if (lf != null && lf.GetMaxXChild() > x)
+                        int rx = x - last.X;
+                        if (rx == -1)
                         {
-                            x = lf.GetMaxXChild();
+                            Tile lf = GetLeftTile(last);
+                            if (lf != null && lf.GetMaxXChild() > x)
+                            {
+                                x = lf.GetMaxXChild();
+                            }
                         }
-                        Tile lr = GetRightTile(last);
-                        if (lr != null && lr.GetMinXChild() < x)
+                        if (rx == 1)
                         {
-                            x = lr.GetMinXChild();
+                            Tile lr = GetRightTile(last);
+                            if (lr != null && lr.GetMinXChild() < x)
+                            {
+                                x = lr.GetMinXChild();
+                            }
                         }
                         Tile tile = Creat(x, y);
                         if (!last.Next.Contains(tile))
@@ -142,7 +152,6 @@ namespace THClimbTower
                             tile.Parent.Add(last);
                         last = tile;
                         AddTile(tile);
-
                     }
                 }
                 //int x = RandomUtil.Next();
@@ -169,7 +178,7 @@ namespace THClimbTower
                     }
                 }
             }
-            if (output != null) Log.Debug($"{tile.X},{tile.Y} Left is {output.X},{output.Y}");
+            //if (output != null) Log.Debug($"{tile.X},{tile.Y} Left is {output.X},{output.Y}");
             return output;
         }
         Tile GetRightTile(Tile tile)
@@ -192,7 +201,7 @@ namespace THClimbTower
                     }
                 }
             }
-            if (output != null) Log.Debug($"{tile.X},{tile.Y} Right is {output.X},{output.Y}");
+            //if (output != null) Log.Debug($"{tile.X},{tile.Y} Right is {output.X},{output.Y}");
             return output;
         }
 
@@ -211,8 +220,11 @@ namespace THClimbTower
                 if (tile.X == x && tile.Y == y)
                     return tile;
             }
+            Tile t = TileFactory.Creat(Tile.TileTypeEnum.Enemy);
+            t.X = x;
+            t.Y = y;
             //Log.Debug($"Creat New Tile{x},{y}");
-            return new Tile() { X = x, Y = y };
+            return t;
         }
 
         /*public void Creat(int LevelNum,int StartLevel, int MinLine=3, int MaxLine=6)

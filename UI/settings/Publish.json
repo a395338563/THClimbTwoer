@@ -1,5 +1,5 @@
 {
-	"binaryFormat":false,
+	"binaryFormat":true,
 	"codeGeneration":{
 		"classNamePrefix":"View_",
 		"codePath":"E:\\Project\\VSTS\\STSForMobile\\Main\\Assets\\Scripts\\UI\\View",

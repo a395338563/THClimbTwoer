@@ -46,7 +46,7 @@ namespace THClimbTower
             return output;
         }
 
-        public virtual void OnClick()
+        internal virtual void OnClick()
         {
             Model.Log.Debug("you click a default tile");
         }

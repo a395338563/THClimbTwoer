@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" overflow="hidden" designImage="ui://p2tnfz1uk8zt3p" designImageOffsetX="-8" designImageOffsetY="-33" designImageAlpha="100" designImageLayer="1">
+<component size="1920,1080" overflow="hidden" designImage="ui://p2tnfz1uk8zt3p" designImageOffsetX="-8" designImageOffsetY="-33" designImageAlpha="0" designImageLayer="1">
   <displayList>
     <component id="n54_m11l" name="n54" src="10e885p" fileName="Scene1.xml" xy="0,0"/>
     <image id="n0_k8zt" name="n0" src="k8zt2w" fileName="战斗UI/bar.png" xy="0,-3"/>
@@ -36,11 +36,6 @@
     <component id="n47_gt45" name="n47" src="j2gj8d3" fileName="Potion.xml" xy="629,-1"/>
     <component id="n48_gt45" name="n48" src="j2gj8d3" fileName="Potion.xml" xy="685,-2"/>
     <graph id="n51_l39c" name="EnergyPanelHolder" xy="109,752" pivot="0.5,0.5" size="100,100"/>
-    <list id="n52_j2gj" name="n52" xy="474,1062" size="1357,300" scale="0.75,0.75" layout="row" defaultItem="ui://p2tnfz1umcmmm">
-      <item/>
-      <item/>
-      <item/>
-    </list>
     <list id="n53_m11l" name="n53" xy="1,71" size="560,128" scale="0.75,0.75" layout="row" defaultItem="ui://p2tnfz1unahy8ok">
       <item icon="ui://p2tnfz1ugmzy8am"/>
       <item/>
@@ -54,5 +49,10 @@
     <component id="n59_nahy" name="n59" src="nahy8ol" fileName="Charactor.xml" xy="1395,559">
       <Label icon="ui://p2tnfz1unahy8op"/>
     </component>
+    <list id="n52_j2gj" name="n52" xy="470,1046" size="1357,300" layout="row" defaultItem="ui://p2tnfz1umcmmm" autoItemSize="false">
+      <item/>
+      <item/>
+      <item/>
+    </list>
   </displayList>
 </component>
