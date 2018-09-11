@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FairyGUI;
 using THClimbTower;
+using UnityEngine;
 
 namespace Model
 {
@@ -71,8 +72,8 @@ namespace Model
             {
                 PlayerCard card = battle.Hand[i];
                 GComponent com = HandList.AddItemFromPool().asCom;
-                com.onRollOver.Add(async() => { if (selectCard==com) return; selectCard = com;await Task.Delay(100); FreshHand(); });
-                com.onRollOut.Add(async () => { selectCard = null; await Task.Delay(100); FreshHand(); });
+                com.onRollOver.Add(() => { if (selectCard==com) return; selectCard = com;FreshHand(); });
+                com.onRollOut.Add(() => { selectCard = null; FreshHand(); });
                 if (selectCard!=null&& com == selectCard)
                 {
                     com.TweenRotate(0, 0f);
@@ -83,7 +84,7 @@ namespace Model
                 {
                     float r = (i - battle.Hand.Count / 2) * 5;
                     com.TweenRotate(r, 1f);
-                    com.TweenMoveY(Math.Abs(300 * (float)(Math.Tan((double)(r / 180 * Math.PI)))), 1f);
+                    com.TweenMoveY(Mathf.Abs(300 * (float)(Mathf.Tan((r / 180 * Mathf.PI)))), 1f);
                     com.scale = new UnityEngine.Vector2(0.75f, 0.75f);
                 }
                 //com.y = Math.Abs(300*(float)(Math.Tan((double)(com.rotation/180*Math.PI))));
