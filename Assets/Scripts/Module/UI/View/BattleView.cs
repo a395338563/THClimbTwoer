@@ -52,18 +52,34 @@ namespace Model
                 {
                     Card c = (x.data as GComponent).data as Card;
                     player.UseCard(c, player);
-                    FreshHand();
                 }
             });           
 
            this.player= new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
 
-            FreshHand();
+            CreateHand();
         }
 
         GComponent selectCard;
 
-        void FreshHand()
+        List<UICard> HandCards = new List<UICard>();
+        void CreateHand()
+        {
+            HandList.RemoveChildrenToPool();
+            HandList.columnGap = -100;
+            for (int i=0;i<battle.Hand.Count;i++)
+            {
+                PlayerCard card = battle.Hand[i];
+                GComponent com = HandList.AddItemFromPool().asCom;
+                UICard uICard = new UICard(com, card, i, battle.Hand.Count - 1);
+                HandCards.Add(uICard);
+                int k = i;
+                com.onRollOver.Set(() => { Log.Debug(k.ToString()+"??"); foreach (var c in HandCards) c.SetSelectIndex(k);  });
+                com.onRollOut.Set(() => { Log.Debug(k.ToString()); foreach (var c in HandCards) c.SetSelectIndex(-1); });
+            }
+        }
+
+        /*void FreshHand()
         {
             //刷新手牌
             HandList.RemoveChildrenToPool();
@@ -76,8 +92,8 @@ namespace Model
                 com.onRollOut.Add(() => { selectCard = null; FreshHand(); });
                 if (selectCard!=null&& com == selectCard)
                 {
-                    com.TweenRotate(0, 0f);
-                    com.TweenMoveY(-100, 0);
+                    com.TweenRotate(0, 0.01f);
+                    com.TweenMoveY(-100, 0.01f);
                     com.scale = new UnityEngine.Vector2(1, 1);
                 }
                 else
@@ -92,7 +108,7 @@ namespace Model
                 //UICard uICard = new UICard(com, card);
                 //uICard.Fresh();
             }
-        }
+        }*/
 
         void FreshPage()
         {

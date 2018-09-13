@@ -65,7 +65,6 @@ namespace Model
             float angle = Mathf.Atan((-delta.x) / delta.y) * 180 / Mathf.PI;
             float distance = delta.magnitude;
             int num = (int)distance / 16;
-            Log.Debug(num.ToString());
             for (int i = 2; i < num - 1; i++)
             {
                 GLoader loader = new GLoader();
