@@ -49,10 +49,6 @@
     <component id="n59_nahy" name="n59" src="nahy8ol" fileName="Charactor.xml" xy="1395,559">
       <Label icon="ui://p2tnfz1unahy8op"/>
     </component>
-    <list id="n52_j2gj" name="n52" xy="470,1046" size="1357,300" layout="row" defaultItem="ui://p2tnfz1umcmmm" autoItemSize="false">
-      <item/>
-      <item/>
-      <item/>
-    </list>
+    <component id="n60_tlpq" name="n60" src="dass1" fileName="Component1.xml" xy="443,897"/>
   </displayList>
 </component>

@@ -18,13 +18,15 @@ namespace Model
 
         THClimbTower.Battle battle;
 
-        GList HandList, RelicList;
+        GList RelicList;
+
+        GComponent Hand;
 
         UICharactor player;
 
         public override void Creat()
         {
-            HandList = MainView.GetChild("n52").asList;
+            Hand = MainView.GetChild("n60").asCom;
             RelicList = MainView.GetChild("n53").asList;
 
             THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
@@ -46,14 +48,14 @@ namespace Model
             //右键点击主动使用遗物
             RelicList.onRightClickItem.Add(RelicListClick);
 
-            HandList.onClickItem.Add((x) =>
+            /*HandList.onClickItem.Add((x) =>
             {
                 if (x.inputEvent.isDoubleClick)
                 {
                     Card c = (x.data as GComponent).data as Card;
                     player.UseCard(c, player);
                 }
-            });           
+            });*/           
 
            this.player= new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
 
@@ -65,12 +67,13 @@ namespace Model
         List<UICard> HandCards = new List<UICard>();
         void CreateHand()
         {
-            HandList.RemoveChildrenToPool();
-            HandList.columnGap = -100;
+            Hand.RemoveChildren(0, Hand.numChildren,true);
+            //HandList.columnGap = -100;
             for (int i=0;i<battle.Hand.Count;i++)
             {
                 PlayerCard card = battle.Hand[i];
-                GComponent com = HandList.AddItemFromPool().asCom;
+                GComponent com = UIPackage.CreateObject("UI", "CardUI").asCom;//HandList.AddItemFromPool().asCom;
+                Hand.AddChild(com);
                 UICard uICard = new UICard(com, card, i, battle.Hand.Count - 1);
                 HandCards.Add(uICard);
                 int k = i;

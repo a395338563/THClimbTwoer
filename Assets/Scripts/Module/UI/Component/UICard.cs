@@ -22,10 +22,11 @@ namespace Model
             if (duration == 0)
             {
                 gCard.y = y;
-                tweenMoveY?.Kill(true);
+                tweenMoveY?.Kill();
                 return;
             }
-            tweenMoveY?.Kill(true);
+            tweenMoveY?.Kill();
+            Debug.Log("y+" + y);
             tweenMoveY = gCard.TweenMoveY(y, duration);
         }
 
@@ -34,10 +35,10 @@ namespace Model
             if (duration == 0)
             {
                 gCard.x = x;
-                tweenMoveX?.Kill(true);
+                tweenMoveX?.Kill();
                 return;
             }
-            tweenMoveX?.Kill(true);
+            tweenMoveX?.Kill();
             tweenMoveX = gCard.TweenMoveX(x, duration);
         }
 
@@ -46,10 +47,10 @@ namespace Model
             if (duration == 0)
             {
                 gCard.rotation = angle;
-                tweenRorate?.Kill(true);
+                tweenRorate?.Kill();
                 return;
             }
-            tweenRorate?.Kill(true);
+            tweenRorate?.Kill();
             tweenRorate = gCard.TweenRotate(angle, duration);
         }
 
@@ -59,6 +60,7 @@ namespace Model
         /// <param name="SelectIndex"></param>
         public void SetSelectIndex(int SelectIndex)
         {
+            TweenMoveX(200 * index, 1f);
             if (SelectIndex == this.index)
             {
                 Log.Debug($"{index}onSelect");

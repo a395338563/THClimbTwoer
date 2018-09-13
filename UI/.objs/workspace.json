@@ -1,10 +1,4 @@
 {
-	"expanded_nodes": [
-		"ybob7dil",
-		"/",
-		"p2tnfz1u",
-		"/"
-	],
 	"active_doc": [
 		"p2tnfz1u",
 		"l39c87j"
@@ -23,5 +17,11 @@
 		"mcmm24",
 		"p2tnfz1u",
 		"l39c87j"
+	],
+	"expanded_nodes": [
+		"ybob7dil",
+		"/",
+		"p2tnfz1u",
+		"/"
 	]
 }
