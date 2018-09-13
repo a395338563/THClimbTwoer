@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FairyGUI;
 using UnityEngine;
+using DG.Tweening;
 
 namespace Model
 {
@@ -14,20 +15,21 @@ namespace Model
         int maxIndex;
         THClimbTower.PlayerCard playerCard;
         GComponent gCard;
-
-        GTweener tweenMoveY, tweenMoveX, tweenRorate;
+        
+        Tween tweenY, tweenX, tweenR;
 
         public void TweenMoveY(float y,float duration)
         {
+
+            Debug.Log(index + ":y+" + y + "last:" + duration);
             if (duration == 0)
             {
                 gCard.y = y;
-                tweenMoveY?.Kill();
+                tweenY?.Kill();
                 return;
             }
-            tweenMoveY?.Kill();
-            Debug.Log("y+" + y);
-            tweenMoveY = gCard.TweenMoveY(y, duration);
+            tweenY?.Kill();
+            tweenY = DOTween.To(() => gCard.y, (x) => gCard.y=x, y, duration);
         }
 
         public void TweenMoveX(float x, float duration)
@@ -35,11 +37,11 @@ namespace Model
             if (duration == 0)
             {
                 gCard.x = x;
-                tweenMoveX?.Kill();
+                tweenX?.Kill();
                 return;
             }
-            tweenMoveX?.Kill();
-            tweenMoveX = gCard.TweenMoveX(x, duration);
+            tweenX?.Kill();
+            tweenX = DOTween.To(() => gCard.x, (xx) => gCard.x = xx, x, duration);
         }
 
         public void TweenRorate(float angle,float duration)
@@ -47,11 +49,11 @@ namespace Model
             if (duration == 0)
             {
                 gCard.rotation = angle;
-                tweenRorate?.Kill();
+                tweenR?.Kill();
                 return;
             }
-            tweenRorate?.Kill();
-            tweenRorate = gCard.TweenRotate(angle, duration);
+            tweenR?.Kill();
+            tweenR = DOTween.To(() => gCard.rotation, (xx) => gCard.rotation = xx, angle, duration);
         }
 
         /// <summary>
@@ -64,21 +66,21 @@ namespace Model
             if (SelectIndex == this.index)
             {
                 Log.Debug($"{index}onSelect");
+                gCard.scale = new Vector2(1, 1);
                 //选中自己的情况
                 TweenMoveY(-100, 0);
                 TweenRorate(0, 0);
-                gCard.scale = new Vector2(1, 1);
                 return;
             }
             if (SelectIndex == -1)
             {
                 Log.Debug($"nothing onSelect");
                 //没有卡被选中的情况
-                float r = (this.index - maxIndex / 2) * 5;
+                float r = (this.index - (float)maxIndex / 2) * 5;
+                gCard.scale = new Vector2(0.75f, 0.75f);
                 //Log.Debug(r.ToString());
                 TweenRorate(r, 1f);
                 TweenMoveY(Mathf.Abs(300 * (float)(Mathf.Tan((r / 180 * Mathf.PI)))), 1f);
-                gCard.scale = new Vector2(0.75f,0.75f);
                 return;
             }
             else

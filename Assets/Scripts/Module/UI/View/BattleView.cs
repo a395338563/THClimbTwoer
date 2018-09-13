@@ -77,8 +77,8 @@ namespace Model
                 UICard uICard = new UICard(com, card, i, battle.Hand.Count - 1);
                 HandCards.Add(uICard);
                 int k = i;
-                com.onRollOver.Set(() => { Log.Debug(k.ToString()+"??"); foreach (var c in HandCards) c.SetSelectIndex(k);  });
-                com.onRollOut.Set(() => { Log.Debug(k.ToString()); foreach (var c in HandCards) c.SetSelectIndex(-1); });
+                com.onRollOver.Set(() => { Log.Debug(k.ToString()+"over"); foreach (var c in HandCards) c.SetSelectIndex(k);  });
+                com.onRollOut.Set(() => { Log.Debug(k.ToString()+"out"); foreach (var c in HandCards) c.SetSelectIndex(-1); });
             }
         }
 
