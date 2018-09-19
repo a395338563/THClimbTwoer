@@ -45,6 +45,8 @@ namespace THClimbTower
             Attack,
             Skill,
             Ablity,
+            Status,
+            Curse,
         }
     }
 }

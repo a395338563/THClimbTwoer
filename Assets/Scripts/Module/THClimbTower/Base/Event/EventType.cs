@@ -1,33 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using Model;
+using System.Threading.Tasks;
 
 namespace THClimbTower
 {
     public enum EventType
     {
-        test,
-
-        Die,
-
+        testEventType,
         GetCardDesc,
-        GetPlayerCardDesc,
-
         BattleStart,
         PlayerTurnStart,
         EnemyTurnStart,
         PlayerTurnEnd,
-
-        BeforeDrawCard,
-        AfterDrawCard,
-
-        HpChange,
-
-        BeforeCardUse,
-        AfterCardUse,
-
         BeforeDamageTake,
         OnDamageTake,
+        BattleEnd,
     }
 }

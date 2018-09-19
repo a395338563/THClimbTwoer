@@ -13,7 +13,6 @@ namespace THClimbTower
         public Player player;
         public List<Enemy> Enemys;
         public List<PlayerCard> Deck, Hand, Cemetery, Gap;
-        TaskCompletionSource<bool> PlayerTurnTcs, GameTcs;
         public int Turn;
         public bool GameEnd;
 
@@ -33,7 +32,7 @@ namespace THClimbTower
         /// <param name="enemyTeam"></param>
         /// <param name="enemies"></param>
         /// <returns></returns>
-        public async Task StartBattle(EnemyTeam enemyTeam)
+        public void StartBattle(EnemyTeam enemyTeam)
         {
             Deck = new List<PlayerCard>();
             Hand = new List<PlayerCard>();
@@ -53,11 +52,11 @@ namespace THClimbTower
             {
                 Deck.Add(p);
             }
-            await Game.EventSystem.RunEvent<EventInfo>(EventType.BattleStart, null);
-            GameCircle();
+            Game.EventSystem.RunEvent(EventType.BattleStart);
+            PlayerTurnStart();
         }
 
-        public async Task StartBattle(List<Enemy> enemies)
+        public void StartBattle(List<Enemy> enemies)
         {
             Deck = new List<PlayerCard>();
             Hand = new List<PlayerCard>();
@@ -72,8 +71,8 @@ namespace THClimbTower
             {
                 Deck.Add(p);
             }
-            await Game.EventSystem.RunEvent<EventInfo>(EventType.BattleStart, null);
-            GameCircle();
+            Game.EventSystem.RunEvent(EventType.BattleStart);
+            PlayerTurnStart();
         }
 
         /// <summary>
@@ -95,7 +94,10 @@ namespace THClimbTower
         /// </summary>
         public void EndTurn()
         {
-            PlayerTurnTcs.SetResult(true);
+            PlayerEndTurn();
+            Model.Log.Debug("GoNextTurn");
+            Turn++;
+            //PlayerTurnTcs.SetResult(true);
         }
 
         public void CheckWin()
@@ -127,45 +129,38 @@ namespace THClimbTower
             Model.Log.Debug("U die");
         }
 
-        async Task PlayerTurnStart()
+        void PlayerTurnStart()
         {
-            PlayerTurnTcs = new TaskCompletionSource<bool>();
-            await Game.EventSystem.RunEvent<EventInfo>(EventType.PlayerTurnStart, null);
-            await DrawCard();
+            Game.EventSystem.RunEvent(EventType.PlayerTurnStart);
+            DrawCard();
             foreach (Enemy e in Enemys)
             {
                 e.TakeThink();
             }
             foreach (PlayerCard c in Hand)
             {
-                await Game.EventSystem.RunEvent(EventType.GetPlayerCardDesc, c);
+                Game.EventSystem.RunEvent<Card,BattleCharactor,BattleCharactor>(EventType.GetCardDesc, c, player, null);
             }
         }
 
-        async Task PlayerEndTurn()
+        void PlayerEndTurn()
         {
-            await PlayerTurnTcs.Task;
-            await ThrowAllCard();
+            ThrowAllCard();
             foreach (Enemy e in Enemys)
             {
-                await e.UseSkill();
+                e.UseSkill();
             }
             //await Game.EventSystem.RunEvent(EventType.PlayerTurnEnd, 0);
             //EnemyWorks
         }
 
-        async void GameCircle()
+        /*void GameCircle()
         {
-            while (true)
-            {
-                await PlayerTurnStart();
-                await PlayerEndTurn();
-                Model.Log.Debug("GoNextTurn");
-                Turn++;
-            }
-        }
+            PlayerTurnStart();
+            
+        }*/
 
-        async Task ThrowAllCard()
+        void ThrowAllCard()
         {
             foreach (PlayerCard c in Hand)
             {
@@ -174,7 +169,7 @@ namespace THClimbTower
             Hand.Clear();
         }
 
-        async Task DrawCard()
+        void DrawCard()
         {
             int DrawNum = 5; //await Game.EventSystem.RunEvent(EventType.BeforeDrawCard, 5);
             for (int i = 0; i < DrawNum; i++)

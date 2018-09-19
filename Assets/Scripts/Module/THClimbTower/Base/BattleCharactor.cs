@@ -36,12 +36,12 @@ namespace THClimbTower
             await card.Use(this, reciver);
         }
 
-        public async Task ReciveDamage(DamageInfo Damage)
+        public async Task ReciveDamage(DamageInfo damage)
         {
-            DamageInfo damage = await Game.EventSystem.RunEvent(EventType.BeforeDamageTake, Damage);
+            Game.EventSystem.RunEvent(EventType.BeforeDamageTake);
             if (damage.Damage > 0)
             {
-                await Game.EventSystem.RunEvent(EventType.OnDamageTake, damage);
+                Game.EventSystem.RunEvent(EventType.OnDamageTake);
                 NowHp -= damage.Damage;
                 Log.Debug($"{Name}收到了{damage.Damage}伤害,剩余Hp：{NowHp}");
             }
@@ -49,7 +49,7 @@ namespace THClimbTower
             {
                 Log.Debug($"{Name}被打死了");
                 NowHp = 0;
-                await Game.EventSystem.RunEvent<EventInfo>(EventType.Die);
+                //await Game.EventSystem.RunEvent<EventInfo>(EventType.Die);
             }
         }
 
@@ -80,14 +80,16 @@ namespace THClimbTower
             if (t == null)
             {
                 t = this.AddComponent<T>();
-                Game.EventSystem.AddWatcher(t);
+                if (t is iEventDispatcher)
+                    Game.EventSystem.AddDispatcher(t as iEventDispatcher);
             }
             return t;
         }
         public void RemoveBuff<T>() where T : Buff, new()
         {
             T t = this.GetComponent<T>();
-            Game.EventSystem.RemoveWatcher(t);
+            if (t is iEventDispatcher)
+                Game.EventSystem.RemoveDispatcher(t as iEventDispatcher);
             this.RemoveComponent<T>();
         }
     }

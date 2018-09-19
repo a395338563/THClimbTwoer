@@ -15,12 +15,12 @@ namespace THClimbTower
 
         public async Task<EnemyPredict> BasePredict()
         {
-            Card card= await Game.EventSystem.RunEvent(EventType.GetCardDesc, this);
+            Game.EventSystem.RunEvent(EventType.GetCardDesc);
             return new EnemyPredict()
             {
-                Power = card.Damage,
-                Hits = card.Hits,
-                Armor = card.Armor,
+                Power = Damage,
+                Hits = Hits,
+                Armor = Armor,
             };
         }
     }

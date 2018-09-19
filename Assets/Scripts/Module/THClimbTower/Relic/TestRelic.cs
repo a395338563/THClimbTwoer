@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    [EventWatcher(new EventType[] { EventType.BattleStart})]
-    public class TestRelic : Relic,iEventWatcher
+    /*[EventWatcher(new EventType[] { EventType.BattleStart})]
+    public class TestRelic : Relic,iEventDispatcher
     {
         public override string Icon { get; set; } = "ui://UI/abacus";
         public override string Name { get; set; } = "测试遗物";
@@ -28,5 +28,5 @@ namespace THClimbTower
             Game.EventSystem.RemoveWatcher(this);
             base.Dispose();
         }
-    }
+    }*/
 }

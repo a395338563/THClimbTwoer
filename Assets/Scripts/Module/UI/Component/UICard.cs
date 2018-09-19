@@ -15,10 +15,10 @@ namespace Model
         int maxIndex;
         THClimbTower.PlayerCard playerCard;
         GComponent gCard;
-        
+
         Tween tweenY, tweenX, tweenR;
 
-        public void TweenMoveY(float y,float duration)
+        public void TweenMoveY(float y, float duration)
         {
 
             Debug.Log(index + ":y+" + y + "last:" + duration);
@@ -29,7 +29,7 @@ namespace Model
                 return;
             }
             tweenY?.Kill();
-            tweenY = DOTween.To(() => gCard.y, (x) => gCard.y=x, y, duration);
+            tweenY = DOTween.To(() => gCard.y, (x) => gCard.y = x, y, duration);
         }
 
         public void TweenMoveX(float x, float duration)
@@ -44,7 +44,7 @@ namespace Model
             tweenX = DOTween.To(() => gCard.x, (xx) => gCard.x = xx, x, duration);
         }
 
-        public void TweenRorate(float angle,float duration)
+        public void TweenRorate(float angle, float duration)
         {
             if (duration == 0)
             {
@@ -56,13 +56,15 @@ namespace Model
             tweenR = DOTween.To(() => gCard.rotation, (xx) => gCard.rotation = xx, angle, duration);
         }
 
+        readonly float[] CardXChange = new[] { 0.5f, 0.35f, 0.25f, 0.1f };
+
         /// <summary>
         /// 当前选中的卡片编号，0表示未选中任何卡
         /// </summary>
         /// <param name="SelectIndex"></param>
         public void SetSelectIndex(int SelectIndex)
         {
-            TweenMoveX(200 * index, 1f);
+            TweenMoveX(200 * index, 0.5f);
             if (SelectIndex == this.index)
             {
                 Log.Debug($"{index}onSelect");
@@ -79,13 +81,18 @@ namespace Model
                 float r = (this.index - (float)maxIndex / 2) * 5;
                 gCard.scale = new Vector2(0.75f, 0.75f);
                 //Log.Debug(r.ToString());
-                TweenRorate(r, 1f);
-                TweenMoveY(Mathf.Abs(300 * (float)(Mathf.Tan((r / 180 * Mathf.PI)))), 1f);
+                TweenRorate(r, 0.5f);
+                TweenMoveY(Mathf.Abs(300 * (float)(Mathf.Tan((r / 180 * Mathf.PI)))), 0.5f);
                 return;
             }
             else
             {
-                Log.Debug("Other onSelect");
+                int offset = index - SelectIndex;
+                float xChange = 0;
+                if (Math.Abs(offset) < CardXChange.Length)
+                    xChange = CardXChange[Math.Abs(offset)];
+                if (offset < 0) xChange *= -1;
+                TweenMoveX(200 * (index + xChange), 0.5f);
             }
         }
 

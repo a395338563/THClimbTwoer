@@ -20,7 +20,7 @@ namespace THClimbTower
                 if (eventSystem == null)
                 {
                     eventSystem = new EventSystem();
-                    eventSystem.Awake();
+                    //eventSystem.Awake();
                     instance.AddBaseEvent();    
                 }
                 return eventSystem;
@@ -56,15 +56,15 @@ namespace THClimbTower
             instance.NowMap = new Map();
             //NowMap.Creat(5, 0);
             NowBattle = new Battle();
-            await NowBattle.StartBattle(new List<Enemy>() { new Maoyu() });
+            NowBattle.StartBattle(new List<Enemy>() { new Maoyu() });
             Log.Debug("战斗结束！");
         }
 
         void AddBaseEvent()
         {
-            EventSystem.AddWatcher(new BaseCardDescFirst());
-            EventSystem.AddWatcher(new BaseCardDescFinal());
-            EventSystem.AddWatcher(new CheckBattleEnd());
+            EventSystem.AddDispatcher(new BaseCardDescFirst());
+            EventSystem.AddDispatcher(new BaseCardDescFinal());
+            EventSystem.AddDispatcher(new CheckBattleEnd());
         }
     }
 }

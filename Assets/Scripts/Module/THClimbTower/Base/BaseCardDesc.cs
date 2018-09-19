@@ -5,39 +5,59 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace THClimbTower
-{
-    [EventWatcher(new EventType[] { EventType.GetCardDesc,EventType.GetPlayerCardDesc },-1)]
-    public class BaseCardDescFirst : Model.Component,iEventWatcher
+{    
+    [EventDispatcher(EventType.GetCardDesc)]
+    public class BaseCardDescFirst : iEventDispatcher<Card,BattleCharactor,BattleCharactor>
     {
-        public async Task<object> RunEvent(EventType eventType, object o, params object[] args)
+        /*public void Handle(BaseEvent baseEvent)
         {
-            Card card = o as Card;
-            card.Damage = card.BaseDamage;
-            card.Armor = card.BaseArmor;
-            card.Hits = card.BaseHits;
-            return card;
-        }
-    }
-    [EventWatcher(new EventType[] { EventType.GetPlayerCardDesc },100)]
-    public class BaseCardDescFinal : Model.Component, iEventWatcher
-    {
-        public async Task<object> RunEvent(EventType eventType, object o, params object[] args)
-        {
-            PlayerCard card = o as PlayerCard;
-            card.Desc = card.BaseDesc.Replace("$Damage$", card.Damage.ToString());
-            card.Desc = card.Desc.Replace("$Hits$", card.Hits.ToString());
-            card.Desc = card.Desc.Replace("$Armor$", card.Armor.ToString());
-            return card;
-        }
-    }
+            Card Card;
+            BattleCharactor user;
+            BattleCharactor reciver;
+            if (baseEvent is Event_GetCardDesc)
+            {
+                (baseEvent as Event_GetCardDesc).GetParams(out Card, out user, out reciver);
+                Card.Damage = Card.BaseDamage;
+                Card.Armor = Card.BaseArmor;
+                Card.Hits = Card.BaseHits;
+            }
+        }*/
 
-    [EventWatcher(new EventType[] { EventType.Die })]
-    public class CheckBattleEnd : Model.Component, iEventWatcher
-    {
-        public async Task<object> RunEvent(EventType eventType, object o, params object[] args)
+        public void Handle(EventType baseEvent, Card t, BattleCharactor t1, BattleCharactor t2)
         {
-            Game.Instance.NowBattle.CheckWin();
-            return o;
+            if (baseEvent == EventType.GetCardDesc)
+            {
+                t.Damage = t.BaseDamage;
+                t.Armor = t.BaseArmor;
+                t.Hits = t.BaseHits;
+            }
+        }
+    }
+    [EventDispatcher(EventType.GetCardDesc)]
+    public class BaseCardDescFinal : iEventDispatcher<Card, BattleCharactor, BattleCharactor>
+    {
+        public void Handle(EventType baseEvent, Card t, BattleCharactor t1, BattleCharactor t2)
+        {
+            if (baseEvent == EventType. GetCardDesc)
+            {
+                //(baseEvent as Event_GetCardDesc).GetParams(out Card, out user, out reciver);
+                if (t is PlayerCard)
+                {
+                    PlayerCard playerCard = t as PlayerCard;
+                    playerCard.Desc = playerCard.BaseDesc.Replace("$Damage$", playerCard.Damage.ToString());
+                    playerCard.Desc = playerCard.Desc.Replace("$Hits$", playerCard.Hits.ToString());
+                    playerCard.Desc = playerCard.Desc.Replace("$Armor$", playerCard.Armor.ToString());
+                }
+            }
+        }
+    }
+   [EventDispatcher(EventType.BattleEnd)]
+    public class CheckBattleEnd : iEventDispatcher
+    {
+
+        public void Handle(EventType baseEvent)
+        {
+            throw new NotImplementedException();
         }
     }
 }

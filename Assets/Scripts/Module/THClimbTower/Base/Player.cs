@@ -59,7 +59,7 @@ namespace THClimbTower
                 Deck.Add(d);*/
             }
             potions.Add(new TestPotion());
-            AddRelics(new TestRelic());
+            //AddRelics(new TestRelic());
         }
         /// <summary>
         /// 获得遗物
@@ -68,9 +68,9 @@ namespace THClimbTower
         public void AddRelics(Relic relic)
         {
             Relics.Add(relic);
-            if (relic is iEventWatcher)
+            if (relic is iEventDispatcher)
             {
-                Game.EventSystem.AddWatcher(relic as iEventWatcher);
+                Game.EventSystem.AddDispatcher(relic as iEventDispatcher);
             }
         }
         /// <summary>
@@ -80,9 +80,9 @@ namespace THClimbTower
         public void RemoveRelics(Relic relic)
         {
             Relics.Remove(relic);
-            if (relic is iEventWatcher)
+            if (relic is iEventDispatcher)
             {
-                Game.EventSystem.RemoveWatcher(relic as iEventWatcher);
+                Game.EventSystem.RemoveDispatcher(relic as iEventDispatcher);
             }
         }
     }

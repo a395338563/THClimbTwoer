@@ -6,16 +6,13 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    /// <summary>
-    /// 继承此类后可以成为用于事件通信
-    /// </summary>
-    public class EventInfo : Model.Entity
-    {
-
-    }
-
-    public class DamageInfo: EventInfo
+    public class DamageInfo
     {
         public int Damage;
+        public DamageTypeEnum Type;
+        public enum DamageTypeEnum
+        {
+            Hit,
+        }
     }
 }

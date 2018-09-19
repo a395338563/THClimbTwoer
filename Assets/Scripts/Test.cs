@@ -6,34 +6,47 @@ using System.Threading.Tasks;
 using UnityEngine;
 using Model;
 using System.Reflection;
+using THClimbTower;
 
 public class Test : MonoBehaviour
 {
-    public UnityEngine.Object dll,mdb;
+    //public UnityEngine.Object dll,mdb;
     private async void Start()
     {
-        byte[] d = (dll as TextAsset).bytes;
+        T();
+        //EventListener<EventData>.AddListener((x) => { x.Info += 1; });
+        //EventListener<EventData>.AddListener((x) => { Debug.Log(x.Info); });
+        //EventListener<EventData>.Handle(new EventData() { Info = 10 });
+        /*byte[] d = (dll as TextAsset).bytes;
         byte[] m = (mdb as TextAsset).bytes;
         Assembly assembly = Assembly.Load(d, m);
         THClimbTower.CardFactory.Instance.AddCard(assembly);
 
-        Debug.Log(THClimbTower.CardFactory.Instance.Get(1001).GetType().Name);
+        Debug.Log(THClimbTower.CardFactory.Instance.Get(1001).GetType().Name);*/
         /*E e = new E();
         e.AddComponent<C>();
         await Task.Delay(1000);
         e.RemoveComponent<C>();*/
         //THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
     }
-
-    class E : Entity
+    void T()
     {
-
+        THClimbTower.EventSystem.Instance.AddDispatcher(new TestDispatcher());
+        THClimbTower.EventSystem.Instance.RunEvent<int>(THClimbTower.EventType.testEventType, 1);
     }
-    class C : Model.Component, IUpdate
+}
+namespace THClimbTower
+{
+    [EventDispatcher(EventType.testEventType)]
+    public class TestDispatcher : iEventDispatcher<int>
     {
-        public void Update()
+        public void Handle(EventType baseEvent,int i)
         {
-            Log.Debug("111");
+            //if (baseEvent is TestEventType)
+            {
+                //(baseEvent as TestEventType).GetParams(out i);
+                Debug.Log(i);
+            }
         }
     }
 }

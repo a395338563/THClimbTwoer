@@ -757,5 +757,5 @@
     <image id="nahy8op" name="测试怪.png" path="/"/>
     <component id="wkqj8oq" name="Component3.xml" path="/"/>
   </resources>
-  <publish name="UI" path="F:\ProjectForFUn\THClimbTwoer\Assets\Resources\UI"/>
+  <publish name="UI" path="..\Assets\Resources\UI"/>
 </packageDescription>
