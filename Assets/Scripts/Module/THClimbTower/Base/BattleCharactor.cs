@@ -33,7 +33,7 @@ namespace THClimbTower
 
         public async Task UseCard(Card card,BattleCharactor reciver)
         {
-            await card.Use(this, reciver);
+            card.Use(this, reciver);
         }
 
         public async Task ReciveDamage(DamageInfo damage)

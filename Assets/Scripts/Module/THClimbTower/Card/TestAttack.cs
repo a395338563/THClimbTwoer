@@ -9,9 +9,9 @@ namespace THClimbTower
     [Card(0)]
     public class TestAttack : PlayerCard
     {
-        public override async Task Use(BattleCharactor user, BattleCharactor reciver)
+        public override void Use(BattleCharactor user, BattleCharactor reciver)
         {
-            await reciver.ReciveDamage(new DamageInfo() { Damage = Damage });
+            reciver.ReciveDamage(new DamageInfo() { Damage = Damage });
             ThrowToCemetery();
         }
 

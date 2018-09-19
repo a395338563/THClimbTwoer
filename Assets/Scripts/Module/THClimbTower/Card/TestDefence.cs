@@ -9,13 +9,12 @@ namespace THClimbTower
     [Card(1)]
     public class TestDefence : PlayerCard
     {
-        public override Task Use(BattleCharactor user, BattleCharactor reciver)
+        public override void Use(BattleCharactor user, BattleCharactor reciver)
         {
             Buff_Armor armor = user.GetBuff<Buff_Armor>();
             armor.LastTime += 5;
             Model.Log.Debug($"{user?.Name} add 5 armor,Now Armor:{armor.LastTime}");
             ThrowToCemetery();
-            return Task.CompletedTask;
         }
 
         public override bool UseAble(BattleCharactor reciver)

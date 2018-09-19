@@ -16,7 +16,7 @@ namespace THClimbTower
         public int BaseHits { get; set; }
         public BattleCharactor Owner { get; set; }
         public int Damage, Armor, Hits;
-        public abstract Task Use(BattleCharactor user, BattleCharactor reciver);
+        public abstract void Use(BattleCharactor user, BattleCharactor reciver);
         /// <summary>
         /// 在这里做初始化
         /// </summary>

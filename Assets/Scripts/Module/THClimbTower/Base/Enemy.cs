@@ -27,17 +27,17 @@ namespace THClimbTower
         /// 以玩家为目标使用预测的技能
         /// </summary>
         /// <returns></returns>
-        public Task UseSkill()
+        public void UseSkill()
         {
-            return UseCard(SelectedSkill, Game.Instance.NowBattle.player);
+            UseCard(SelectedSkill, Game.Instance.NowBattle.player);
         }
         public EnemyPredict GetPredict()
         {
             return predict;
         }
-        public async void Predict()
+        public void Predict()
         {
-            predict = await SelectedSkill.GetPredict();
+            predict = SelectedSkill.GetPredict();
         }
     }
 }

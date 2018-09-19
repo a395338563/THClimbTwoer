@@ -11,9 +11,9 @@ namespace THClimbTower
     /// </summary>
     public abstract class EnemyCard : Card
     {
-        public abstract Task<EnemyPredict> GetPredict();
+        public abstract EnemyPredict GetPredict();
 
-        public async Task<EnemyPredict> BasePredict()
+        public EnemyPredict BasePredict()
         {
             Game.EventSystem.RunEvent(EventType.GetCardDesc);
             return new EnemyPredict()
