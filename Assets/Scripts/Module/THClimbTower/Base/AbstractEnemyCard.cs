@@ -9,13 +9,13 @@ namespace THClimbTower
     /// <summary>
     /// 怪物使用的技能，需要实现预测
     /// </summary>
-    public abstract class EnemyCard : Card
+    public abstract class AbstractEnemyCard : AbstractCard
     {
         public abstract EnemyPredict GetPredict();
 
         public EnemyPredict BasePredict()
         {
-            Game.EventSystem.RunEvent(EventType.GetCardDesc);
+            Game.EventSystem.RunEvent(EventType.GetCardFinalInfo);
             return new EnemyPredict()
             {
                 Power = Damage,

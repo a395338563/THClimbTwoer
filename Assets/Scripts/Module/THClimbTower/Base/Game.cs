@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using THClimbTower.BaseEvent;
+using THClimbTower.Buff;
+using THClimbTower.Enemy;
 
 namespace THClimbTower
 {
@@ -50,21 +53,23 @@ namespace THClimbTower
                 HelpCharactorType = helpCharactor,
             };
             player.Init();
+            player.AddBuff<Buff_Str>().Amount = 1;
 
             RandomUtil.SetSeed(1);
 
             instance.NowMap = new Map();
             //NowMap.Creat(5, 0);
             NowBattle = new Battle();
-            NowBattle.StartBattle(new List<Enemy>() { new Maoyu() });
+            NowBattle.StartBattle(new List<AbstractEnemy>() { new Maoyu() });
             Log.Debug("战斗结束！");
         }
 
         void AddBaseEvent()
         {
-            EventSystem.AddDispatcher(new BaseCardDescFirst());
+
             EventSystem.AddDispatcher(new BaseCardDescFinal());
-            EventSystem.AddDispatcher(new CheckBattleEnd());
+            EventSystem.AddDispatcher(new BaseCardDescFirst());
+            //EventSystem.AddDispatcher(new CheckBattleEnd());
         }
     }
 }

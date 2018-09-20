@@ -71,7 +71,7 @@ namespace Model
             //HandList.columnGap = -100;
             for (int i=0;i<battle.Hand.Count;i++)
             {
-                PlayerCard card = battle.Hand[i];
+                AbstractPlayerCard card = battle.Hand[i];
                 GComponent com = UIPackage.CreateObject("UI", "CardUI").asCom;//HandList.AddItemFromPool().asCom;
                 Hand.AddChild(com);
                 UICard uICard = new UICard(com, card, i, battle.Hand.Count - 1);
@@ -139,7 +139,7 @@ namespace Model
         void RelicListClick(EventContext context)
         {
             GComponent g = context.data as GComponent;
-            Relic relic = g.data as Relic;
+            AbstractRelic relic = g.data as AbstractRelic;
             relic.Use();
         }
 
@@ -151,7 +151,7 @@ namespace Model
         void usePotion(object o)
         {
             Log.Debug(o.GetType().ToString());
-            THClimbTower.Potion potion = o as THClimbTower.Potion;
+            THClimbTower.AbstractPotion potion = o as THClimbTower.AbstractPotion;
             if (potion == null) return;
             else potion.Use();
         }

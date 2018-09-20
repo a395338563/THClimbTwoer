@@ -7,10 +7,10 @@ using Model;
 
 namespace THClimbTower
 {
-    public abstract class Potion : Entity
+    public abstract class AbstractPotion : Entity
     {
         public string Name;
         public string Icon;
-        public abstract Task Use();
+        public abstract void Use();
     }
 }

@@ -40,9 +40,9 @@ namespace THClimbTower
             }
         }
 
-        public Card Get(int Id)
+        public AbstractCard Get(int Id)
         {
-            return (Activator.CreateInstance(CardDic[Id]) as Card).Init();
+            return (Activator.CreateInstance(CardDic[Id]) as AbstractCard).Init();
         }
     }
     public class CardAttribute : Attribute

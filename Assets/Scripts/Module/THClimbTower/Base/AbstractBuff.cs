@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    public abstract class Buff : Model.Component
+    public abstract class AbstractBuff : Model.Component
     {
-        public int LastTime { get; set; }
+        public int Amount { get; set; }
 
-        public string Icon { get; set; }
+        public abstract string Icon { get; }
 
-        public BattleCharactor Owner { get; set; }
+        public AbstractCharactor Owner { get; set; }
         //public abstract Task<object> RunEvent(EventType eventType, object o, params object[] args);
     }
 }

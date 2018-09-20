@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using THClimbTower.EnemyCard;
 
-namespace THClimbTower
+namespace THClimbTower.Enemy
 {
     [Enemy(EnemyEnum.Maoyu)]
-    public class Maoyu : Enemy
+    public class Maoyu : AbstractEnemy
     {
         public override string Name
         {
@@ -17,7 +18,7 @@ namespace THClimbTower
             }
         }
 
-        protected override EnemyCard AIThink()
+        protected override AbstractEnemyCard AIThink()
         {
             return new MaoyuHit() { BaseDamage = 15, BaseHits = 1 };
         }

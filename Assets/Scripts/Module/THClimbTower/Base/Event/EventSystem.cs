@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,6 +18,7 @@ namespace THClimbTower
         }
         private static EventSystem instance;
         Dictionary<int, List<iBaseEventDispather>> dic = new Dictionary<int, List<iBaseEventDispather>>();
+        
         public void RunEvent(EventType eventType)
         {
             if (dic.ContainsKey((int)eventType))
@@ -55,6 +57,7 @@ namespace THClimbTower
             object[] attrs= dispatcher.GetType().GetCustomAttributes(typeof(EventDispatcherAttribute), false);
             foreach (EventDispatcherAttribute e in attrs)
             {
+                Model.Log.Debug(e.ToString());
                 foreach (var a in e.ids)
                 {
                     List<iBaseEventDispather> eventDispatchers;
@@ -65,13 +68,70 @@ namespace THClimbTower
                         dic.Add(a, eventDispatchers);
                     }
                     eventDispatchers.Add(dispatcher);
+                    eventDispatchers.Sort((x, y) =>
+                    {
+                        return GetSortIndex(x).CompareTo(GetSortIndex(y));
+                    });
                 }
-                //dic[e].Add(dispatcher);
             }
         }
+
+        /// <summary>
+        /// 获取iBaseEventDispather的排序大小，为了方便就这样吧
+        /// </summary>
+        /// <param name="iBaseEventDispather"></param>
+        /// <returns></returns>
+        int GetSortIndex(iBaseEventDispather iBaseEventDispather)
+        {
+            try
+            {
+                return (iBaseEventDispather.GetType().GetCustomAttribute<EventDispatcherAttribute>().SortIndex);
+            }
+            catch
+            {
+                Model.Log.Error($"{iBaseEventDispather.GetType()}未添加EventDispatcherAttribute特性！");
+                throw new Exception();
+            }
+        }
+
         public void RemoveDispatcher(iBaseEventDispather dispatcher)
         {
-
+            object[] attrs = dispatcher.GetType().GetCustomAttributes(typeof(EventDispatcherAttribute), false);
+            foreach (EventDispatcherAttribute e in attrs)
+            {
+                foreach (var a in e.ids)
+                {
+                    List<iBaseEventDispather> eventDispatchers;
+                    dic.TryGetValue(a, out eventDispatchers);
+                    if (!eventDispatchers.Contains(dispatcher))
+                    {
+                        Model.Log.Debug($"移出{dispatcher.GetType()}事件失败");
+                        continue;
+                    }
+                    eventDispatchers.Remove(dispatcher);
+                }
+            }
         }
+
+        /*public void Awake()
+        {
+            Type[] types = Assembly.GetExecutingAssembly().GetTypes();
+            foreach (Type type in types)
+            {
+                object[] attrs = type.GetCustomAttributes(typeof(EventDispatcherAttribute), false);
+                foreach (var attr in attrs)
+                {
+                    if (type is iBaseEventDispather)
+                    {
+                        SortDic.Add(type, (attr as EventDispatcherAttribute));
+                    }
+                    else
+                    {
+                        Model.Log.Error($"类{type.ToString()}未继承iEventDispather");
+                        break;
+                    }
+                }
+            }
+        }*/
     }
 }

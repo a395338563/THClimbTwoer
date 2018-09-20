@@ -3,30 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using THClimbTower.Buff;
 
-namespace THClimbTower
+namespace THClimbTower.Card
 {
     [Card(1)]
-    public class TestDefence : PlayerCard
+    public class TestDefence : AbstractPlayerCard
     {
-        public override void Use(BattleCharactor user, BattleCharactor reciver)
+        public override void CardLogic(AbstractCharactor reciver)
         {
-            Buff_Armor armor = user.GetBuff<Buff_Armor>();
-            armor.LastTime += 5;
-            Model.Log.Debug($"{user?.Name} add 5 armor,Now Armor:{armor.LastTime}");
+            Buff_Armor armor = Owner.GetBuff<Buff_Armor>();
+            armor.Amount += 5;
+            Model.Log.Debug($"{Owner?.Name} add 5 armor,Now Armor:{armor.Amount}");
             ThrowToCemetery();
         }
-
-        public override bool UseAble(BattleCharactor reciver)
-        {
-            return true;
-        }
-
-        public override bool UseAbleInHand()
-        {
-            return true;
-        }
-        public override Card Init()
+        public override AbstractCard Init()
         {
             BaseDesc = "获得$Armor$点护甲";
             BaseArmor = 5;

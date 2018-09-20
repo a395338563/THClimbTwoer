@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using THClimbTower.Buff;
 
 namespace THClimbTower
 {
     /// <summary>
-    /// 战斗单位
+    /// 战斗单位,己方和敌方的基类
     /// </summary>
-    public abstract class BattleCharactor : Entity
+    public abstract class AbstractCharactor : Entity
     {
         public abstract string Name { get;}
 
@@ -21,19 +22,19 @@ namespace THClimbTower
             {
                 if (GetBuff<Buff_Armor>() == null)
                     return 0;
-                return GetBuff<Buff_Armor>().LastTime;
+                return GetBuff<Buff_Armor>().Amount;
             }
             set
             {
                 if (GetBuff<Buff_Armor>() == null)
                     AddComponent<Buff_Armor>();
-                GetBuff<Buff_Armor>().LastTime = value;
+                GetBuff<Buff_Armor>().Amount = value;
             }
         }
 
-        public async Task UseCard(Card card,BattleCharactor reciver)
+        public async Task UseCard(AbstractCard card,AbstractCharactor reciver)
         {
-            card.Use(this, reciver);
+            card.CardLogic(reciver);
         }
 
         public async Task ReciveDamage(DamageInfo damage)
@@ -53,43 +54,43 @@ namespace THClimbTower
             }
         }
 
-        public List<Buff> GetBuffs()
+        public List<AbstractBuff> GetBuffs()
         {
-            List<Buff> output = new List<Buff>();
+            List<AbstractBuff> output = new List<AbstractBuff>();
             foreach (var buff in GetComponents())
             {
-                if (buff is Buff)
+                if (buff is AbstractBuff)
                 {
                     //护甲不计入buff列表
                     if (buff is Buff_Armor)
-                        break;
-                    output.Add(buff as Buff);
+                        continue;
+                    output.Add(buff as AbstractBuff);
                 }
             }
             return output;
         }
 
-        public T AddBuff<T>()where T : Buff, new()
+        public T AddBuff<T>()where T : AbstractBuff, new()
         {
             return GetBuff<T>();
         }
 
-        public T GetBuff<T>() where T : Buff, new()
+        public T GetBuff<T>() where T : AbstractBuff, new()
         {
             T t = this.GetComponent<T>();
             if (t == null)
             {
                 t = this.AddComponent<T>();
-                if (t is iEventDispatcher)
-                    Game.EventSystem.AddDispatcher(t as iEventDispatcher);
+                if (t is iBaseEventDispather)
+                    Game.EventSystem.AddDispatcher(t as iBaseEventDispather);
             }
             return t;
         }
-        public void RemoveBuff<T>() where T : Buff, new()
+        public void RemoveBuff<T>() where T : AbstractBuff, new()
         {
             T t = this.GetComponent<T>();
-            if (t is iEventDispatcher)
-                Game.EventSystem.RemoveDispatcher(t as iEventDispatcher);
+            if (t is iBaseEventDispather)
+                Game.EventSystem.RemoveDispatcher(t as iBaseEventDispather);
             this.RemoveComponent<T>();
         }
     }

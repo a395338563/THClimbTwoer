@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace THClimbTower
+namespace THClimbTower.Buff
 {
-    [EventDispatcher(EventType.GetCardDesc)]
-    public class Buff_Str : Buff,iEventDispatcher
+    [EventDispatcher(EventType.GetCardFinalInfo)]
+    public class Buff_Str : AbstractBuff,iEventDispatcher<AbstractCard,AbstractCharactor,AbstractCharactor>
     {
+        public override string Icon { get; } = "str";
 
-        public void Handle(EventType baseEvent)
+        public void Handle(EventType eventType, AbstractCard t, AbstractCharactor t1, AbstractCharactor t2)
         {
-            throw new NotImplementedException();
+            t.Damage += Amount;
         }
 
         /*public override async Task<object> RunEvent(EventType eventType, object o, params object[] args)

@@ -11,7 +11,7 @@ namespace THClimbTower
         //BaseEvent[] baseEvents { get; }
     }
     public interface iEventDispatcher: iBaseEventDispather
-    {      
+    {
         void Handle(EventType eventType);
     }
     public interface iEventDispatcher<T>: iBaseEventDispather

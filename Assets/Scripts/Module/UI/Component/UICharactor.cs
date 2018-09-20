@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using FairyGUI;
 using THClimbTower;
+using THClimbTower.Buff;
 
 namespace Model
 {
@@ -12,11 +13,11 @@ namespace Model
     {
         GList buffList;
         GProgressBar GBar;
-        BattleCharactor charactor;
+        AbstractCharactor charactor;
         Controller ArmorController;
 
         const int MinHpWidth = 150, MaxHpWidth = 500, MaxHpValue = 150;
-        public UICharactor(GComponent gCharactor,BattleCharactor charactor)
+        public UICharactor(GComponent gCharactor,AbstractCharactor charactor)
         {
             GBar = gCharactor.GetChild("bar").asProgress;
             buffList = GBar.GetChild("BuffList").asList;
@@ -30,7 +31,7 @@ namespace Model
             SetMaxHp(charactor.MaxHp);
             SetHp(charactor.NowHp);
 
-            ArmorController.selectedIndex = charactor.GetBuff<Buff_Armor>().LastTime > 0 ? 0 : 1;
+            ArmorController.selectedIndex = charactor.GetBuff<Buff_Armor>().Amount > 0 ? 0 : 1;
             GBar.text = $"{charactor.NowHp}/{charactor.MaxHp}";
             GBar.GetChild("Block").text = charactor.Armor.ToString();
 
@@ -39,7 +40,7 @@ namespace Model
             {
                 GComponent g = buffList.AddItemFromPool().asCom;
                 g.icon = buff.Icon;
-                g.text = buff.LastTime == 0 ? "" : buff.LastTime.ToString();
+                g.text = buff.Amount == 0 ? "" : buff.Amount.ToString();
             }
         }
 

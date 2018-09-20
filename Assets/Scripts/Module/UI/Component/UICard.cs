@@ -13,7 +13,7 @@ namespace Model
     {
         int index;
         int maxIndex;
-        THClimbTower.PlayerCard playerCard;
+        THClimbTower.AbstractPlayerCard playerCard;
         GComponent gCard;
 
         Tween tweenY, tweenX, tweenR;
@@ -96,7 +96,7 @@ namespace Model
             }
         }
 
-        public UICard(GComponent gCard, THClimbTower.PlayerCard card, int index,int maxIndex)
+        public UICard(GComponent gCard, THClimbTower.AbstractPlayerCard card, int index,int maxIndex)
         {
             this.gCard = gCard;
             this.playerCard = card;

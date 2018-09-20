@@ -9,15 +9,15 @@ namespace THClimbTower
     /// <summary>
     /// 进入战斗大地图后的玩家信息
     /// </summary>
-    public class Player : BattleCharactor
+    public class Player : AbstractCharactor
     {
         public CharactorTypeEnum MainCharactorType, HelpCharactorType;
         public int Gold;
         public int Power;
         public int MaxPower;
-        public List<PlayerCard> Deck = new List<PlayerCard>();
-        public List<Relic> Relics = new List<Relic>();
-        public List<Potion> potions = new List<Potion>();
+        public List<AbstractPlayerCard> Deck = new List<AbstractPlayerCard>();
+        public List<AbstractRelic> Relics = new List<AbstractRelic>();
+        public List<AbstractPotion> potions = new List<AbstractPotion>();
 
         public override string Name
         {
@@ -37,8 +37,8 @@ namespace THClimbTower
             MainCharactorType = CharactorTypeEnum.Reimu;
             for (int i = 0; i < 5; i++)
             {
-                Deck.Add(CardFactory.Instance.Get(0) as PlayerCard);
-                Deck.Add(CardFactory.Instance.Get(1) as PlayerCard);
+                Deck.Add(CardFactory.Instance.Get(0) as AbstractPlayerCard);
+                Deck.Add(CardFactory.Instance.Get(1) as AbstractPlayerCard);
                 /*TestAttack t = new TestAttack()
                 {
                     BaseDesc = "造成$Damage$点伤害",
@@ -58,14 +58,14 @@ namespace THClimbTower
                 };
                 Deck.Add(d);*/
             }
-            potions.Add(new TestPotion());
+            potions.Add(new Potion.TestPotion());
             //AddRelics(new TestRelic());
         }
         /// <summary>
         /// 获得遗物
         /// </summary>
         /// <param name="relic"></param>
-        public void AddRelics(Relic relic)
+        public void AddRelics(AbstractRelic relic)
         {
             Relics.Add(relic);
             if (relic is iEventDispatcher)
@@ -77,7 +77,7 @@ namespace THClimbTower
         /// 失去遗物
         /// </summary>
         /// <param name="relic"></param>
-        public void RemoveRelics(Relic relic)
+        public void RemoveRelics(AbstractRelic relic)
         {
             Relics.Remove(relic);
             if (relic is iEventDispatcher)

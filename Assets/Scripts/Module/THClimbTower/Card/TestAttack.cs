@@ -4,27 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace THClimbTower
+namespace THClimbTower.Card
 {
     [Card(0)]
-    public class TestAttack : PlayerCard
+    public class TestAttack : AbstractPlayerCard
     {
-        public override void Use(BattleCharactor user, BattleCharactor reciver)
+        public override void CardLogic(AbstractCharactor reciver)
         {
             reciver.ReciveDamage(new DamageInfo() { Damage = Damage });
             ThrowToCemetery();
         }
-
-        public override bool UseAble(BattleCharactor reciver)
-        {
-            return true;
-        }
-
-        public override bool UseAbleInHand()
-        {
-            return true;
-        }
-        public override Card Init()
+        public override AbstractCard Init()
         {
             BaseDesc = "造成$Damage$点伤害";
             BaseDamage = 6;

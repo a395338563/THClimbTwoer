@@ -9,19 +9,25 @@ namespace THClimbTower
     /// <summary>
     /// 所有卡牌的基类
     /// </summary>
-    public abstract class Card
+    public abstract class AbstractCard
     {
         public int BaseDamage { get; set; }
         public int BaseArmor { get; set; }
         public int BaseHits { get; set; }
-        public BattleCharactor Owner { get; set; }
+        public AbstractCharactor Owner { get; set; }
         public int Damage, Armor, Hits;
-        public abstract void Use(BattleCharactor user, BattleCharactor reciver);
+        public void Use(AbstractCharactor reciver)
+        {
+            Game.EventSystem.RunEvent(EventType.BeforeCardUse, this, Owner, reciver);
+            CardLogic(reciver);
+            Game.EventSystem.RunEvent(EventType.AfterCardUse, this, Owner, reciver);
+        }
+        public abstract void CardLogic(AbstractCharactor reciver);
         /// <summary>
         /// 在这里做初始化
         /// </summary>
         /// <returns></returns>
-        public virtual Card Init()
+        public virtual AbstractCard Init()
         {
             return this;
         }

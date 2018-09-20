@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace THClimbTower
 {
-    public abstract class Enemy : BattleCharactor
+    public abstract class AbstractEnemy : AbstractCharactor
     {
         public int X, Y;
-        public EnemyCard SelectedSkill;
-        protected abstract EnemyCard AIThink();
+        public AbstractEnemyCard SelectedSkill;
+        protected abstract AbstractEnemyCard AIThink();
 
         public abstract void EnenmyInit();
 

@@ -24,15 +24,15 @@ namespace THClimbTower
     public class EnemyFatory : Model.Component,IAwake
     {
         Dictionary<int, Type> dic = new Dictionary<int, Type>();
-        public Enemy Get(int ID)
+        public AbstractEnemy Get(int ID)
         {
             Type t;
             dic.TryGetValue(ID, out t);
-            Enemy e = Activator.CreateInstance(t) as Enemy;
+            AbstractEnemy e = Activator.CreateInstance(t) as AbstractEnemy;
             e.EnenmyInit();
             return e;
         }
-        public Enemy Get(EnemyEnum enemyEnum)
+        public AbstractEnemy Get(EnemyEnum enemyEnum)
         {
             return Get((int)enemyEnum);
         }
@@ -47,7 +47,7 @@ namespace THClimbTower
                 {
                     EnemyAttribute enemyAttribute = (EnemyAttribute)attr;
                     object obj = Activator.CreateInstance(type);
-                    Enemy enemy = obj as Enemy;
+                    AbstractEnemy enemy = obj as AbstractEnemy;
                     if (enemy == null)
                     {
                         Log.Error($"{obj.GetType()}未继承Enemy");

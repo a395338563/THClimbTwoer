@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace THClimbTower
+namespace THClimbTower.Potion
 {
-    public class TestPotion : Potion
+    public class TestPotion : AbstractPotion
     {
-        public override Task Use()
+        public override void Use()
         {
             Model.Log.Debug("你喝了一瓶药，然而并没有什么卵用");
-            return Task.CompletedTask;
         }
     }
 }
