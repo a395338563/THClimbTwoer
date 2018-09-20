@@ -22,7 +22,7 @@ namespace Model
                 MainView.AddRelation(GRoot.inst, RelationType.Size);
                 MainView.fairyBatching = true;
                 GRoot.inst.AddChild(MainView);
-                Creat();
+                Create();
             }
             else
             {
@@ -31,7 +31,7 @@ namespace Model
             //OnEnter();
         }
 
-        public abstract void Creat();
+        public abstract void Create();
         public abstract void OnEnter();
 
         public virtual void Leave()

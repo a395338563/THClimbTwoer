@@ -50,5 +50,6 @@
       <Label icon="ui://p2tnfz1unahy8op"/>
     </component>
     <component id="n60_tlpq" name="n60" src="dass1" fileName="Component1.xml" xy="443,1050"/>
+    <component id="n61_pi22" name="n61" src="pi228ot" fileName="战斗UI/Arrow.xml" xy="0,0" hideByEditor="true" touchable="false"/>
   </displayList>
 </component>

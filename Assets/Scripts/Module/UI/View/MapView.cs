@@ -18,7 +18,7 @@ namespace Model
 
         GComponent GNode;
 
-        public override void Creat()
+        public override void Create()
         {
             GNode = MainView.GetChildAt(0).asCom.GetChild("Node").asCom;
             GNode.touchable = true;

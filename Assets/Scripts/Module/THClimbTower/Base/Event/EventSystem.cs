@@ -112,26 +112,5 @@ namespace THClimbTower
                 }
             }
         }
-
-        /*public void Awake()
-        {
-            Type[] types = Assembly.GetExecutingAssembly().GetTypes();
-            foreach (Type type in types)
-            {
-                object[] attrs = type.GetCustomAttributes(typeof(EventDispatcherAttribute), false);
-                foreach (var attr in attrs)
-                {
-                    if (type is iBaseEventDispather)
-                    {
-                        SortDic.Add(type, (attr as EventDispatcherAttribute));
-                    }
-                    else
-                    {
-                        Model.Log.Error($"类{type.ToString()}未继承iEventDispather");
-                        break;
-                    }
-                }
-            }
-        }*/
     }
 }

@@ -62,21 +62,29 @@ namespace Model
         /// 当前选中的卡片编号，0表示未选中任何卡
         /// </summary>
         /// <param name="SelectIndex"></param>
-        public void SetSelectIndex(int SelectIndex)
+        public void SetSelectIndex(int SelectIndex,bool Click=false)
         {
             TweenMoveX(200 * index, 0.5f);
             if (SelectIndex == this.index)
-            {
-                Log.Debug($"{index}onSelect");
-                gCard.scale = new Vector2(1, 1);
+            {              
                 //选中自己的情况
-                TweenMoveY(-100, 0);
-                TweenRorate(0, 0);
+                if (Click)
+                {
+                    gCard.scale = new Vector2(0.75f, 0.75f);
+                    TweenMoveY(-50,0.5f);
+                    TweenMoveX(200 * ((float)maxIndex / 2), 0.5f);
+                    TweenRorate(0, 0);
+                }
+                else
+                {
+                    gCard.scale = new Vector2(1, 1);
+                    TweenMoveY(-100, 0);
+                    TweenRorate(0, 0);
+                }
                 return;
             }
             if (SelectIndex == -1)
             {
-                Log.Debug($"nothing onSelect");
                 //没有卡被选中的情况
                 float r = (this.index - (float)maxIndex / 2) * 5;
                 gCard.scale = new Vector2(0.75f, 0.75f);
@@ -113,6 +121,7 @@ namespace Model
             gCard.GetChild("CardName").text = playerCard.Title;
             gCard.GetChild("CardType").text = playerCard.CardType.ToString();
             gCard.GetChild("CardImage").asLoader.url = $"Card/{playerCard.Pic}";
+            gCard.GetController("UseAble").selectedIndex = playerCard.UseAble ? 0 : 1;
         }
     }
 }

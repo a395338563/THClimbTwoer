@@ -17,7 +17,7 @@ namespace Model
 
         CharactorTypeEnum mainType, helpType;
 
-        public override void Creat()
+        public override void Create()
         {
             MainView.GetChild("StartGame").onClick.Add(() =>
             {

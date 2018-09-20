@@ -10,7 +10,7 @@ using UnityEngine;
 namespace Model
 {
     [GameUIView(UIViewType.Battle)]
-    public class BattleView : GameUIView,IUpdate
+    public class BattleView : GameUIView, IUpdate
     {
         public override string PackageName { get; set; } = "UI";
 
@@ -20,14 +20,20 @@ namespace Model
 
         GList RelicList;
 
-        GComponent Hand;
+        GComponent Hand,Arrow;
 
         UICharactor player;
 
-        public override void Creat()
+        /// <summary>
+        /// 为true时，表示玩家选中了一张牌，准备打出
+        /// </summary>
+        bool InSelectCard = false;
+
+        public override void Create()
         {
             Hand = MainView.GetChild("n60").asCom;
             RelicList = MainView.GetChild("n53").asList;
+            Arrow = MainView.GetChild("n61").asCom;
 
             THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
             battle = THClimbTower.Game.Instance.NowBattle;
@@ -45,6 +51,11 @@ namespace Model
                 battle.EndTurn();
             });
 
+            MainView.onRightClick.Add(() =>
+            {
+                InSelectCard = false;
+            });
+
             //右键点击主动使用遗物
             RelicList.onRightClickItem.Add(RelicListClick);
 
@@ -55,11 +66,11 @@ namespace Model
                     Card c = (x.data as GComponent).data as Card;
                     player.UseCard(c, player);
                 }
-            });*/           
+            });*/
 
-           this.player= new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
+            this.player = new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
 
-            CreateHand();
+            CreateHand();          
         }
 
         GComponent selectCard;
@@ -77,41 +88,11 @@ namespace Model
                 UICard uICard = new UICard(com, card, i, battle.Hand.Count - 1);
                 HandCards.Add(uICard);
                 int k = i;
-                com.onRollOver.Set(() => { Log.Debug(k.ToString()+"over"); foreach (var c in HandCards) c.SetSelectIndex(k);  });
-                com.onRollOut.Set(() => { Log.Debug(k.ToString()+"out"); foreach (var c in HandCards) c.SetSelectIndex(-1); });
+                com.onRollOver.Set(() => { if (!InSelectCard) foreach (var c in HandCards) c.SetSelectIndex(k); });
+                com.onRollOut.Set(() => { if(!InSelectCard) foreach (var c in HandCards) c.SetSelectIndex(-1); });
+                com.onClick.Set(() => { foreach (var c in HandCards) c.SetSelectIndex(k, true);InSelectCard = true; });
             }
         }
-
-        /*void FreshHand()
-        {
-            //刷新手牌
-            HandList.RemoveChildrenToPool();
-            HandList.columnGap = -100;
-            for (int i = 0; i < battle.Hand.Count; i++)// card in battle.Hand)
-            {
-                PlayerCard card = battle.Hand[i];
-                GComponent com = HandList.AddItemFromPool().asCom;
-                com.onRollOver.Add(() => { if (selectCard==com) return; selectCard = com;FreshHand(); });
-                com.onRollOut.Add(() => { selectCard = null; FreshHand(); });
-                if (selectCard!=null&& com == selectCard)
-                {
-                    com.TweenRotate(0, 0.01f);
-                    com.TweenMoveY(-100, 0.01f);
-                    com.scale = new UnityEngine.Vector2(1, 1);
-                }
-                else
-                {
-                    float r = (i - battle.Hand.Count / 2) * 5;
-                    com.TweenRotate(r, 1f);
-                    com.TweenMoveY(Mathf.Abs(300 * (float)(Mathf.Tan((r / 180 * Mathf.PI)))), 1f);
-                    com.scale = new UnityEngine.Vector2(0.75f, 0.75f);
-                }
-                //com.y = Math.Abs(300*(float)(Math.Tan((double)(com.rotation/180*Math.PI))));
-                //Log.Debug($"{com.rotation},{com.y}");
-                //UICard uICard = new UICard(com, card);
-                //uICard.Fresh();
-            }
-        }*/
 
         void FreshPage()
         {
@@ -159,6 +140,38 @@ namespace Model
         public void Update()
         {
             FreshPage();
+            Vector2 v2 = Input.mousePosition;
+            v2.y = Screen.height - v2.y;
+            Vector2 start = new Vector2(Screen.width / 2, Screen.height - 300);
+            Vector2 Last = new Vector2(Screen.width / 2, Screen.height - 300);
+            for (int i = 0; i < 19; i++)
+            {
+                float x = BackIn(v2.x-start.x, ((float)i) / 19);
+                float y = - BackOut(start.y - v2.y, ((float)i) / 19);
+                Vector2 delta = new Vector2(x, y);
+                delta.y *= -1;
+                if (i > 0)
+                {
+                    Arrow.GetChild($"n{i - 1}").rotation = Vector2.SignedAngle(Vector2.up, delta);
+                }
+                if (i == 18)
+                {
+                    Arrow.GetChild("Head").rotation= Vector2.SignedAngle(Vector2.up, delta);
+                }
+                Arrow.GetChild($"n{i}").xy = new Vector2(x, y) + start;
+                Last = new Vector2(x, y) + start;
+            }
+            Arrow.GetChild("Head").xy = v2;
         }
+        float BackOut(float value, float time)
+        {
+            time -= 1.0f;
+            return value * (time * time * (2.70158f * time + 1.70158f) + 1.0f);
+        }
+        float BackIn(float value,  float time)
+        {
+            return value * time * time * (2.70158f * time - 1.70158f);
+        }
+
     }
 }

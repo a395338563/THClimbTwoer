@@ -15,7 +15,7 @@ namespace Model
 
         public override string ViewName { get; set; } = "Main";
 
-        public override void Creat()
+        public override void Create()
         {
             MainView.GetChild("n2").onClick.Add(() =>
             {

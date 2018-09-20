@@ -756,6 +756,9 @@
     <image id="nahy8oo" name="战士图.png" path="/"/>
     <image id="nahy8op" name="测试怪.png" path="/"/>
     <component id="wkqj8oq" name="Component3.xml" path="/"/>
+    <image id="pi228or" name="reticleBlock.png" path="/战斗UI/" exported="true"/>
+    <image id="pi228os" name="reticleArrow.png" path="/战斗UI/" exported="true"/>
+    <component id="pi228ot" name="Arrow.xml" path="/战斗UI/"/>
   </resources>
   <publish name="UI" path="..\Assets\Resources\UI"/>
 </packageDescription>
