@@ -5,24 +5,28 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace THClimbTower.BaseEvent
-{    
+{
+    /// <summary>
+    /// 初始化卡片基本信息
+    /// </summary>
     [EventDispatcher(EventType.GetCardFinalInfo,-100)]
     public class BaseCardDescFirst : iEventDispatcher<AbstractCard,AbstractCharactor,AbstractCharactor>
     {
         public void Handle(EventType baseEvent, AbstractCard t, AbstractCharactor t1, AbstractCharactor t2)
         {
-            //初始化卡片基本信息
             t.Damage = t.BaseDamage;
             t.Armor = t.BaseArmor;
             t.Hits = t.BaseHits;
         }
     }
+    /// <summary>
+    /// 将卡牌数值套入描述中，让玩家看得懂
+    /// </summary>
     [EventDispatcher(EventType.GetCardFinalInfo, 100)]
     public class BaseCardDescFinal : iEventDispatcher<AbstractCard, AbstractCharactor, AbstractCharactor>
     {
         public void Handle(EventType baseEvent, AbstractCard t, AbstractCharactor t1, AbstractCharactor t2)
         {
-            //玩家的卡片需要替换字符串
             if (t is AbstractPlayerCard)
             {
                 AbstractPlayerCard playerCard = t as AbstractPlayerCard;

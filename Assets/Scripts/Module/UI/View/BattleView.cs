@@ -142,13 +142,15 @@ namespace Model
             FreshPage();
             Vector2 v2 = Input.mousePosition;
             v2.y = Screen.height - v2.y;
-            Vector2 start = new Vector2(Screen.width / 2, Screen.height - 300);
-            Vector2 Last = new Vector2(Screen.width / 2, Screen.height - 300);
+            Vector2 screenpos = GRoot.inst.GlobalToLocal(v2);
+            
+            Vector2 start = new Vector2(960, 780);
+            Vector2 Last = new Vector2(960, 780);
             for (int i = 0; i < 19; i++)
             {
                 float x = BackIn(v2.x-start.x, ((float)i) / 19);
-                float y = - BackOut(start.y - v2.y, ((float)i) / 19);
-                Vector2 delta = new Vector2(x, y);
+                float y = BackOut(v2.y-start.y, ((float)i) / 19);
+                Vector2 delta = new Vector2(x, y) + start - Last;
                 delta.y *= -1;
                 if (i > 0)
                 {
@@ -156,6 +158,7 @@ namespace Model
                 }
                 if (i == 18)
                 {
+                    Arrow.GetChild($"n{i}").rotation = Vector2.SignedAngle(Vector2.up, delta);
                     Arrow.GetChild("Head").rotation= Vector2.SignedAngle(Vector2.up, delta);
                 }
                 Arrow.GetChild($"n{i}").xy = new Vector2(x, y) + start;

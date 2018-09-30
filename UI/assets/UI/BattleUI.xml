@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080" overflow="hidden" designImage="ui://p2tnfz1uk8zt3p" designImageOffsetX="-8" designImageOffsetY="-33" designImageAlpha="0" designImageLayer="1">
+  <controller name="c1" pages="0,,1," selected="1"/>
   <displayList>
     <component id="n54_m11l" name="n54" src="10e885p" fileName="Scene1.xml" xy="0,0"/>
     <image id="n0_k8zt" name="n0" src="k8zt2w" fileName="战斗UI/bar.png" xy="0,-3"/>
@@ -7,7 +8,9 @@
     <text id="n20_i0hd" name="WorkName" xy="161,19" size="89,27" font="Noto Sans Mono CJK SC Regular" fontSize="21" color="#ffffff" text="静默猎手"/>
     <image id="n24_l5sr" name="n24" src="l5sr47" fileName="战斗UI/shadow.png" xy="21,932" locked="true"/>
     <image id="n25_l5sr" name="n25" src="l5sr47" fileName="战斗UI/shadow.png" xy="1771,931" locked="true"/>
-    <component id="n23_l5sr" name="EndTurn" src="l5sr49" fileName="战斗UI/EndTurnComponent.xml" xy="1509,741"/>
+    <component id="n23_l5sr" name="EndTurn" src="l5sr49" fileName="战斗UI/EndTurnComponent.xml" xy="1509,741">
+      <Button controller="c1" page="1"/>
+    </component>
     <image id="n29_gt45" name="n29" src="gt454i" fileName="战斗UI/panelHeart.png" xy="278,-2"/>
     <image id="n30_gt45" name="n30" src="gt454h" fileName="战斗UI/panelGoldBag.png" xy="441,-4"/>
     <text id="n31_gt45" name="H" xy="336,14" size="69,35" font="Source Han Serif SC" fontSize="27" color="#f97f71" strokeColor="#3f211d" shadowColor="#3f211d" shadowOffset="2,2" text="70/70"/>
@@ -41,6 +44,7 @@
       <item/>
     </list>
     <component id="n57_nahy" name="n57" src="nahy8ol" fileName="Charactor.xml" xy="340,528">
+      <gearDisplay controller="c1" pages="1"/>
       <Label icon="ui://p2tnfz1unahy8oo"/>
     </component>
     <component id="n58_nahy" name="n58" src="nahy8ol" fileName="Charactor.xml" xy="1059,559">
@@ -52,4 +56,7 @@
     <component id="n60_tlpq" name="n60" src="dass1" fileName="Component1.xml" xy="443,1050"/>
     <component id="n61_pi22" name="n61" src="pi228ot" fileName="战斗UI/Arrow.xml" xy="0,0" hideByEditor="true" touchable="false"/>
   </displayList>
+  <transition name="t0">
+    <item time="0" type="Scale" target="n59_nahy" tween="true" startValue="0,0" endValue="1,1" duration="12"/>
+  </transition>
 </component>

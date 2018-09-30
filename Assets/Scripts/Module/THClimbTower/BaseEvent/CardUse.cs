@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace THClimbTower.BaseEvent
 {
-    class ThrowCard
+
+    public class ThrowCard
     {
     }
 }

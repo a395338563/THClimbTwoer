@@ -759,6 +759,7 @@
     <image id="pi228or" name="reticleBlock.png" path="/战斗UI/" exported="true"/>
     <image id="pi228os" name="reticleArrow.png" path="/战斗UI/" exported="true"/>
     <component id="pi228ot" name="Arrow.xml" path="/战斗UI/"/>
+    <image id="ptnn8ou" name="n59.png" path="/"/>
   </resources>
   <publish name="UI" path="..\Assets\Resources\UI"/>
 </packageDescription>
