@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
   <displayList>
-    <image id="n62_pi22" name="Head" src="pi228os" fileName="战斗UI/reticleArrow.png" xy="1099,121" pivot="0.5,0" anchor="true" rotation="90"/>
     <image id="n64_pi22" name="n0" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="664,578" pivot="0.5,0" anchor="true"/>
     <image id="n65_pi22" name="n1" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="283,354" pivot="0.5,0" anchor="true"/>
     <image id="n66_pi22" name="n2" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="826,500" pivot="0.5,0" anchor="true"/>
@@ -21,5 +20,6 @@
     <image id="n81_pi22" name="n16" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="148,322" pivot="0.5,0" anchor="true"/>
     <image id="n82_pi22" name="n17" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="197,497" pivot="0.5,0" anchor="true"/>
     <image id="n83_pi22" name="n18" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="525,511" pivot="0.5,0" anchor="true"/>
+    <image id="n62_pi22" name="Head" src="pi228os" fileName="战斗UI/reticleArrow.png" xy="1099,121" pivot="0.5,0" anchor="true" rotation="90"/>
   </displayList>
 </component>

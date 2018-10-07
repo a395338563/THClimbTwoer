@@ -1,0 +1,11 @@
+{
+    "name": "Hotfix",
+    "references": [
+        "Model",
+        "ThirdParty"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
