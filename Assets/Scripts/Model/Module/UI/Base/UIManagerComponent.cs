@@ -35,7 +35,7 @@ namespace Model
             //LoadPackge("BlueSkin");//加载默认皮肤
             //LoadPackge("THCLimbTower");//加载资源
             LoadPackge("UI");//从爬塔偷的资源包
-            LoadSence(UIViewType.Map);//初始化页面
+            //LoadSence(UIViewType.Map);//初始化页面
             //Game.Scene.AddComponent<WindowComponent>();
         }
 

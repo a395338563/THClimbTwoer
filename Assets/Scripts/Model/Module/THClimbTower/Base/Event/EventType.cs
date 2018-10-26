@@ -9,6 +9,11 @@ namespace THClimbTower
     public enum EventType
     {
         testEventType,
+        TestBattle,
+
+        GameStart,
+        GameEnd,
+
         /// <summary>
         /// 确定卡片的最终使用信息
         /// </summary>

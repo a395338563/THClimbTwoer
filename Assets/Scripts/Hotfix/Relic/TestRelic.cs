@@ -19,7 +19,7 @@ namespace Hotfix.Relic
         }
         public override void Dispose()
         {
-            Game.EventSystem.RemoveDispatcher(this);
+            EventSystem.Instance.RemoveDispatcher(this);
             base.Dispose();
         }
 

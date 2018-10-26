@@ -12,21 +12,6 @@ namespace THClimbTower
     /// </summary>
     public class Game:Entity
     {
-        private static EventSystem eventSystem;
-        public static EventSystem EventSystem
-        {
-            get
-            {
-                if (eventSystem == null)
-                {
-                    eventSystem = new EventSystem();
-                    //eventSystem.Awake();
-                    instance.AddBaseEvent();    
-                }
-                return eventSystem;
-            }
-        }
-
         public static Game Instance
         {
             get
@@ -59,14 +44,6 @@ namespace THClimbTower
             NowBattle = new Battle();
             NowBattle.StartBattle(new List<AbstractEnemy>() { new Maoyu() });
             Log.Debug("战斗结束！");*/
-        }
-
-        void AddBaseEvent()
-        {
-
-            //EventSystem.AddDispatcher(new BaseCardDescFinal());
-            //EventSystem.AddDispatcher(new BaseCardDescFirst());
-            //EventSystem.AddDispatcher(new CheckBattleEnd());
         }
     }
 }

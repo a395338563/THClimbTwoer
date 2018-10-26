@@ -27,8 +27,9 @@ namespace Hotfix.View
         THClimbTower.Map map;
         public override void OnEnter()
         {
+            THClimbTower.EventSystem.Instance.RunEvent(THClimbTower.EventType.GameStart);
             //MainView.scale = new Vector2(0.33f, 0.33f);
-             map = new THClimbTower.Map();
+            map = new THClimbTower.Map();
             map.Creat(0, 10, 5, 6);
             CreatMap(map);
             /*foreach (var t in map.tiles)

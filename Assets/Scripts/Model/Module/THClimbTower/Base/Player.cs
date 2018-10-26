@@ -68,9 +68,9 @@ namespace THClimbTower
         public void AddRelics(AbstractRelic relic)
         {
             Relics.Add(relic);
-            if (relic is iEventDispatcher)
+            if (relic is iBaseEventDispather)
             {
-                Game.EventSystem.AddDispatcher(relic as iEventDispatcher);
+                EventSystem.Instance.AddDispatcher(relic as iBaseEventDispather);
             }
         }
         /// <summary>
@@ -80,9 +80,9 @@ namespace THClimbTower
         public void RemoveRelics(AbstractRelic relic)
         {
             Relics.Remove(relic);
-            if (relic is iEventDispatcher)
+            if (relic is iBaseEventDispather)
             {
-                Game.EventSystem.RemoveDispatcher(relic as iEventDispatcher);
+                EventSystem.Instance.RemoveDispatcher(relic as iBaseEventDispather);
             }
         }
     }

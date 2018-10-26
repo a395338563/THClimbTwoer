@@ -37,7 +37,10 @@ namespace Hotfix.View
             RelicList = MainView.GetChild("n53").asList;
             Arrow = MainView.GetChild("n61").asCom;
 
-            THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
+            THClimbTower.EventSystem.Instance.RunEvent(THClimbTower.EventType.TestBattle);
+            //THClimbTower.Game.EventSystem.RunEvent(THClimbTower.EventType.GameStart);
+
+            //THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
             battle = THClimbTower.Game.Instance.NowBattle;
             THClimbTower.Player player = THClimbTower.Game.Instance.player;
             MainView.GetChild("PlayerName").text = player.Name;
@@ -146,15 +149,17 @@ namespace Hotfix.View
             v2.y = Screen.height - v2.y;
             Vector2 screenpos = GRoot.inst.GlobalToLocal(v2);
 
-            Debug.Log(screenpos);
+            //Debug.Log(screenpos);
 
             Vector2 start = new Vector2(960, 780);
-            Vector2 Last = new Vector2(960, 780);
+            Vector2 Last = start;
+            Vector2 contorl = new Vector2(start.x - (screenpos.x - start.x) / 4, screenpos.y + (screenpos.y - start.y) / 2);
             for (int i = 0; i < 19; i++)
             {
-                float x = BackIn(screenpos.x-start.x, ((float)i) / 19);
-                float y = BackOut(screenpos.y-start.y, ((float)i) / 19);
-                Vector2 delta = new Vector2(x, y) + start - Last;
+                Vector2 pos = BezierHelper.Quadratic(i / 20f, start, screenpos, contorl);
+                //float x = BackIn(screenpos.x-start.x, ((float)i) / 19);
+                //float y = BackOut(screenpos.y-start.y, ((float)i) / 19);
+                Vector2 delta = pos - Last;
                 delta.y *= -1;
                 if (i > 0)
                 {
@@ -165,10 +170,11 @@ namespace Hotfix.View
                     Arrow.GetChild($"n{i}").rotation = 360 - Vector2.SignedAngle(Vector2.up, delta);
                     Arrow.GetChild("Head").rotation= 360 - Vector2.SignedAngle(Vector2.up, delta);
                 }
-                Arrow.GetChild($"n{i}").xy = new Vector2(x, y) + start;
-                Last = new Vector2(x, y) + start;
+                Arrow.GetChild($"n{i}").xy = pos;
+                Last = pos;
             }
             Arrow.GetChild("Head").xy = screenpos;
+            Arrow.AddChild(Arrow.GetChild("Head"));
         }
         float BackOut(float value, float time)
         {
@@ -179,6 +185,14 @@ namespace Hotfix.View
         {
             return value * time * time * (2.70158f * time - 1.70158f);
         }
-
+        Vector2 quadratic(Vector2 output, float t, Vector2 p0, Vector2 p1, Vector2 p2, Vector2 tmp)
+        {
+            float dt = 1.0F - t;
+            output = p0;
+            output *= dt * dt;
+            output += p1 * 2 * dt * t;
+            output += p2 * t * t;
+            return output;
+        }
     }
 }

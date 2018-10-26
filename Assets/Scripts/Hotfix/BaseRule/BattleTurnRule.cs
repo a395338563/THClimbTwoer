@@ -7,21 +7,44 @@ using THClimbTower;
 
 namespace Hotfix.BaseRule
 {
+    [BaseEvent(1003)]
     [EventDispatcher(EventType.BattleStart)]
-    public class BattleStart : iEventDispatcher<EnemyTeam>
+    public class BattleStart : iEventDispatcher<EnemyTeamConfig>
     {
-        public void Handle(EventType eventType, EnemyTeam enemyTeam)
+        public void Handle(EventType eventType, EnemyTeamConfig enemyTeam)
         {
-            EventSystem.Instance.RunEvent(EventType.BattleStart);
+            BattleInit(enemyTeam);
             EventSystem.Instance.RunEvent(EventType.PlayerTurnStart);
         }
 
-        void BattleInit()
+        void BattleInit(EnemyTeamConfig enemyTeam)
         {
+            Model.Log.Debug("战斗初始化");
             Battle battle = Game.Instance.NowBattle;
-            
+            battle.Deck = new List<AbstractPlayerCard>();
+            battle.Hand = new List<AbstractPlayerCard>();
+            battle.Cemetery = new List<AbstractPlayerCard>();
+            battle.Gap = new List<AbstractPlayerCard>();
+            battle.player = Game.Instance.player;
+            battle.Enemys = new List<AbstractEnemy>();
+            for (int i = 0; i < enemyTeam.Team.Length; i++)
+            {
+                int Id = enemyTeam.Team[i];
+                AbstractEnemy e = EnemyFatory.Instance.Get(Id);
+                e.X = enemyTeam.Pos[i].x;
+                e.Y = enemyTeam.Pos[i].x;
+                battle.Enemys.Add(e);
+            }
+            battle.Turn = 0;
+            battle.GameEnd = false;
+
+            foreach (AbstractPlayerCard p in battle.player.Deck)
+            {
+                battle.Deck.Add(p);
+            }
         }
     }
+    [BaseEvent(1004)]
     [EventDispatcher(EventType.PlayerTurnEnd)]
     public class PlayerTurnEnd : iEventDispatcher
     {

@@ -18,11 +18,18 @@ namespace THClimbTower
         public int Damage, Armor, Hits;
         public void Use(AbstractCharactor reciver)
         {
-            Game.EventSystem.RunEvent(EventType.BeforeCardUse, this, Owner, reciver);
-            CardLogic(reciver);
-            Game.EventSystem.RunEvent(EventType.AfterCardUse, this, Owner, reciver);
+            EventSystem.Instance.RunEvent(EventType.BeforeCardUse, this, Owner, reciver);
+            foreach (Component c in GetComponents())
+            {
+                if (c is AbstractCardEffect)
+                {
+                    (c as AbstractCardEffect).OnUse(Owner, reciver, this);
+                }
+            }
+            //CardLogic(reciver);
+            EventSystem.Instance.RunEvent(EventType.AfterCardUse, this, Owner, reciver);
         }
-        public abstract void CardLogic(AbstractCharactor reciver);
+        //public abstract void CardLogic(AbstractCharactor reciver);
         /// <summary>
         /// 在这里做初始化
         /// </summary>

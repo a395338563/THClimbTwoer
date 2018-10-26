@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Model;
 
 namespace THClimbTower
 {
@@ -66,9 +67,13 @@ namespace THClimbTower
 
     public class TileAttribute : BaseConfigAttribute
     {
-        public TileAttribute(int Id) : base(Id)
+        /*public TileAttribute(string Id)
         {
             this.Id = Id;
+        }*/
+        public TileAttribute(Tile.TileTypeEnum Id):base()
+        {
+            this.Id = (int)Id;
         }
     }
 

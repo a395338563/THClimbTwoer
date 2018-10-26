@@ -30,10 +30,12 @@ namespace THClimbTower
         public void RunEvent<T>(EventType eventType, T t)
         {
             if (dic.ContainsKey((int)eventType))
+            {
                 foreach (var a in dic[(int)eventType])
                 {
                     (a as iEventDispatcher<T>)?.Handle(eventType, t);
                 }
+            }
         }
         public void RunEvent<T,T1>(EventType eventType, T t,T1 t1)
         {
@@ -67,7 +69,7 @@ namespace THClimbTower
                         eventDispatchers = new List<iBaseEventDispather>();
                         dic.Add(a, eventDispatchers);
                     }
-                    eventDispatchers.Add(dispatcher);
+                    eventDispatchers.Add(dispatcher);                   
                     eventDispatchers.Sort((x, y) =>
                     {
                         return GetSortIndex(x).CompareTo(GetSortIndex(y));

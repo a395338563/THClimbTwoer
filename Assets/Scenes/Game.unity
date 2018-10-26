@@ -143,6 +143,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57e3ee7e7fe6a794f9794dd0075d253b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IninScene: 3
+  dll: {fileID: 4900000, guid: 7ec2589ca557c0c46871fab4f7fbb3e2, type: 3}
+  mdb: {fileID: 4900000, guid: 0ef38421f800e9348aa72d0918998015, type: 3}
 --- !u!114 &595025255
 MonoBehaviour:
   m_ObjectHideFlags: 0

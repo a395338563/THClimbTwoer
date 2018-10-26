@@ -9,6 +9,7 @@ using System.Reflection;
 
 public class Init : MonoBehaviour
 {
+    public UIViewType IninScene;
     public UnityEngine.Object dll, mdb;
     private void Awake()
     {
@@ -17,11 +18,17 @@ public class Init : MonoBehaviour
         byte[] m = (mdb as TextAsset).bytes;
         Assembly hotfix = Assembly.Load(d, m);
 
+        //读取Hotfix的内容，虽然很奇怪但是就这样吧
         THClimbTower.TileFactory.Instance.Add(hotfix);
+        THClimbTower.CardFactory.Instance.Add(hotfix);
+        THClimbTower.EnemyFatory.Instance.Add(hotfix);
+        THClimbTower.EnemyTeamFactory.Instance.Add(hotfix);
+        THClimbTower.EventFactory.Instance.Add(hotfix);
 
         UIManagerComponent ui= Game.Scene.AddComponent<UIManagerComponent>();
         ui.Add(hotfix);
         ui.Awake();
+        ui.LoadSence(IninScene);
     }
 
     private void Update()

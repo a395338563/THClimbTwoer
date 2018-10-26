@@ -11,7 +11,7 @@ namespace Hotfix
     /// <summary>
     /// 进入此格时，进行战斗
     /// </summary>
-    [Tile((int)TileTypeEnum.Enemy)]
+    [Tile(TileTypeEnum.Enemy)]
     public class EnemyTile : Tile
     {
         public override void OnClick()

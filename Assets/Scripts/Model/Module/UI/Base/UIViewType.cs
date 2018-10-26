@@ -12,5 +12,7 @@ namespace Model
         ChooseCharactor,
         Map,
         Battle,
+
+        TestBattle,
     }
 }

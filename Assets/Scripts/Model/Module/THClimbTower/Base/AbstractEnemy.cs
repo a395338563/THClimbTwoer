@@ -8,11 +8,9 @@ namespace THClimbTower
 {
     public abstract class AbstractEnemy : AbstractCharactor
     {
-        public int X, Y;
+        public float X, Y;
         public AbstractEnemyCard SelectedSkill;
         protected abstract AbstractEnemyCard AIThink();
-
-        public abstract void EnenmyInit();
 
         EnemyPredict predict;
         /// <summary>
@@ -21,7 +19,7 @@ namespace THClimbTower
         public void TakeThink()
         {
             SelectedSkill = AIThink();
-            Predict();            
+            Predict();
         }
         /// <summary>
         /// 以玩家为目标使用预测的技能
@@ -38,6 +36,10 @@ namespace THClimbTower
         public void Predict()
         {
             predict = SelectedSkill.GetPredict();
+        }
+        public virtual AbstractEnemy Init()
+        {
+            return this;
         }
     }
 }

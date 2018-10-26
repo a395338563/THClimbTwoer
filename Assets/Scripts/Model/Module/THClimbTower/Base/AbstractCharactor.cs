@@ -9,24 +9,24 @@ namespace THClimbTower
     /// <summary>
     /// 战斗单位,己方和敌方的基类
     /// </summary>
-    public abstract class AbstractCharactor : Entity
+    public abstract class AbstractCharactor : BaseConfig
     {
         public abstract string Name { get;}
 
         public int NowHp;
         public int MaxHp;
 
-        public async Task UseCard(AbstractCard card,AbstractCharactor reciver)
+        public void UseCard(AbstractCard card,AbstractCharactor reciver)
         {
-            card.CardLogic(reciver);
+            card.Use(reciver);
         }
 
-        public async Task ReciveDamage(DamageInfo damage)
+        public void ReciveDamage(DamageInfo damage)
         {
-            Game.EventSystem.RunEvent(EventType.BeforeDamageTake);
+            EventSystem.Instance.RunEvent(EventType.BeforeDamageTake);
             if (damage.Damage > 0)
             {
-                Game.EventSystem.RunEvent(EventType.OnDamageTake);
+                EventSystem.Instance.RunEvent(EventType.OnDamageTake);
                 NowHp -= damage.Damage;
                 Log.Debug($"{Name}收到了{damage.Damage}伤害,剩余Hp：{NowHp}");
             }
@@ -63,7 +63,7 @@ namespace THClimbTower
             {
                 t = this.AddComponent<T>();
                 if (t is iBaseEventDispather)
-                    Game.EventSystem.AddDispatcher(t as iBaseEventDispather);
+                    EventSystem.Instance.AddDispatcher(t as iBaseEventDispather);
             }
             return t;
         }
@@ -71,7 +71,7 @@ namespace THClimbTower
         {
             T t = this.GetComponent<T>();
             if (t is iBaseEventDispather)
-                Game.EventSystem.RemoveDispatcher(t as iBaseEventDispather);
+                EventSystem.Instance.RemoveDispatcher(t as iBaseEventDispather);
             this.RemoveComponent<T>();
         }
     }

@@ -10,6 +10,7 @@ namespace Hotfix.BaseRule
     /// <summary>
     /// 初始化卡片基本信息
     /// </summary>
+    [BaseEvent(1001)]
     [EventDispatcher(EventType.GetCardFinalInfo,-100)]
     public class BaseCardDescFirst : iEventDispatcher<AbstractCard,AbstractCharactor,AbstractCharactor>
     {
@@ -23,6 +24,7 @@ namespace Hotfix.BaseRule
     /// <summary>
     /// 将卡牌数值套入描述中，让玩家看得懂
     /// </summary>
+    [BaseEvent(1002)]
     [EventDispatcher(EventType.GetCardFinalInfo, 100)]
     public class BaseCardDescFinal : iEventDispatcher<AbstractCard, AbstractCharactor, AbstractCharactor>
     {

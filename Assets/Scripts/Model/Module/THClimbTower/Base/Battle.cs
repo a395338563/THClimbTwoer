@@ -21,10 +21,10 @@ namespace THClimbTower
         /// </summary>
         /// <param name="Index"></param>
         /// <param name="reciver">目标，可为空</param>
-        public async void PlayerUseCard(int Index, AbstractCharactor reciver)
+        public void PlayerUseCard(int Index, AbstractCharactor reciver)
         {
             AbstractCard card = Hand[Index];
-            await player.UseCard(card, reciver);
+            player.UseCard(card, reciver);
         }
         /// <summary>
         /// 开始一场新的战斗
@@ -32,7 +32,7 @@ namespace THClimbTower
         /// <param name="enemyTeam"></param>
         /// <param name="enemies"></param>
         /// <returns></returns>
-        public void StartBattle(EnemyTeam enemyTeam)
+        /*public void StartBattle(EnemyTeamConfig enemyTeam)
         {
             Deck = new List<AbstractPlayerCard>();
             Hand = new List<AbstractPlayerCard>();
@@ -40,9 +40,12 @@ namespace THClimbTower
             Gap = new List<AbstractPlayerCard>();
             player = Game.Instance.player;
             Enemys = new List<AbstractEnemy>();
-            foreach (var a in enemyTeam.Team)
+            for (int i = 0; i < enemyTeam.Team.Length; i++)
             {
-                AbstractEnemy e = Game.Instance.GetComponent<EnemyFatory>().Get(a);
+                int Id = enemyTeam.Team[i];
+                AbstractEnemy e = Game.Instance.GetComponent<EnemyFatory>().Get(Id);
+                e.X = enemyTeam.Pos[i].x;
+                e.Y = enemyTeam.Pos[i].x;
                 Enemys.Add(e);
             }
             Turn = 0;
@@ -54,26 +57,7 @@ namespace THClimbTower
             }
             Game.EventSystem.RunEvent(EventType.BattleStart);
             PlayerTurnStart();
-        }
-
-        public void StartBattle(List<AbstractEnemy> enemies)
-        {
-            Deck = new List<AbstractPlayerCard>();
-            Hand = new List<AbstractPlayerCard>();
-            Cemetery = new List<AbstractPlayerCard>();
-            Gap = new List<AbstractPlayerCard>();
-            player = Game.Instance.player;
-            Enemys = new List<AbstractEnemy>(enemies);
-            Turn = 0;
-            GameEnd = false;
-
-            foreach (AbstractPlayerCard p in player.Deck)
-            {
-                Deck.Add(p);
-            }
-            Game.EventSystem.RunEvent(EventType.BattleStart);
-            PlayerTurnStart();
-        }
+        }*/
 
         /// <summary>
         /// 预测敌人行动
@@ -131,7 +115,7 @@ namespace THClimbTower
 
         void PlayerTurnStart()
         {
-            Game.EventSystem.RunEvent(EventType.PlayerTurnStart);
+            EventSystem.Instance.RunEvent(EventType.PlayerTurnStart);
             DrawCard();
             foreach (AbstractEnemy e in Enemys)
             {
@@ -139,7 +123,7 @@ namespace THClimbTower
             }
             foreach (AbstractPlayerCard c in Hand)
             {
-                Game.EventSystem.RunEvent<AbstractCard,AbstractCharactor,AbstractCharactor>(EventType.GetCardFinalInfo, c, player, null);
+                EventSystem.Instance.RunEvent<AbstractCard,AbstractCharactor,AbstractCharactor>(EventType.GetCardFinalInfo, c, player, null);
             }
         }
 
