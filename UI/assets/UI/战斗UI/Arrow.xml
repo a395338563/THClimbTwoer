@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component size="1920,1080">
   <displayList>
-    <image id="n64_pi22" name="n0" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="664,578" pivot="0.5,0" anchor="true"/>
-    <image id="n65_pi22" name="n1" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="283,354" pivot="0.5,0" anchor="true"/>
-    <image id="n66_pi22" name="n2" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="826,500" pivot="0.5,0" anchor="true"/>
-    <image id="n67_pi22" name="n3" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="548,635" pivot="0.5,0" anchor="true"/>
-    <image id="n69_pi22" name="n4" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="922,422" pivot="0.5,0" anchor="true"/>
-    <image id="n70_pi22" name="n5" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="764,674" pivot="0.5,0" anchor="true"/>
-    <image id="n71_pi22" name="n6" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="451,640" pivot="0.5,0" anchor="true"/>
-    <image id="n72_pi22" name="n7" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="283,512" pivot="0.5,0" anchor="true"/>
-    <image id="n73_pi22" name="n8" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="332,687" pivot="0.5,0" anchor="true"/>
-    <image id="n74_pi22" name="n9" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="529,388" pivot="0.5,0" anchor="true"/>
-    <image id="n75_pi22" name="n10" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="148,165" pivot="0.5,0" anchor="true"/>
-    <image id="n76_pi22" name="n11" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="691,310" pivot="0.5,0" anchor="true"/>
-    <image id="n77_pi22" name="n12" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="413,446" pivot="0.5,0" anchor="true"/>
-    <image id="n78_pi22" name="n13" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="787,233" pivot="0.5,0" anchor="true"/>
-    <image id="n79_pi22" name="n14" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="629,485" pivot="0.5,0" anchor="true"/>
-    <image id="n80_pi22" name="n15" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="316,451" pivot="0.5,0" anchor="true"/>
-    <image id="n81_pi22" name="n16" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="148,322" pivot="0.5,0" anchor="true"/>
-    <image id="n82_pi22" name="n17" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="197,497" pivot="0.5,0" anchor="true"/>
-    <image id="n83_pi22" name="n18" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="525,511" pivot="0.5,0" anchor="true"/>
-    <image id="n62_pi22" name="Head" src="pi228os" fileName="战斗UI/reticleArrow.png" xy="1099,121" pivot="0.5,0" anchor="true" rotation="90"/>
+    <image id="n64_pi22" name="n0" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n65_pi22" name="n1" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n66_pi22" name="n2" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n67_pi22" name="n3" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n69_pi22" name="n4" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n70_pi22" name="n5" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n71_pi22" name="n6" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n72_pi22" name="n7" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n73_pi22" name="n8" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n74_pi22" name="n9" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n75_pi22" name="n10" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n76_pi22" name="n11" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n77_pi22" name="n12" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n78_pi22" name="n13" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n79_pi22" name="n14" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n80_pi22" name="n15" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n81_pi22" name="n16" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n82_pi22" name="n17" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n83_pi22" name="n18" src="pi228or" fileName="战斗UI/reticleBlock.png" xy="0,0" pivot="0.5,0" anchor="true"/>
+    <image id="n62_pi22" name="Head" src="pi228os" fileName="战斗UI/reticleArrow.png" xy="0,0" pivot="0.5,0" anchor="true" rotation="90"/>
   </displayList>
 </component>
