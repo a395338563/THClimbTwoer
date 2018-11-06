@@ -11,7 +11,7 @@ using Hotfix.UIModule;
 
 namespace Hotfix.View
 {
-    [GameUIView(UIViewType.Battle)]
+    /*[GameUIView(UIViewType.Battle)]
     public class BattleView : GameUIView, IUpdate
     {
         public override string PackageName { get; set; } = "UI";
@@ -38,8 +38,6 @@ namespace Hotfix.View
             Hand = MainView.GetChild("n60").asCom;
             RelicList = MainView.GetChild("n53").asList;
             curve = new UICurve(MainView.GetChild("n61").asCom);
-
-            THClimbTower.EventSystem.Instance.RunEvent(THClimbTower.EventType.TestBattle);
             //THClimbTower.Game.EventSystem.RunEvent(THClimbTower.EventType.GameStart);
 
             //THClimbTower.Game.Instance.StartGame(THClimbTower.CharactorTypeEnum.Reimu, THClimbTower.CharactorTypeEnum.Marisa);
@@ -66,14 +64,14 @@ namespace Hotfix.View
             //右键点击主动使用遗物
             RelicList.onRightClickItem.Add(RelicListClick);
 
-            /*HandList.onClickItem.Add((x) =>
-            {
-                if (x.inputEvent.isDoubleClick)
-                {
-                    Card c = (x.data as GComponent).data as Card;
-                    player.UseCard(c, player);
-                }
-            });*/
+            //HandList.onClickItem.Add((x) =>
+            //{
+            //    if (x.inputEvent.isDoubleClick)
+            //    {
+            //        Card c = (x.data as GComponent).data as Card;
+            //        player.UseCard(c, player);
+            //    }
+            //});
 
             this.player = new UICharactor(MainView.GetChild("n57").asCom, THClimbTower.Game.Instance.player);
 
@@ -157,5 +155,5 @@ namespace Hotfix.View
             Vector2 contorl = new Vector2(start.x - (screenpos.x - start.x) / 4, screenpos.y + (screenpos.y - start.y) / 2);
             curve.ChangeShape(start, screenpos, contorl);
         }
-    }
+    }*/
 }

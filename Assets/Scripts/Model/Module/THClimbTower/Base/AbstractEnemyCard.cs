@@ -15,7 +15,7 @@ namespace THClimbTower
 
         public EnemyPredict BasePredict()
         {
-            EventSystem.Instance.RunEvent(EventType.GetCardFinalInfo);
+            //EventSystem.Instance.RunEvent(EventType.GetCardFinalInfo);
             return new EnemyPredict()
             {
                 Power = Damage,

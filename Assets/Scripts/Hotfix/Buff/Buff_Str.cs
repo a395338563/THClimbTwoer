@@ -8,20 +8,15 @@ using THClimbTower;
 namespace Hotfix.Buff
 {
     [EventDispatcher(EventType.GetCardFinalInfo)]
-    public class Buff_Str : AbstractBuff,iEventDispatcher<AbstractCard,AbstractCharactor,AbstractCharactor>
+    public class Buff_Str : AbstractBuff,iEventDispatcher
     {
         public override string Icon { get; } = "str";
 
-        public void Handle(EventType eventType, AbstractCard t, AbstractCharactor t1, AbstractCharactor t2)
-        {
-            t.Damage += Amount;
-        }
+        public int SortIndex => 0;
 
-        /*public override async Task<object> RunEvent(EventType eventType, object o, params object[] args)
+        public void Handle(EventType eventType, params object[] param)
         {
-            Card card = o as Card;
-            card.Damage += LastTime;
-            return card;
-        }*/
+            (param[0] as AbstractCard).Damage += Amount;
+        }
     }
 }

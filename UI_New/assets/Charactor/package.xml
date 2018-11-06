@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="y6z79r4c" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="kgg10" name="十六夜咲夜.png" path="/"/>
+    <image id="kgg11" name="雾雨魔理沙.png" path="/"/>
+    <image id="kgg12" name="妖梦.png" path="/"/>
+    <image id="kgg13" name="罪袋1.png" path="/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

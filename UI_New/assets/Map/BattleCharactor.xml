@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="300,300" pivot="0.5,0.5" anchor="true" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <component id="n0_mzkx" name="Intention" src="mzkxt" fileName="Intention.xml" xy="118,-64" visible="false">
+      <relation target="" sidePair="bottom-top"/>
+    </component>
+    <image id="n2_kgg1" name="n2" src="kgg1w" fileName="选中框.png" xy="-26,-30" size="349,356">
+      <gearDisplay controller="button" pages="2,3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <loader id="n3_kgg1" name="n3" xy="0,0" size="300,300"/>
+    <component id="n5_kgg1" name="HpBar" src="kgg1y" fileName="HpBar.xml" xy="10,306" size="286,12">
+      <ProgressBar value="100" max="100"/>
+    </component>
+    <list id="n6_vk5m" name="BuffList" xy="7,324" size="287,37" layout="row" overflow="scroll" colGap="5" defaultItem="ui://7tkfu8n4vk5m17"/>
+  </displayList>
+  <Button/>
+</component>

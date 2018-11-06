@@ -9,322 +9,159 @@ namespace THClimbTower
 {
     public class Map : Model.Entity
     {
-        public int LevelNum, StartLevel, MinLine, MaxLine, MaxHeight, MaxWidth;
+        HashSet<Tile> tiles = new HashSet<Tile>();
+        public Tile NowTile { get; private set; }
 
-        public List<Tile> tiles = new List<Tile>();
-
-        Tile NowTile;
-
-        public void GoNextTile(Tile tile)
+        public HashSet<Tile> GetTiles()
         {
-            if (NowTile.Next.Contains(tile))
-            {
-                tile.OnClick();
-                NowTile = tile;
-            }
-            else
-            {
-                Model.Log.Info("you can't go this tile");
-            }
+            return new HashSet<Tile>(tiles);
         }
 
-        public async void CreatAsync(int StartLevel, int height, int width, int Density,int time)
+        public bool CanMove(Tile Next)
         {
-            //int yadd = -1;
-            Tile last = null;
-            for (int i = 0; i < Density; i++)
+            return NowTile.Nexts.Contains(Next);
+        }
+        public void MoveNext(Tile Next)
+        {
+            if (!CanMove(Next))
             {
-                for (int j = 0; j < height; j++)
+                return;
+            }
+            NowTile = Next;
+            NowTile.Enter();
+        }
+        public void ReBuild(int MaxLineNumber, int MaxWidth, int Length, int StartLevel)
+        {
+            /*瞎写的路线生成,估计还得改*/
+            for (int i = 0; i < MaxLineNumber; i++)
+            {
+                //重复i次生成路线
+                Tile LastTile = null;
+                for (int j = 0; j < Length; j++)
                 {
-                    //yadd++;
-                    int y = StartLevel + j;
-                    //第一层单独
+                    Tile next;
                     if (j == 0)
                     {
-                        int x = RandomUtil.Next(0, width + 1);
-                        Tile tile = Creat(x, y);
-                        last = tile;
-                        AddTile(tile);
-                        //Log.Debug($"Add Base Tile:{tile.X,tile.Y}");
+                        //第零层固定位置生成起点
+                        int y = MaxWidth / 2;
+                        next = Get(StartLevel, y);
+                        if (next == null)
+                            next = new StartTile() { X = StartLevel, Y = y };
+                        NowTile = next;
+                    }
+                    else if (j == 1)
+                    {
+                        //第一层的位置是完全随机的
+                        //第一次一定是小怪
+                        int y = RandomUtil.MapRandomSeed.Next(0, MaxWidth);
+                        next = Get(StartLevel + 1, y);
+                        if (next == null)
+                            next = new BattleTile() { X = StartLevel + 1, Y = y };
+                    }
+                    else if (j == Length - 1)
+                    {
+                        //最后一层固定位置生成boss
+                        int y = MaxWidth / 2;
+                        next = Get(StartLevel + j, y);
+                        if (next == null)
+                            next = new BossTile() { X = StartLevel + j, Y = y };
                     }
                     else
                     {
-                        int minX = last.X;
-                        int maxX = last.X;
-                        if (last.X != 0)
-                            minX--;
-                        if (last.X != width)
+                        //中间层
+                        List<int> waychoose = new List<int>() { -1, 0, 1 };
+                        if (LastTile.Y == 0) waychoose.Remove(-1);
+                        else if (LastTile.Y == MaxWidth - 1) waychoose.Remove(1);
+                        Tile midNext = Get(StartLevel + j, LastTile.Y);
+                        if (midNext != null)
                         {
-                            maxX++;
-                        }
-                        int x = RandomUtil.Next(minX, maxX + 1);
-                        int rx = x - last.X;
-                        if (rx == -1)
-                        {
-                            Tile lf = GetLeftTile(last);
-                            Log.Debug($"L{x},{lf?.GetMaxXChild()},{lf?.GetInfo()}");
-                            if (lf != null && lf.GetMaxXChild() > x)
+                            foreach (Tile t in midNext.Pres)
                             {
-                                Log.Debug("Change Max");
-                                x = lf.GetMaxXChild();
+                                if (t.Y == midNext.Y + 1)
+                                    waychoose.Remove(1);
+                                else if (t.Y == midNext.Y - 1)
+                                    waychoose.Remove(-1);
                             }
                         }
-                        if (rx == 1)
+                        int NextY = LastTile.Y + waychoose[RandomUtil.MapRandomSeed.Next(0, waychoose.Count)];
+                        next = Get(StartLevel + j, NextY);
+                        //if (next == null)
+                        if (j == Length / 2)
                         {
-                            Tile lr = GetRightTile(last);
-                            Log.Debug($"R{x},{lr?.GetMinXChild()},{lr?.GetInfo()}");
-                            if (lr != null && lr.GetMinXChild() < x)
-                            {
-                                Log.Debug("Change Min");
-                                x = lr.GetMinXChild();
-                            }
+                            next = Get(StartLevel + j, NextY);
+                            if (next == null)
+                                next = new TreasureTile() { X = StartLevel + j, Y = NextY };
                         }
-                        Tile tile = Creat(x, y);
-                        if (!last.Next.Contains(tile))
-                            last.Next.Add(tile);
-                        if (!tile.Parent.Contains(last))
-                            tile.Parent.Add(last);
-                        last = tile;
-                        AddTile(tile);
+                        else
+                            next = CreatRandom(LastTile.Type, next, StartLevel + j); //new BattleTile() { X = StartLevel + j, Y = NextY };
+                        next.X = StartLevel + j;
+                        next.Y = NextY;
                     }
-                    await Task.Delay(time);
+                    if (j != 0) LastTile.Nexts.Add(next);
+                    next.Pres.Add(LastTile);
+                    tiles.Add(next);
+                    LastTile = next;
                 }
-                //int x = RandomUtil.Next();
             }
+
         }
 
-        public void Creat(int StartLevel, int height, int width, int Density)
+        private Tile CreatTile(Tile.TileTypeEnum type, int Value)
         {
-            Tile Root = Creat(width / 2, StartLevel - 1);
-            AddTile(Root);
-            NowTile = Root;
-            Tile last = Root;
-            for (int i = 0; i < Density; i++)
+            switch (type)
             {
-                for (int j = 0; j < height; j++)
-                {
-                    int y = StartLevel + j;
-                    //第一层单独
-                    if (j == 0)
-                    {
-                        int x = RandomUtil.Next(0, width + 1);
-                        Tile tile = Creat(x, y);
-                        last = tile;
-                        AddTile(tile);
-                        if (!Root.Next.Contains(tile))
-                            Root.Next.Add(tile);
-                        if (!tile.Parent.Contains(tile))
-                            tile.Parent.Add(Root);
-                        //Log.Debug($"Add Base Tile:{tile.X,tile.Y}");
-                    }
-                    else
-                    {
-                        int minX = last.X;
-                        int maxX = last.X;
-                        if (last.X != 0)
-                            minX--;
-                        if (last.X != width)
-                        {
-                            maxX++;
-                        }
-                        int x = RandomUtil.Next(minX, maxX + 1);
-                        int rx = x - last.X;
-                        if (rx == -1)
-                        {
-                            Tile lf = GetLeftTile(last);
-                            if (lf != null && lf.GetMaxXChild() > x)
-                            {
-                                x = lf.GetMaxXChild();
-                            }
-                        }
-                        if (rx == 1)
-                        {
-                            Tile lr = GetRightTile(last);
-                            if (lr != null && lr.GetMinXChild() < x)
-                            {
-                                x = lr.GetMinXChild();
-                            }
-                        }
-                        Tile tile = Creat(x, y);
-                        if (!last.Next.Contains(tile))
-                            last.Next.Add(tile);
-                        if (!tile.Parent.Contains(last))
-                            tile.Parent.Add(last);
-                        last = tile;
-                        AddTile(tile);
-                    }
-                }
-                //int x = RandomUtil.Next();
+                case Tile.TileTypeEnum.Battle:
+                    return new BattleTile();
+                case Tile.TileTypeEnum.Battle_Sp:
+                    return new BattleTile_SP();
+                case Tile.TileTypeEnum.Treasure:
+                    return new TreasureTile();
+                case Tile.TileTypeEnum.Rest:
+                    return new RestTile();
+                case Tile.TileTypeEnum.Shop:
+                    return new ShopTile();
+                case Tile.TileTypeEnum.Event:
+                    return new EventTile();
+                case Tile.TileTypeEnum.Boss:
+                    return new BossTile();
+                default:
+                    return null;
             }
+        }
+        private Tile CreatRandom(Tile.TileTypeEnum lastType, Tile now, int Value)
+        {
+            //分别是 宝箱,精英,小怪,火堆,商店,事件,boss的概率
+            int[] Chance = { 0, 2, 10, 3, 2, 2, 0 };
+            if (lastType != Tile.TileTypeEnum.Battle || lastType != Tile.TileTypeEnum.Event)//杂兵和事件可以连着
+                Chance[(int)lastType] = 0;
+            /*if (NextType != Tile.TileTypeEnum.Other)
+                Chance[(int)NextType] = 0;*/
+            int sum = 0;
+            foreach (var i in Chance) sum += i;
+            int ran = RandomUtil.MapRandomSeed.Next(0, sum);
+            int index = 0;
+            while (Chance[index] <= ran)
+            {
+                ran -= Chance[index];
+                index++;
+            }
+            Tile result = CreatTile((Tile.TileTypeEnum)index, Value);
+            if (now != null)
+            {
+                result.Nexts = new SortedSet<Tile>(now.Nexts);
+                result.Pres = new SortedSet<Tile>(now.Pres);
+                tiles.Remove(now);
+            }
+            return result;
         }
 
-        Tile GetLeftTile(Tile tile)
+        internal Tile Get(int x, int y)
         {
-            Tile output = null;
-            foreach (var t in tiles)
+            Tile tile = tiles.FirstOrDefault((t) =>
             {
-                if (t.Y != tile.Y||t==tile)
-                    continue;
-                if (t.X < tile.X)
-                {
-                    if (output == null)
-                    {
-                        output = t;
-                    }
-                    else
-                    {
-                        if (t.X > output.X)
-                            output = t;
-                    }
-                }
-            }
-            //if (output != null) Log.Debug($"{tile.X},{tile.Y} Left is {output.X},{output.Y}");
-            return output;
+                return t.X == x && t.Y == y;
+            });
+            return tile;
         }
-        Tile GetRightTile(Tile tile)
-        {
-            Tile output = null;
-            foreach (var t in tiles)
-            {
-                if (t.Y != tile.Y||t==tile)
-                    continue;
-                if (t.X > tile.X)
-                {
-                    if (output == null)
-                    {
-                        output = t;
-                    }
-                    else
-                    {
-                        if (t.X < output.X)
-                            output = t;
-                    }
-                }
-            }
-            //if (output != null) Log.Debug($"{tile.X},{tile.Y} Right is {output.X},{output.Y}");
-            return output;
-        }
-
-        void AddTile(Tile tile)
-        {
-            if (!tiles.Contains(tile))
-            {
-                tiles.Add(tile);
-            }
-        }
-
-        Tile Creat(int x,int y)
-        {
-            foreach (var tile in tiles)
-            {
-                if (tile.X == x && tile.Y == y)
-                    return tile;
-            }
-            Tile t = TileFactory.Instance.Get(Tile.TileTypeEnum.Enemy);
-            t.X = x;
-            t.Y = y;
-            //Log.Debug($"Creat New Tile{x},{y}");
-            return t;
-        }
-
-        /*public void Creat(int LevelNum,int StartLevel, int MinLine=3, int MaxLine=6)
-        {
-            tiles = new List<Tile>();
-            List<Tile> last,now=new List<Tile>();
-            for (int i = 0; i < LevelNum; i++)
-            {
-                //第0层固定为特殊商店
-                if (i == 0)
-                {
-                    Tile t = TileFactory.Creat(Tile.TileTypeEnum.StartShop);
-                    t.Level = StartLevel;
-                    now.Add(t);
-                    tiles.Add(t);
-                    //从第0层开始游戏
-                    NowTile = t;
-                    continue;
-                }
-                //最终层固定为boss
-                if (i == LevelNum - 1)
-                {
-                    Tile t = TileFactory.Creat(Tile.TileTypeEnum.Boss);
-                    t.Level = StartLevel + i;
-                    tiles.Add(t);
-                    foreach (var tile in now)
-                    {
-                        tile.Next.Add(t);
-                    }
-                    continue;
-                }
-                last = now;
-                now = new List<Tile>();
-                //生成本层节点
-                int num = RandomUtil.Next(MinLine, MaxLine + 1);
-                for (int j = 0; j < num; j++)
-                {
-                    Tile t = TileFactory.CreatRandom();
-                    t.Level = StartLevel + i;
-                    now.Add(t);
-                    tiles.Add(t);
-                }
-                //上层节点和本层节点连接
-                if (now.Count > last.Count)
-                {
-                    int Count = now.Count - last.Count;
-                    int[] ex = new int[last.Count];
-                    for (int j = 0; j < ex.Length; j++)
-                    {
-                        //丑陋的生成代码
-                        if (j == ex.Length - 1)
-                        {
-                            ex[ex.Length - 1] = Count;
-                            continue;
-                        }
-                        int r = RandomUtil.Next(0, Count);
-                        Count -= r;
-                        ex[j] = r;
-                    }
-                    Count = 0;
-                    for (int j = 0; j < ex.Length; j++)
-                    {
-                        for(int m = 0; m < ex[j] + 1; m++)
-                        {
-                            last[j].Next.Add(now[m + Count]);
-                        }
-                        Count += ex[j]+1;
-                    }
-                }
-                else
-                {
-                    int Count = last.Count - now.Count;
-                    int[] ex = new int[now.Count];
-                    for (int j = 0; j < ex.Length; j++)
-                    {
-                        if (j == ex.Length - 1)
-                        {
-                            ex[ex.Length - 1] = Count;
-                            continue;
-                        }
-                        int r = RandomUtil.Next(0, Count);
-                        Count -= r;
-                        ex[j] = r;
-                    }
-                    Count = 0;
-                    for (int j = 0; j < ex.Length; j++)
-                    {
-                        for (int m = 0; m < ex[j] + 1; m++)
-                        {
-                            last[m + Count].Next.Add(now[j]);
-                        }
-                        Count += ex[j]+1;
-                    }
-                }               
-            }
-        }*/
-    }
-    public enum MapThemeEnum
-    {
-        HXM,
-        YYM,
     }
 }

@@ -11,12 +11,32 @@ namespace THClimbTower
     /// </summary>
     public class Player : AbstractCharactor
     {
-        public CharactorTypeEnum MainCharactorType, HelpCharactorType;
-        public int Gold;
-        public int Power;
-        public int MaxPower;
-        public List<AbstractPlayerCard> Deck = new List<AbstractPlayerCard>();
-        public List<AbstractRelic> Relics = new List<AbstractRelic>();
+        public AbstractCharactorConfig MainCharactorType, HelpCharactorType;
+        /// <summary>
+        /// 获取和改变玩家金钱
+        /// </summary>
+        public int Gold
+        {
+            get { return gold; }
+            set
+            {
+                Game.Instance.EventSystem.Call(EventType.GoldChange, new ValueChange()
+                {
+                    BeforeValue = gold,
+                    AfterValue = value
+                });
+                gold = value;
+            }
+        }
+        int gold;
+        public int Power { get;private set; }
+        public int MaxPower { get; set; }
+        public int HelpPower { get; private set; }
+        public int MaxHelpPower { get; set; }
+        List<AbstractPlayerCard> Deck = new List<AbstractPlayerCard>();
+        List<AbstractRelic> Relics = new List<AbstractRelic>();
+        //切换人物的时候需要切换遗物，防止遗物因为特殊原因遗失而出错
+        List<AbstractRelic> ChangeRelics = new List<AbstractRelic>();
         public List<AbstractPotion> potions = new List<AbstractPotion>();
 
         public override string Name
@@ -29,38 +49,39 @@ namespace THClimbTower
         /// <summary>
         /// 初始化卡组，金钱等信息
         /// </summary>
-        public void Init()
+        public void Init(AbstractCharactorConfig main,AbstractCharactorConfig help)
         {
-            /*MaxHp = 100;
-            NowHp = 100;
-            Gold = 2333;
-            MainCharactorType = CharactorTypeEnum.Reimu;
-            for (int i = 0; i < 5; i++)
-            {
-                Deck.Add(CardFactory.Instance.Get(0) as AbstractPlayerCard);
-                Deck.Add(CardFactory.Instance.Get(1) as AbstractPlayerCard);
-                TestAttack t = new TestAttack()
-                {
-                    BaseDesc = "造成$Damage$点伤害",
-                    BaseDamage = 6,
-                    Cost=1,
-                    Title="打击",
-                    Pic="anger",
-                };
-                Deck.Add(t);
-                TestDefence d = new TestDefence()
-                {
-                    BaseDesc = "获得$Armor$点护甲",
-                    BaseArmor=5,
-                    Cost=1,
-                    Title="防御",
-                    Pic="armaments",
-                };
-                Deck.Add(d);
-            }
-            potions.Add(new Potion.TestPotion());*/
-            //AddRelics(new TestRelic());
+            MainCharactorType = main;
+            HelpCharactorType = help;
+            Deck.Clear();
+            Relics.Clear();
+            potions.Clear();
+            Gold = 0;
+            MaxHp = 0;
+            //主人物初始能量为2，支援人物初始能量为1
+            MaxPower = 2;
+            MaxHelpPower = 1;
+            InitCharactorConfig(MainCharactorType);
+            InitCharactorConfig(HelpCharactorType);
+            NowHp = MaxHp;
         }
+        void InitCharactorConfig(AbstractCharactorConfig Config)
+        {
+            //AbstractCharactorConfig Config = CharactorConfigFactory.Instance.Get(charactorTypeEnum);
+            foreach (var cardId in Config.BaseCardID)
+            {
+                Deck.Add(CardFactory.Instance.GetPlayerCard(cardId));
+            }
+            if (Config == MainCharactorType)
+            {
+                //foreach (int i in MainCharactorType.BaseRelic)
+                    //AddRelics();
+            }
+            Gold += Config.Gold;
+            MaxHp += Config.MaxHp;
+
+        }
+
         /// <summary>
         /// 获得遗物
         /// </summary>
@@ -68,9 +89,9 @@ namespace THClimbTower
         public void AddRelics(AbstractRelic relic)
         {
             Relics.Add(relic);
-            if (relic is iBaseEventDispather)
+            if (relic is iEventDispatcher)
             {
-                EventSystem.Instance.AddDispatcher(relic as iBaseEventDispather);
+                Game.Instance.EventSystem.AddDispatcher(relic as iEventDispatcher);
             }
         }
         /// <summary>
@@ -80,15 +101,75 @@ namespace THClimbTower
         public void RemoveRelics(AbstractRelic relic)
         {
             Relics.Remove(relic);
-            if (relic is iBaseEventDispather)
+            if (relic is iEventDispatcher)
             {
-                EventSystem.Instance.RemoveDispatcher(relic as iBaseEventDispather);
+                Game.Instance.EventSystem.RemoveDispatcher(relic as iEventDispatcher);
             }
+        }
+        /// <summary>
+        /// 获取遗物
+        /// </summary>
+        /// <returns></returns>
+        public List<AbstractRelic> GetRelics()
+        {
+            return new List<AbstractRelic>(Relics);
+        }
+        /// <summary>
+        /// 获取卡组
+        /// </summary>
+        /// <returns></returns>
+        public List<AbstractPlayerCard> GetDeck()
+        {
+            return new List<AbstractPlayerCard>(Deck);
+        }
+        /// <summary>
+        /// 获取卡牌
+        /// </summary>
+        /// <param name="card"></param>
+        public void AddCard(AbstractPlayerCard card)
+        {
+            Deck.Add(card);
+        }
+        /// <summary>
+        /// 获取卡牌
+        /// </summary>
+        /// <param name="CardId"></param>
+        /// <param name="Number"></param>
+        public void AddCard(int CardId,int Number = 1)
+        {
+            for (int i = 0; i < Number; i++)
+                Deck.Add(CardFactory.Instance.GetPlayerCard(CardId));
+        }
+        /// <summary>
+        /// 失去卡牌
+        /// </summary>
+        /// <param name="card"></param>
+        public void RemoveCard(AbstractPlayerCard card)
+        {
+            if (!Deck.Remove(card))
+            {
+                throw new Exception($"Can't find {card.Title} at deck");
+            }
+        }
+        /// <summary>
+        /// 切换主副角色，todo
+        /// </summary>
+        public void ChangeCharactor()
+        {
+
+        }
+        public void ChangePower(int value)
+        {
+            Power += value;
+        }
+        public void ChangeHelpPower(int value)
+        {
+            HelpPower += value;
         }
     }
     public enum CharactorTypeEnum
     {
-        Reimu,
+        Sakuya,
         Marisa,
         Alice,
     }

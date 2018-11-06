@@ -8,7 +8,8 @@ using UnityEngine;
 namespace THClimbTower
 {
     public class EnemyTeamConfig :Model.BaseConfig
-    {        
+    {
+        public int Diffculty;
         public int[] Team;
         public Vector2[] Pos;
 

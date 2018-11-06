@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="78yltx8f" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="mcf80" name="MainView.xml" path="/" exported="true"/>
+    <image id="d41v1" name="Background.png" path="/"/>
+    <image id="d41v2" name="快速登录 副本.png" path="/" scale="9grid" scale9grid="170,15,264,32"/>
+    <component id="d41v3" name="Button1.xml" path="/"/>
+  </resources>
+  <publish name="Main"/>
+</packageDescription>

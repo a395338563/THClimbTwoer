@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="30,30" extention="Label">
+  <displayList>
+    <loader id="n0_vk5m" name="icon" xy="0,0" size="30,30" url="ui://kfbby33fa3ji1" fill="scale"/>
+    <text id="n1_vk5m" name="title" xy="20,15" size="12,19" fontSize="12" color="#ffffff" strokeColor="#000000" text="1"/>
+  </displayList>
+</component>

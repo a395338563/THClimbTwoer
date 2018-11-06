@@ -18,7 +18,7 @@ namespace THClimbTower
         public int Damage, Armor, Hits;
         public void Use(AbstractCharactor reciver)
         {
-            EventSystem.Instance.RunEvent(EventType.BeforeCardUse, this, Owner, reciver);
+            Game.Instance.EventSystem.Call(EventType.BeforeCardUse, this, Owner, reciver);
             foreach (Component c in GetComponents())
             {
                 if (c is AbstractCardEffect)
@@ -27,7 +27,7 @@ namespace THClimbTower
                 }
             }
             //CardLogic(reciver);
-            EventSystem.Instance.RunEvent(EventType.AfterCardUse, this, Owner, reciver);
+            Game.Instance.EventSystem.Call(EventType.AfterCardUse, this, Owner, reciver);
         }
         //public abstract void CardLogic(AbstractCharactor reciver);
         /// <summary>

@@ -8,24 +8,21 @@ namespace THClimbTower
 {
     public class Battle : Model.Entity
     {
-        public Random DeckSeed, OtherSeed;
-
-        public Player player;
-        public List<AbstractEnemy> Enemys;
-        public List<AbstractPlayerCard> Deck, Hand, Cemetery, Gap;
+        public Player player => Game.Instance.player;
+        public List<AbstractEnemy> Enemys = new List<AbstractEnemy>();
+        public List<AbstractPlayerCard> Deck = new List<AbstractPlayerCard>(), Hand = new List<AbstractPlayerCard>(), Cemetery = new List<AbstractPlayerCard>(), Gap = new List<AbstractPlayerCard>();
         public int Turn;
-        public bool GameEnd;
 
         /// <summary>
         /// 玩家使用一张牌
         /// </summary>
         /// <param name="Index"></param>
         /// <param name="reciver">目标，可为空</param>
-        public void PlayerUseCard(int Index, AbstractCharactor reciver)
+        /*public void PlayerUseCard(int Index, AbstractCharactor reciver)
         {
             AbstractCard card = Hand[Index];
             player.UseCard(card, reciver);
-        }
+        }*/
         /// <summary>
         /// 开始一场新的战斗
         /// </summary>
@@ -76,7 +73,7 @@ namespace THClimbTower
         /// <summary>
         /// 结束当前回合
         /// </summary>
-        public void EndTurn()
+        /*public void EndTurn()
         {
             PlayerEndTurn();
             Model.Log.Debug("GoNextTurn");
@@ -115,7 +112,7 @@ namespace THClimbTower
 
         void PlayerTurnStart()
         {
-            EventSystem.Instance.RunEvent(EventType.PlayerTurnStart);
+            Game.Instance.EventSystem.Call(EventType.PlayerTurnStart);
             DrawCard();
             foreach (AbstractEnemy e in Enemys)
             {
@@ -123,7 +120,7 @@ namespace THClimbTower
             }
             foreach (AbstractPlayerCard c in Hand)
             {
-                EventSystem.Instance.RunEvent<AbstractCard,AbstractCharactor,AbstractCharactor>(EventType.GetCardFinalInfo, c, player, null);
+                Game.Instance.EventSystem.Call(EventType.GetCardFinalInfo, c, player, null);
             }
         }
 
@@ -138,12 +135,6 @@ namespace THClimbTower
             //EnemyWorks
         }
 
-        /*void GameCircle()
-        {
-            PlayerTurnStart();
-            
-        }*/
-
         void ThrowAllCard()
         {
             foreach (AbstractPlayerCard c in Hand)
@@ -151,9 +142,9 @@ namespace THClimbTower
                 Cemetery.Add(c);
             }
             Hand.Clear();
-        }
+        }*/
 
-        void DrawCard()
+        /*void DrawCard()
         {
             int DrawNum = 5; //await Game.EventSystem.RunEvent(EventType.BeforeDrawCard, 5);
             for (int i = 0; i < DrawNum; i++)
@@ -185,6 +176,6 @@ namespace THClimbTower
         void Flush()
         {
             Model.Log.Warning("洗牌！但是尚未实现该功能");
-        }
+        }*/
     }
 }

@@ -4,64 +4,75 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Model;
+using UnityEngine;
 
 namespace THClimbTower
 {
-    public class Tile : BaseConfig
+    public class Tile : BaseConfig, IComparable
     {
-        public int X, Y;
-        public TileTypeEnum TileType;
-        public int Level;
-        public List<Tile> Next = new List<Tile>();
-        public List<Tile> Parent = new List<Tile>();
+        public virtual TileTypeEnum Type => TileTypeEnum.Other;
+        public int X { get; internal set; }
+        public int Y { get; internal set; }
+        public TileStatusEnum tileStatus { get; internal set; }
+        internal SortedSet<Tile> Pres = new SortedSet<Tile>(), Nexts = new SortedSet<Tile>();
 
-        public string GetInfo()
+        public HashSet<Tile> GetNexts()
         {
-            string s = "";
-            foreach (var t in Next)
-            {
-                s += $"@{t.X},{t.Y}";
-            }
-            return s;
+            return new HashSet<Tile>(Nexts);
         }
 
-        public int GetMaxXChild()
+        public int CompareTo(object obj)
         {
-            int output = -1;
-            foreach (var t in Next)
-            {               
-                if (t.X > output)
-                    output = t.X;
-            }
-            return output;
+            int y = Y.CompareTo((obj as Tile).Y);
+            if (y == 0) return X.CompareTo((obj as Tile).X);
+            return y;
+        }
+        /*public Vector2 pos()
+        {
+            return new Vector2(X * 200, Y * 100 + 500);
+        }*/
+
+        internal virtual void OnEnter()
+        {
+            
+        }
+        internal virtual Tile Init()
+        {
+            return this;
+        }
+        /*public virtual void ShowDeltaInfo()
+        {
+            EventSystem.Instance.RunEvent(EventType.ShowDeltaInfo, this);
+        }*/
+
+        internal void Enter()
+        {
+            tileStatus = TileStatusEnum.OnTile;
+            Game.Instance.EventSystem.Call(EventType.FreshMap, Game.Instance.NowMap);
+            OnEnter();
+            //tileStatus = TileStatusEnum.Complete;
+            //Game.Instance.EventSystem.Call(EventType.FreshMap, Game.Instance.NowMap);
         }
 
-        public int GetMinXChild()
+        public enum TileStatusEnum
         {
-            int output = 999999;
-            foreach (var t in Next)
-            {
-                if (t.X < output)
-                    output = t.X;
-            }
-            return output;
+            CanEnter,
+            NotEnter,
+            OnTile,
+            Complete,
         }
 
-        public virtual void OnClick()
-        {
-            Model.Log.Debug("you click a default tile");
-        }
         public enum TileTypeEnum
         {
-            Default,
-            Enemy,
-            Enemy_Sp,
-            Boss,
-            Event,
+            Treasure,
+            Battle_Sp,
+            Battle,
+            Rest,
             Shop,
-            StartShop,
-            Camp,
-            Box,
+            Event,
+            Boss,
+
+            Other = 100,
         }
     }
 
@@ -71,13 +82,13 @@ namespace THClimbTower
         {
             this.Id = Id;
         }*/
-        public TileAttribute(Tile.TileTypeEnum Id):base()
+        public TileAttribute(Tile.TileTypeEnum Id) : base()
         {
             this.Id = (int)Id;
         }
     }
 
-    public class TileFactory:BaseFactory<Tile, TileAttribute>
+    public class TileFactory : BaseFactory<Tile, TileAttribute>
     {
         public static TileFactory Instance
         {
@@ -93,27 +104,5 @@ namespace THClimbTower
             return Get((int)tileType);
         }
     }
-
-    /*public static class TileFactory
-    {
-        public static Tile Creat(Tile.TileTypeEnum type)
-        {
-            Tile output;
-            switch (type)
-            {
-                case Tile.TileTypeEnum.Enemy:
-                    output= new EnemyTile() ;
-                    break;
-                default:
-                    output = new Tile();
-                    break;
-            }
-            output.TileType = type;
-            return output;
-        }
-        public static Tile CreatRandom()
-        {
-            return new Tile();
-        }
-    }*/
 }
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <loader id="n10_i45p" name="BattleBackGround" xy="0,0" size="1920,1080" url="ui://7tkfu8n4i45pr" fill="scale"/>
+    <component id="n11_vk5m" name="Hand" src="vk5m16" fileName="HandCards.xml" xy="329,837"/>
+  </displayList>
+</component>

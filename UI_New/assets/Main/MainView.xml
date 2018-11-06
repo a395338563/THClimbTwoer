@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <image id="n0_d41v" name="n0" src="d41v1" fileName="Background.png" xy="0,0" size="1920,1080"/>
+    <component id="n3_d41v" name="StartGame" src="d41v3" fileName="Button1.xml" xy="738,728">
+      <Button title="开始游戏"/>
+    </component>
+    <component id="n4_d41v" name="n4" src="d41v3" fileName="Button1.xml" xy="733,838">
+      <Button title="不知道干啥用"/>
+    </component>
+    <component id="n5_d41v" name="ExitGame" src="d41v3" fileName="Button1.xml" xy="737,953">
+      <Button title="退出游戏"/>
+    </component>
+    <text id="n6_d41v" name="n6" xy="525,308" size="1058,202" fontSize="179" color="#00ffff" text="可能是个logo"/>
+  </displayList>
+</component>

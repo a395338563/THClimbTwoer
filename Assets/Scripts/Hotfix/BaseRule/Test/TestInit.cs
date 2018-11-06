@@ -9,31 +9,31 @@ using THClimbTower;
 
 namespace Hotfix.BaseRule
 {
-    [EventDispatcher(EventType.GameStart)]
+    /*[EventDispatcher(EventType.GameStart)]
     public class TestInit : THClimbTower.iEventDispatcher
     {
-        public void Handle(EventType eventType)
+        public int SortIndex => 0;
+
+        public void Handle(EventType eventType, params object[] param)
         {
             Player player = THClimbTower.Game.Instance.player;
             player.MaxHp = 100;
             player.NowHp = 100;
             player.Gold = 2333;
-            player.MainCharactorType = CharactorTypeEnum.Reimu;
-            for (int i = 0; i < 5; i++)
-            {
-                player.Deck.Add(CardFactory.Instance.Get(CardEnum.TestAttack) as AbstractPlayerCard);
-                player.Deck.Add(CardFactory.Instance.Get(CardEnum.TestDefence) as AbstractPlayerCard);
-            }
+            //player.MainCharactorType = CharactorTypeEnum.Alice;
+            player.AddCard(CardEnum.TestAttack, 5);
+            player.AddCard(CardEnum.TestDefence, 5);
             player.potions.Add(new Potion.TestPotion());
-            //player.AddRelics(new TestRelic());
         }
     }
 
     [BaseEvent(1000)]
-    [EventDispatcher(EventType.TestBattle)]
+    [EventDispatcher(EventType.TestGame)]
     public class TestBattle : iEventDispatcher
     {
-        public void Handle(EventType eventType)
+        public int SortIndex => 0;
+
+        public void Handle(EventType eventType, params object[] param)
         {
             Log.Debug("生成测试战斗");
             THClimbTower.Game.Instance.player = new Player();
@@ -41,17 +41,16 @@ namespace Hotfix.BaseRule
             player.MaxHp = 100;
             player.NowHp = 100;
             player.Gold = 2333;
-            player.MainCharactorType = CharactorTypeEnum.Reimu;
-            for (int i = 0; i < 5; i++)
-            {
-                player.Deck.Add(CardFactory.Instance.Get(CardEnum.TestAttack) as AbstractPlayerCard);
-                player.Deck.Add(CardFactory.Instance.Get(CardEnum.TestDefence) as AbstractPlayerCard);
-            }
+            player.AddCard(CardEnum.TestAttack, 5);
+            player.AddCard(CardEnum.TestDefence, 5);
             player.potions.Add(new Potion.TestPotion());
 
-            THClimbTower.Game.Instance.NowBattle = new Battle();
-            THClimbTower.EventSystem.Instance.RunEvent(EventType.BattleStart, EnemyTeamFactory.Instance.Get(EnemyTeam.EnemyTeamEnum.TestTeam));
+            Map map= THClimbTower.Game.Instance.NowMap = new Map();
+            //map.Creat(0, 10, 5, 6);
+
+            //THClimbTower.Game.Instance.NowBattle = new Battle();
+            //THClimbTower.EventSystem.Instance.RunEvent(EventType.BattleStart, EnemyTeamFactory.Instance.Get(EnemyTeam.EnemyTeamEnum.TestTeam));
             //THClimbTower.Game.Instance.NowBattle.StartBattle(EnemyTeamFactory.Instance.Get(EnemyTeam.EnemyTeamEnum.TestTeam));
         }
-    }
+    }*/
 }

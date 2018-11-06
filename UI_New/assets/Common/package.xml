@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7pdn75nc" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="d41v0" name="按钮.png" path="/image/"/>
+    <component id="d41v1" name="蓝按钮.xml" path="/" exported="true"/>
+    <image id="ibir2" name="big_button.png" path="/image/"/>
+    <component id="ibir3" name="黄方按钮.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="Common"/>
+</packageDescription>

@@ -21,13 +21,23 @@ namespace THClimbTower
         }
         private static Game instance;
 
-        public Player player;
-        public Battle NowBattle;
+        public EventSystem EventSystem = new EventSystem();
 
-        public Map NowMap;
+        public Player player = new Player();
+        public Battle NowBattle = new Battle();
+
+        public Map NowMap = new Map();
         
-        public async void StartGame(CharactorTypeEnum mainCharactor, CharactorTypeEnum helpCharactor)
+        public void StartGame(AbstractCharactorConfig mainCharactor, AbstractCharactorConfig helpCharactor,int Seed=0)
         {
+            RandomUtil.SetSeed(Seed);
+            EventSystem.Call(EventType.GameStart, mainCharactor, helpCharactor);
+            /*player = new Player()
+            {
+                MainCharactorType = mainCharactor,
+                HelpCharactorType = helpCharactor,
+            };
+            player.Init();*/
             /*Model.Game.Scene.AddComponent<CardFactory>();
             Instance.player = new Player()
             {

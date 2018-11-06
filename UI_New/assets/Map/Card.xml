@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="280,400">
+  <displayList>
+    <graph id="n0_gsfy" name="n0" xy="0,0" size="280,400" type="rect" lineSize="0" fillColor="#ff666688"/>
+    <graph id="n4_hrze" name="n4" xy="17,17" size="243,148" type="rect" fillColor="#ff000000"/>
+    <text id="n3_hrze" name="n3" xy="68,73" size="149,31" fontSize="24" color="#ffffff" text="这里有一张图"/>
+    <text id="n5_hrze" name="CardDesc" xy="16,200" size="246,175" fontSize="20" color="#ffffff" autoSize="none" autoClearText="true" text="这里是描述"/>
+    <graph id="n8_hrze" name="n8" xy="23,7" size="227,35" type="rect"/>
+    <graph id="n6_hrze" name="n6" xy="-15,-17" size="50,50" type="eclipse" fillColor="#ff66ccff"/>
+    <text id="n7_hrze" name="CardCost" xy="-11,-5" size="41,27" fontSize="20" align="center" autoSize="none" text="2"/>
+    <text id="n9_hrze" name="CardTitle" xy="30,12" size="209,27" fontSize="20" align="center" autoSize="none" text="卡名"/>
+  </displayList>
+</component>

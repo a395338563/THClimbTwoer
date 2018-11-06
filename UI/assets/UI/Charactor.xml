@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="256,256" extention="Label">
-  <displayList>
-    <loader id="n58_nahy" name="icon" xy="0,0" size="256,256" align="center" vAlign="middle"/>
-    <component id="n57_nahy" name="bar" src="l39c87x" fileName="战斗UI/HpBar.xml" xy="134,250">
-      <ProgressBar value="52" max="100"/>
-    </component>
-  </displayList>
-</component>

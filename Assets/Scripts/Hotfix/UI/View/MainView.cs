@@ -12,21 +12,14 @@ namespace Hotfix.View
     [GameUIView(UIViewType.Main)]
     public class MainView : GameUIView
     {
-        public override string PackageName { get; set; } = "THClimbTower";
+        public override string PackageName => "Main";
 
-        public override string ViewName { get; set; } = "Main";
+        public override string ViewName => "MainView";
 
         public override void Create()
         {
-            MainView.GetChild("n2").onClick.Add(() =>
-            {
-                Log.Debug("???");
+            MainView.GetChild("StartGame").onClick.Add(()=> {
                 Game.Scene.GetComponent<UIManagerComponent>().LoadSence(UIViewType.ChooseCharactor);
-            });
-            MainView.GetChild("n2").onTouchMove.Add((x) =>
-            {
-                Log.Debug("???");
-                Log.Debug(x.inputEvent.mouseWheelDelta.ToString());
             });
         }
 

@@ -12,50 +12,75 @@ namespace Hotfix.View
     [GameUIView(UIViewType.ChooseCharactor)]
     public class ChooseCharactorView:GameUIView
     {
-        public override string PackageName { get; set; } = "THClimbTower";
+        public override string PackageName => "ChooseCharactor";
 
-        public override string ViewName { get; set; } = "ChooseCharactor";
+        public override string ViewName => "ChooseView";
 
-        CharactorTypeEnum mainType, helpType;
-
+        AbstractCharactorConfig NowSelectCharactor, MainCharactor, HelpCharactor;
+        GComponent NowSelectComponent, MainSelectComponent, HelpSelectComponent;
+        GList CharactorList;
         public override void Create()
         {
+            CharactorList = MainView.GetChild("CharactorList").asList;
+            CharactorList.RemoveChildrenToPool();
+            GButton choose = MainView.GetChild("Choose").asButton;
+            GButton unChoose = MainView.GetChild("UnChoose").asButton;
+            foreach (var a in CharactorConfigFactory.Instance.GetAll())
+            {
+                GComponent g = CharactorList.AddItemFromPool().asCom;
+                g.icon = IconHelper.GetHeadIcon(a.ImageName);
+                g.data = a;
+                g.onClick.Add(() =>
+                {
+                    MainView.GetChild("BigImage").asLoader.url = "Hero/" + a.ImageName;
+                    NowSelectCharactor = a;
+                    NowSelectComponent = g;
+                    bool Allselect = MainCharactor != null && HelpCharactor != null;
+                    bool Inselect = MainCharactor == a | HelpCharactor == a;
+                    choose.enabled = !Allselect && !Inselect;
+                    unChoose.enabled = Inselect;
+
+                    MainView.GetChild("Name").text = a.Name;
+                    MainView.GetChild("Desc").text = a.Desc;
+                });
+            }
+            choose.onClick.Add(() =>
+            {
+                if (MainCharactor == null)
+                {
+                    MainCharactor = NowSelectCharactor;
+                    NowSelectComponent.GetController("Choose").selectedIndex = 1;
+                }
+                else
+                {
+                    HelpCharactor = NowSelectCharactor;
+                    NowSelectComponent.GetController("Choose").selectedIndex = 2;
+                    MainView.GetChild("StartGame").visible = true;
+                }
+                choose.enabled = false;
+                unChoose.enabled = true;
+            });
+            unChoose.onClick.Add(() =>
+            {
+                if (HelpCharactor != null)
+                    HelpCharactor = null;
+                else
+                    MainCharactor = null;
+                NowSelectComponent.GetController("Choose").selectedIndex = 0;
+                MainView.GetChild("StartGame").visible = false;
+                choose.enabled = true;
+                unChoose.enabled = false;
+            });
             MainView.GetChild("StartGame").onClick.Add(() =>
             {
+                THClimbTower.Game.Instance.StartGame(MainCharactor, HelpCharactor,(int)System.DateTime.Now.Ticks);
                 Model.Game.Scene.GetComponent<UIManagerComponent>().LoadSence(UIViewType.Map);
-                THClimbTower.Game.Instance.StartGame(mainType, helpType);
             });
-            GList MainCharactorList = MainView.GetChild("MainCharactor").asList;
-            GList HelpCharactorList = MainView.GetChild("HelpCharactor").asList;
-            foreach (CharactorTypeEnum a in Enum.GetValues(typeof(CharactorTypeEnum)))
-            {
-                AddItem(MainCharactorList, a);
-                AddItem(HelpCharactorList, a);
-            }
-            MainCharactorList.onClickItem.Add(mainListOnClick);
-            MainCharactorList.onClickItem.Call(MainCharactorList.GetChildAt(0));
-            HelpCharactorList.onClickItem.Add(helpListOnClick);
-        }
-        void AddItem(GList list, CharactorTypeEnum type)
-        {
-            GComponent g = list.AddItemFromPool().asCom;
-            g.text = type.ToString();
-            g.data = type;
-        }
-        void mainListOnClick(EventContext x)
-        {
-            CharactorTypeEnum type = (CharactorTypeEnum)(((x.data) as GComponent).data);
-            mainType = type;
-        }
-        void helpListOnClick(EventContext x)
-        {
-            CharactorTypeEnum type = (CharactorTypeEnum)(((x.data) as GComponent).data);
-            helpType = type;
         }
 
         public override void OnEnter()
         {
-
+            CharactorList.GetChildAt(0).onClick.Call();
         }
     }
 }

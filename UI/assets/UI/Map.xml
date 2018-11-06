@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="1920,1080" bgColorEnabled="true" bgColor="#000000">
-  <displayList>
-    <component id="n11_mcmm" name="Background" src="mcmm20" fileName="MapBackground.xml" xy="0,0">
-      <relation target="" sidePair="width-width,height-height"/>
-    </component>
-    <image id="n13_mcmm" name="n13" src="mcmmt" fileName="大地图UI/legend2.png" xy="1442,199"/>
-  </displayList>
-</component>

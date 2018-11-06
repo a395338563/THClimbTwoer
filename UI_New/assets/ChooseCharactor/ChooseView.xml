@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <displayList>
+    <image id="n0_d41v" name="n0" src="d41v1" fileName="背景.png" xy="0,0" size="1920,1080"/>
+    <list id="n4_d41v" name="CharactorList" xy="108,120" size="132,519" lineGap="40" defaultItem="ui://7okzyk13d41v3">
+      <item icon="ui://7l983x7kd41v0"/>
+      <item icon="ui://7l983x7kd41v1"/>
+      <item icon="ui://7l983x7kd41v2"/>
+    </list>
+    <loader id="n5_d41v" name="BigImage" xy="720,98" size="735,882" align="center" vAlign="middle" fill="scaleMatchHeight"/>
+    <component id="n6_d41v" name="Choose" src="ibir3" fileName="黄方按钮.xml" pkg="7pdn75nc" xy="881,1011" controller="button,0">
+      <Button title="出战"/>
+    </component>
+    <component id="n7_ibir" name="UnChoose" src="ibir3" fileName="黄方按钮.xml" pkg="7pdn75nc" xy="1092,1011" touchable="false" controller="button,2">
+      <Button title="取消"/>
+    </component>
+    <component id="n8_ibir" name="StartGame" src="ibir3" fileName="黄方按钮.xml" pkg="7pdn75nc" xy="1504,1008" visible="false" controller="button,0">
+      <Button title="  冲鸭！"/>
+    </component>
+    <text id="n9_ibir" name="Name" xy="47,696" size="165,64" fontSize="52" color="#ffffff" strokeColor="#000000" autoClearText="true" text="魔理沙"/>
+    <text id="n10_ibir" name="Desc" xy="47,792" size="409,88" fontSize="25" color="#ccff33" autoSize="none" strokeColor="#000000" autoClearText="true" text="住在森林中的魔法使，喜欢使用魔炮和星形弹幕。"/>
+  </displayList>
+</component>

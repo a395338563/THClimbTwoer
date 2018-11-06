@@ -24,7 +24,7 @@ namespace Model
         /// 已经add过的包
         /// </summary>
         static List<string> LoadPackage = new List<string>();
-        static string PackagePath = "UI/";
+        static string PackagePath = "Assets/Res/UI/";
         public GameUIView NowSence;
 
         public void Awake()
@@ -34,7 +34,8 @@ namespace Model
             //Add(typeof(Init).Assembly);
             //LoadPackge("BlueSkin");//加载默认皮肤
             //LoadPackge("THCLimbTower");//加载资源
-            LoadPackge("UI");//从爬塔偷的资源包
+            LoadPackge("Common");
+            LoadPackge("Image_HeadIcon");
             //LoadSence(UIViewType.Map);//初始化页面
             //Game.Scene.AddComponent<WindowComponent>();
         }

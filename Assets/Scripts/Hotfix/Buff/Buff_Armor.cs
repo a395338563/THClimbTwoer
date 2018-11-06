@@ -9,15 +9,17 @@ namespace Hotfix.Buff
 {
     //[EventWatcher(new EventType[] { EventType.BeforeDamageTake, EventType.PlayerTurnStart, EventType.PlayerTurnEnd})]
     [EventDispatcher(EventType.BeforeDamageTake, EventType.PlayerTurnStart, EventType.PlayerTurnEnd)]
-    public class Buff_Armor : AbstractBuff, iEventDispatcher<DamageInfo>
+    public class Buff_Armor : AbstractBuff, iEventDispatcher
     {
         public override string Icon { get; } = "Armor";
 
-        //public BaseEvent[] baseEvents { get; } = new BaseEvent[] { EventType.Event_BeforeDamageTake, EventType.Event_PlayerTurnStart, EventType.Event_PlayerTurnEnd };
+        public int SortIndex => 0;
 
-        public void Handle(EventType baseEvent, DamageInfo damage)
+        //public BaseEvent[] baseEvents { get; } = new BaseEvent[] { EventType.Event_BeforeDamageTake, EventType.Event_PlayerTurnStart, EventType.Event_PlayerTurnEnd };
+        public void Handle(EventType eventType, params object[] param)
         {
-            if (baseEvent == EventType. BeforeDamageTake)
+            DamageInfo damage = param[0] as DamageInfo;
+            if (eventType == EventType.BeforeDamageTake)
             {
                 if (Amount > damage.Damage)
                 {
@@ -32,7 +34,7 @@ namespace Hotfix.Buff
                     Model.Log.Debug($"{Amount} point Damage have been avoid by armor,remain {damage.Damage}Point");
                 }
             }
-            else if (baseEvent == EventType.PlayerTurnStart)
+            else if (eventType == EventType.PlayerTurnStart)
             {
                 Model.Log.Debug($"{(Parent as AbstractCharactor).Name} lose all armor at turn start");
                 Amount = 0;

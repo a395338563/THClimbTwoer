@@ -18,47 +18,23 @@ namespace THClimbTower
             }
         }
         protected static CardFactory instance;
+
+        public AbstractPlayerCard GetPlayerCard(int id)
+        {
+            AbstractPlayerCard result = Get(id) as AbstractPlayerCard;
+            if (result == null)
+                throw new Exception("未配置该类型的playerCardID");
+            return result;
+        }
+        public AbstractEnemyCard GetEnemyCard(int id)
+        {
+            AbstractEnemyCard result = Get(id) as AbstractEnemyCard;
+            if (result == null)
+                throw new Exception("未配置该类型的EnemyCardId");
+            return result;
+        }
     }
-   /* public class CardFactory:Component,IAwake
-    {
-        public static CardFactory Instance;
-        Dictionary<int, Type> CardDic;
-        public void Awake()
-        {
-            Instance = this;
-            CardDic = new Dictionary<int, Type>();
-            AddCard(Assembly.GetExecutingAssembly());
-        }
 
-        public void AddCard(Assembly assembly)
-        {
-            Type[] types = assembly.GetTypes();
-            foreach (Type type in types)
-            {
-                Log.Debug(type.ToString());
-                object[] attrs = type.GetCustomAttributes(typeof(CardAttribute), false);
-                foreach (object attr in attrs)
-                {
-                    if (! (attr is CardAttribute))
-                        continue;
-                    CardAttribute cardAttribute = (CardAttribute)attr;
-                    if (!CardDic.ContainsKey(cardAttribute.Id))
-                    {
-                        CardDic.Add(cardAttribute.Id, type);
-                    }
-                    else
-                    {
-                        Model.Log.Error($"存在牌有相同ID：{CardDic[cardAttribute.Id].Name},{type.Name}");
-                    }
-                }
-            }
-        }
-
-        public AbstractCard Get(int Id)
-        {
-            return (Activator.CreateInstance(CardDic[Id]) as AbstractCard).Init();
-        }
-    }*/
     public class CardAttribute : BaseConfigAttribute
     {
         public CardAttribute(int Id)

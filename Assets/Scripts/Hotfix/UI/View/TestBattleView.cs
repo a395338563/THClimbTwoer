@@ -10,13 +10,13 @@ namespace Hotfix.View
     [GameUIView(UIViewType.TestBattle)]
     public class TestBattleView : GameUIView
     {
-        public override string PackageName { get; set; } = "UI";
+        public override string PackageName => "Battle";
 
-        public override string ViewName { get; set; } = "BattleUI";
+        public override string ViewName => "BattleView";
 
         public override void Create()
         {
-            THClimbTower.EventSystem.Instance.RunEvent(THClimbTower.EventType.TestBattle);
+            THClimbTower.Game.Instance.EventSystem.Call(THClimbTower.EventType.TestGame);
         }
 
         public override void OnEnter()

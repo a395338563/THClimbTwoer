@@ -23,19 +23,25 @@ namespace THClimbTower
 
         public void ReciveDamage(DamageInfo damage)
         {
-            EventSystem.Instance.RunEvent(EventType.BeforeDamageTake);
+            Game.Instance.EventSystem.Call(EventType.BeforeDamageTake, damage);
             if (damage.Damage > 0)
             {
-                EventSystem.Instance.RunEvent(EventType.OnDamageTake);
-                NowHp -= damage.Damage;
+                Game.Instance.EventSystem.Call(EventType.OnDamageTake, damage);
                 Log.Debug($"{Name}收到了{damage.Damage}伤害,剩余Hp：{NowHp}");
+                Game.Instance.EventSystem.Call(EventType.HpChange,this, new ValueChange()
+                {
+                    AfterValue = NowHp - damage.Damage,
+                    BeforeValue = NowHp,
+                    Reason = damage
+                });
+                NowHp -= damage.Damage;
             }
             if (NowHp <= 0)
             {
                 Log.Debug($"{Name}被打死了");
                 NowHp = 0;
                 //await Game.EventSystem.RunEvent<EventInfo>(EventType.Die);
-            }
+            }          
         }
 
         public List<AbstractBuff> GetBuffs()
@@ -62,16 +68,16 @@ namespace THClimbTower
             if (t == null)
             {
                 t = this.AddComponent<T>();
-                if (t is iBaseEventDispather)
-                    EventSystem.Instance.AddDispatcher(t as iBaseEventDispather);
+                if (t is iEventDispatcher)
+                    Game.Instance.EventSystem.AddDispatcher(t as iEventDispatcher);
             }
             return t;
         }
         public void RemoveBuff<T>() where T : AbstractBuff, new()
         {
             T t = this.GetComponent<T>();
-            if (t is iBaseEventDispather)
-                EventSystem.Instance.RemoveDispatcher(t as iBaseEventDispather);
+            if (t is iEventDispatcher)
+                Game.Instance.EventSystem.RemoveDispatcher(t as iEventDispatcher);
             this.RemoveComponent<T>();
         }
     }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="64,64" extention="Label">
+  <displayList>
+    <loader id="n1_mzkx" name="icon" xy="0,0" size="64,64" url="ui://7tkfu8n4mzkxu"/>
+    <text id="n2_mzkx" name="title" xy="69,15" size="10,39" fontSize="30" color="#ff3366" text=""/>
+  </displayList>
+</component>

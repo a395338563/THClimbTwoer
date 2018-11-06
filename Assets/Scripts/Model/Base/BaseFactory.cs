@@ -11,7 +11,7 @@ namespace Model
     public class BaseFactory<T, TAttr> : Component where T : BaseConfig where TAttr : BaseConfigAttribute
     {
         //public static BaseFactory Instance;
-        Dictionary<int, Type> Dic = new Dictionary<int, Type>();
+        protected Dictionary<int, Type> Dic = new Dictionary<int, Type>();
 
         public void Add(Assembly assembly)
         {

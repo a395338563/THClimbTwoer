@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7tkfu8n4" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="d41v0" name="MapView.xml" path="/" exported="true"/>
+    <component id="xyr21" name="MapBtn.xml" path="/" exported="true"/>
+    <image id="xyr23" name="chest.png" path="/FromSTS/"/>
+    <image id="xyr25" name="circle1.png" path="/FromSTS/"/>
+    <image id="xyr26" name="circle2.png" path="/FromSTS/"/>
+    <image id="xyr27" name="circle3.png" path="/FromSTS/"/>
+    <image id="xyr28" name="circle4.png" path="/FromSTS/"/>
+    <image id="xyr29" name="circle5.png" path="/FromSTS/"/>
+    <image id="xyr2a" name="elite.png" path="/FromSTS/"/>
+    <image id="xyr2b" name="event.png" path="/FromSTS/"/>
+    <image id="xyr2c" name="monster.png" path="/FromSTS/"/>
+    <image id="xyr2d" name="rest.png" path="/FromSTS/"/>
+    <image id="xyr2e" name="shop.png" path="/FromSTS/"/>
+    <movieclip id="xyr2f" name="circle.jta" path="/"/>
+    <component id="xyr2g" name="Map.xml" path="/"/>
+    <component id="xyr2h" name="Tile.xml" path="/"/>
+    <component id="xyr2i" name="Line.xml" path="/"/>
+    <image id="xyr2j" name="dot1.png" path="/" exported="true"/>
+    <image id="awmsk" name="panelHeart.png" path="/战斗UI/"/>
+    <image id="awmsl" name="panelGoldBag.png" path="/战斗UI/"/>
+    <component id="awmsm" name="Potion.xml" path="/"/>
+    <image id="awmsn" name="potion_placeholder.png" path="/战斗UI/"/>
+    <component id="awmso" name="SettingButton.xml" path="/战斗UI/"/>
+    <image id="awmsp" name="settings.png" path="/战斗UI/"/>
+    <image id="i45pq" name="B1.png" path="/"/>
+    <image id="i45pr" name="前景.png" path="/"/>
+    <component id="a3jis" name="BattleCharactor.xml" path="/" exported="true"/>
+    <component id="mzkxt" name="Intention.xml" path="/"/>
+    <image id="mzkxu" name="attack1.png" path="/FromSTS/"/>
+    <image id="kgg1v" name="Bitmap.png" path="/"/>
+    <image id="kgg1w" name="选中框.png" path="/" scale="9grid" scale9grid="73,82,23,18"/>
+    <component id="kgg1y" name="HpBar.xml" path="/"/>
+    <component id="gsfyz" name="Card.xml" path="/" exported="true"/>
+    <image id="gsfy10" name="anger.png" path="/战斗UI/"/>
+    <component id="hrze11" name="Battle.xml" path="/"/>
+    <component id="hrze12" name="OpenDeck.xml" path="/战斗UI/"/>
+    <image id="hrze13" name="deck.png" path="/战斗UI/"/>
+    <component id="hrze14" name="MapButton.xml" path="/战斗UI/"/>
+    <image id="hrze15" name="map.png" path="/战斗UI/"/>
+    <component id="vk5m16" name="HandCards.xml" path="/"/>
+    <component id="vk5m17" name="BuffIcon.xml" path="/"/>
+  </resources>
+  <publish name="Map"/>
+</packageDescription>

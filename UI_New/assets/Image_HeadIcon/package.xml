@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7l983x7k" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="d41v0" name="Marisa.png" path="/" exported="true"/>
+    <image id="d41v1" name="Alice.png" path="/" exported="true"/>
+    <image id="d41v2" name="Sakuya.png" path="/" exported="true"/>
+  </resources>
+  <publish name="Image_HeadIcon"/>
+</packageDescription>

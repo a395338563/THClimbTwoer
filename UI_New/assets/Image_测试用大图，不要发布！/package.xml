@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7ndih9ql" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="d41v3" name="魔理沙.png" path="/"/>
+    <image id="d41v4" name="女仆.png" path="/"/>
+    <image id="d41v5" name="爱丽丝.png" path="/"/>
+    <image id="kgg17" name="妖梦.png" path="/"/>
+  </resources>
+  <publish name=""/>
+</packageDescription>

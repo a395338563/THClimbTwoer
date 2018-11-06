@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1920,1080">
+  <controller name="c1" pages="0,map,1,battle" selected="0"/>
+  <displayList>
+    <component id="n0_xyr2" name="Map" src="xyr2g" fileName="Map.xml" xy="0,0">
+      <gearDisplay controller="c1" pages="0"/>
+    </component>
+    <component id="n10_i45p" name="Battle" src="hrze11" fileName="Battle.xml" xy="0,0">
+      <gearDisplay controller="c1" pages="1"/>
+    </component>
+    <graph id="n1_xyr2" name="n1" xy="0,0" size="1920,100" group="n9_i45p" type="rect" lineSize="13" lineColor="#ff3366ff" fillColor="#ffcc9966"/>
+    <text id="n2_xyr2" name="PlayerName" xy="36,24" size="182,51" group="n9_i45p" input="true" prompt="NoName" fontSize="41" color="#ffffff" autoSize="shrink" strokeColor="#000000" singleLine="true" autoClearText="true" text="玩家名字"/>
+    <image id="n3_awms" name="n3" src="awmsk" fileName="战斗UI/panelHeart.png" xy="294,18" group="n9_i45p"/>
+    <text id="n4_awms" name="Hp" xy="364,24" size="108,51" group="n9_i45p" fontSize="41" color="#ffffff" strokeColor="#000000" text="99/99"/>
+    <image id="n5_awms" name="n5" src="awmsl" fileName="战斗UI/panelGoldBag.png" xy="508,20" group="n9_i45p"/>
+    <text id="n6_awms" name="Gold" xy="570,24" size="100,51" group="n9_i45p" fontSize="41" color="#ffffff" autoSize="shrink" strokeColor="#000000" singleLine="true" text="9999"/>
+    <component id="n7_awms" name="potion" src="awmsm" fileName="Potion.xml" xy="742,15" group="n9_i45p"/>
+    <component id="n8_awms" name="setting" src="awmso" fileName="战斗UI/SettingButton.xml" xy="1824,17" group="n9_i45p"/>
+    <component id="n11_hrze" name="OpenDeck" src="hrze12" fileName="战斗UI/OpenDeck.xml" xy="1750,16" group="n9_i45p"/>
+    <component id="n12_hrze" name="OpenMap" src="hrze14" fileName="战斗UI/MapButton.xml" xy="1672,16" group="n9_i45p"/>
+    <group id="n9_i45p" name="n9" xy="0,0" size="1920,100" collapsed="true"/>
+  </displayList>
+</component>

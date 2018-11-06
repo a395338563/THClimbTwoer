@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="512,512" opaque="false" extention="Button">
-  <displayList>
-    <loader id="n14_mcmm" name="icon" xy="0,0" size="512,512" url="ui://p2tnfz1umcmm1i" autoSize="true" color="#505050"/>
-  </displayList>
-  <Button/>
-</component>

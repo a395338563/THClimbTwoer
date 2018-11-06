@@ -10,8 +10,8 @@ namespace Model
     public abstract class GameUIView
     {
         public GComponent MainView;
-        public abstract string PackageName { get; set; }
-        public abstract string ViewName { get; set; }
+        public abstract string PackageName { get; }
+        public abstract string ViewName { get; }
         public virtual void Enter()
         {
             if (MainView == null)

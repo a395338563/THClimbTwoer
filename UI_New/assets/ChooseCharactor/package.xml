@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="7okzyk13" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="d41v0" name="ChooseView.xml" path="/" exported="true"/>
+    <image id="d41v1" name="背景.png" path="/"/>
+    <image id="d41v2" name="teamItem_bg_small.png" path="/"/>
+    <component id="d41v3" name="Head.xml" path="/"/>
+    <image id="ibir4" name="选中.png" path="/"/>
+    <image id="ibir5" name="左右键.png" path="/"/>
+  </resources>
+  <publish name="ChooseCharactor"/>
+</packageDescription>

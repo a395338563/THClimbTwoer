@@ -9,7 +9,7 @@ using DG.Tweening;
 
 namespace Hotfix.UIModule
 {
-    public class UICard
+    /*public class UICard
     {
         int index;
         int maxIndex;
@@ -123,5 +123,5 @@ namespace Hotfix.UIModule
             gCard.GetChild("CardImage").asLoader.url = $"Card/{playerCard.Pic}";
             gCard.GetController("UseAble").selectedIndex = playerCard.UseAble ? 0 : 1;
         }
-    }
+    }*/
 }

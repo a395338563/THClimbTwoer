@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace Hotfix.UIModule
 {
-    public class UICurve
+    /*public class UICurve
     {
         GComponent main;
         public UICurve(GComponent component)
@@ -38,5 +38,5 @@ namespace Hotfix.UIModule
             }
             main.GetChild("Head").xy = end;
         }
-    }
+    }*/
 }

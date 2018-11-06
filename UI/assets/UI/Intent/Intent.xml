@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="64,64" extention="Label">
-  <displayList>
-    <loader id="n0_mbp8" name="icon" xy="0,0" size="64,64" url="ui://p2tnfz1umbp82o" autoSize="true"/>
-    <richtext id="n2_mbp8" name="title" xy="-9,40" size="49,49" fontSize="40" color="#ffffff" strokeColor="#000000" text="24"/>
-  </displayList>
-</component>

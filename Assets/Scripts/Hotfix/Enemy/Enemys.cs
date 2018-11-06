@@ -32,5 +32,11 @@ namespace Hotfix.Enemy
         {
             throw new NotImplementedException();
         }
+        public override AbstractEnemy Init()
+        {
+            X = 800;
+            Y = 500;
+            return base.Init();
+        }
     }
 }

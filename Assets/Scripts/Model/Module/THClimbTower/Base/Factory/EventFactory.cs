@@ -19,7 +19,7 @@ namespace THClimbTower
         }
         protected static EventFactory instance;
 
-        Dictionary<int, iBaseEventDispather> Dic = new Dictionary<int, iBaseEventDispather>();
+        Dictionary<int, iEventDispatcher> Dic = new Dictionary<int, iEventDispatcher>();
 
         public void Add(Assembly assembly)
         {
@@ -34,8 +34,8 @@ namespace THClimbTower
                     BaseEventAttribute Attribute = (BaseEventAttribute)attr;
                     if (!Dic.ContainsKey(Attribute.Id))
                     {
-                        iBaseEventDispather BaseEventDispather= Activator.CreateInstance(type) as iBaseEventDispather;
-                        EventSystem.Instance.AddDispatcher(BaseEventDispather);
+                        iEventDispatcher BaseEventDispather = Activator.CreateInstance(type) as iEventDispatcher;
+                        Game.Instance.EventSystem.AddDispatcher(BaseEventDispather);
                         Dic.Add(Attribute.Id, BaseEventDispather);
                         Log.Debug($"添加了规则类{BaseEventDispather.GetType().ToString()}");
                     }
@@ -50,10 +50,10 @@ namespace THClimbTower
         public void RemoveAll()
         {
             foreach (var a in Dic)
-                EventSystem.Instance.RemoveDispatcher(a.Value);
+                Game.Instance.EventSystem.RemoveDispatcher(a.Value);
             Dic.Clear();
         }
-        public iBaseEventDispather Get(int Id)
+        public iEventDispatcher Get(int Id)
         {
             return Dic[Id];
         }

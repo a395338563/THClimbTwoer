@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<component size="128,128" pivot="0.5,0.5" anchor="true" extention="Button">
-  <displayList>
-    <loader id="n0_mcmm" name="icon" xy="0,0" size="128,128" url="ui://p2tnfz1umcmm12" autoSize="true"/>
-    <movieclip id="n1_mcmm" name="Select" src="mcmm25" fileName="Map/SelectRoom.jta" xy="-34,-32" visible="false" playing="false"/>
-  </displayList>
-  <Button/>
-</component>

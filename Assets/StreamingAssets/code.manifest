@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 3059362725
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 64b33ec3a9da7972a3c64c8ff8745f8b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 5ad585dd02dfb5016c0dad519eab8f49
+HashAppended: 0
+ClassTypes:
+- Class: 49
+  Script: {instanceID: 0}
+Assets:
+- Assets/Res/Code/Hotfix.mdb.bytes
+- Assets/Res/Code/Hotfix.pdb.bytes
+- Assets/Res/Code/Hotfix.dll.bytes
+Dependencies: []

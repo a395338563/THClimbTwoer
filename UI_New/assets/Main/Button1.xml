@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="473,62" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="2"/>
+  <displayList>
+    <image id="n0_d41v" name="n0" src="d41v2" fileName="快速登录 副本.png" xy="0,0" size="473,62">
+      <gearDisplay controller="button" pages="0"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n1_d41v" name="n1" src="d41v2" fileName="快速登录 副本.png" xy="0,0" size="473,62" color="#b4b4b4">
+      <gearDisplay controller="button" pages="1"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n2_d41v" name="n2" src="d41v2" fileName="快速登录 副本.png" xy="0,0" size="473,62" color="#d2d2d2">
+      <gearDisplay controller="button" pages="2"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <image id="n3_d41v" name="n3" src="d41v2" fileName="快速登录 副本.png" xy="0,0" size="473,62">
+      <gearDisplay controller="button" pages="3"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </image>
+    <text id="n4_d41v" name="title" xy="124,10" size="224,47" fontSize="30" color="#00ffff" align="center" autoSize="none" singleLine="true" autoClearText="true" text="qqq"/>
+  </displayList>
+  <Button/>
+</component>
